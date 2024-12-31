@@ -155,8 +155,8 @@ def updateChannelUrlsM3U(channels, template_channels):
                         if channel_name in channels[category]:
                             # 去重逻辑
                             unique_urls = list(OrderedDict.fromkeys([url for _, url in channels[category][channel_name]]))
-                            sorted_urls = sorted(unique_urls, key=lambda url: not is_ipv6(url) if litecon.ip_version_priority == "ipv6" else is_ipv6(url))
-                            filtered_urls = [url for url in sorted_urls if not is_ipv6(url) and url not in written_urls and not any(blacklist in url for blacklist in litecon.url_blacklist)]
+                            sorted_urls = sorted(unique_urls, key=lambda url: is_ipv6(url) if litecon.ip_version_priority == "ipv6" else is_ipv6(url))
+                            filtered_urls = [url for url in sorted_urls if is_ipv6(url) and url not in written_urls and not any(blacklist in url for blacklist in litecon.url_blacklist)]
 
                             # 保证数字连续
                             index = 1
