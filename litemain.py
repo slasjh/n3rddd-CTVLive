@@ -161,7 +161,7 @@ def updateChannelUrlsM3U(channels, template_channels):
                             # 保证数字连续
                             index = 1
                             for url in filtered_urls:
-                                url_suffix = f"$小土豆•IPV4" if len(filtered_urls) == 1 else f"$小土豆•IPV4『线路{index}』"
+                                url_suffix = f"$小土豆•IPV6" if len(filtered_urls) == 1 else f"$小土豆•IPV6『线路{index}』"
                                 if '$' in url:
                                     base_url = url.split('$', 1)[0]
                                 else:
