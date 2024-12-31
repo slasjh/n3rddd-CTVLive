@@ -41,11 +41,19 @@ jobs:
       run: |
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
+          current_datetime=$(date +"%Y%m%d_%H%M%S")
+          cp live.txt history/"${current_datetime}_live.txt"
+          cp litelive.txt history/"${current_datetime}_litelive.txt"
+          git add history/"${current_datetime}_live.txt.txt"
+          git add history/"${current_datetime}_litelive.txt.txt"
+          git commit -m "Archive file with timestamp"
         git add -A
+        
         if ! git diff --staged --quiet; then
           git commit -m "Auto-update live files"
           git push
         fi
+        
 
     env:
       TZ: Asia/Shanghai
