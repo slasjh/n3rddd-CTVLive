@@ -44,8 +44,8 @@ jobs:
           current_datetime=$(date +"%Y%m%d_%H%M%S")
           cp live.txt history/"${current_datetime}_live.txt"
           cp litelive.txt history/"${current_datetime}_litelive.txt"
-          git add history/"${current_datetime}_live.txt.txt"
-          git add history/"${current_datetime}_litelive.txt.txt"
+          git add history/"${current_datetime}_live.txt"
+          git add history/"${current_datetime}_litelive.txt"
           git commit -m "Archive file with timestamp"
         git add -A
         
