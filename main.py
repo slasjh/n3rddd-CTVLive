@@ -134,14 +134,14 @@ def updateChannelUrlsM3U(channels, template_channels):
                             sorted_urls = sorted(channels[category][channel_name], key=lambda url: not is_ipv6(url) if config.ip_version_priority == "ipv6" else is_ipv6(url))
                             filtered_urls = []
                             for url in sorted_urls:
-                                if url and url not in written_urls and not any(blacklist in url for blacklist in config.url_blacklist):
+                                if url and not is_ipv6(url) and url not in written_urls and not any(blacklist in url for blacklist in config.url_blacklist):
                                     filtered_urls.append(url)
                                     written_urls.add(url)
 
                             total_urls = len(filtered_urls)
                             for index, url in enumerate(filtered_urls, start=1):
                                 if not is_ipv6(url):
-                                    url_suffix = f"$雷蒙影视•IPV4" if total_urls == 1 else f"$雷蒙影视•IPV4『线路{index}』"
+                                    url_suffix = f"$小土豆•IPV4" if total_urls == 1 else f"$小土豆•IPV4『线路{index}』"
                                 
                                 if '$' in url:
                                     base_url = url.split('$', 1)[0]
