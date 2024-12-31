@@ -1,4 +1,4 @@
-ip_version_priority = "ipv4"
+ip_version_priority = "ipv6"
 
 source_urls = [
     "http://tv.850930.xyz/kdsb.txt", #ADDED BY LEM ON 28/09/2024
