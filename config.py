@@ -7,6 +7,7 @@ source_urls = [
     "http://175.178.251.183:6689/live.m3u", #ADDED BY lee from yuanlz77" ON 31/12/2024 
     "https://raw.githubusercontent.com/Guovin/TV/gd/output/result.m3u", #ADDED BY lee from Guovin/TV/gd/ (juhe) ON 31/12/2024 
     "https://live.iptv365.org/live.txt", #ADDED BY lee from kimwang1978/collect-tv-txt (juhe) ON 31/12/2024 
+    #"https://raw.githubusercontent.com/kimwang1978/collect-tv-txt/main/merged_output.txt", #ADDED BY LEM ON 29/07/2024
     "https://raw.githubusercontent.com/zwc456baby/iptv_alive/master/live.m3u", #ADDED BY lee from zwc456baby cu (juhe) ON 31/12/2024 
     "https://raw.githubusercontent.com/hero1898/tv/refs/heads/main/IPTV.m3u", #ADDED BY lee from hero1898 (juhe) ON 31/12/2024 
     "https://live.zbds.top/tv/iptv6.txt", #ADDED zbds (juhe) ON 31/12/2024 
@@ -44,7 +45,7 @@ source_urls = [
     "https://fm1077.serv00.net/SmartTV.m3u",
     "https://raw.githubusercontent.com/ssili126/tv/main/itvlist.txt",
     "https://raw.githubusercontent.com/joevess/IPTV/main/iptv.m3u8", #ADDED BY LEM ON 08/09/2024
-    "https://raw.githubusercontent.com/kimwang1978/collect-tv-txt/main/merged_output.txt", #ADDED BY LEM ON 29/07/2024
+
     "https://raw.githubusercontent.com/Supprise0901/TVBox_live/main/live.txt", #ADDED BY LEM ON 29/07/2024
     "https://raw.githubusercontent.com/yoursmile66/TVBox/main/live.txt", #ADDED BY LEM ON 29/07/2024
     "http://kxrj.site:55/lib/kx2024.txt", #ADDED BY LEM ON 22/10/2024
