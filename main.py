@@ -132,7 +132,8 @@ def updateChannelUrlsM3U(channels, template_channels):
                 if category in channels:
                     for channel_name in channel_list:
                         if channel_name in channels[category]:
-                            sorted_urls = sorted(channels[category][channel_name], key=lambda url: is_ipv6(url) if config.ip_version_priority == "ipv6" else not is_ipv6(url))
+                           # sorted_urls = sorted(channels[category][channel_name], key=lambda url: is_ipv6(url) if config.ip_version_priority == "ipv6" else not is_ipv6(url))
+                            sorted_urls = channels[category][channel_name]
                             filtered_urls = []
                             for url in sorted_urls:
                                 if url and  is_ipv6(url) and url not in written_urls and not any(blacklist in url for blacklist in config.url_blacklist):
