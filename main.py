@@ -7,6 +7,7 @@ import config
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s', handlers=[logging.FileHandler("function.log", "w", encoding="utf-8"), logging.StreamHandler()])
 
+##  muban name  template_file = "demo.txt"
 def parse_template(template_file):
     template_channels = OrderedDict()
     current_category = None
@@ -24,7 +25,7 @@ def parse_template(template_file):
 
     return template_channels
 
-def fetch_channels(url):
+def fetch_channels(url):                      ##zhua qu name and url
     channels = OrderedDict()
 
     try:
@@ -131,7 +132,7 @@ def updateChannelUrlsM3U(channels, template_channels):
                 if category in channels:
                     for channel_name in channel_list:
                         if channel_name in channels[category]:
-                            sorted_urls = sorted(channels[category][channel_name], key=lambda url: is_ipv6(url) if config.ip_version_priority == "ipv6" else is_ipv6(url))
+                            sorted_urls = sorted(channels[category][channel_name], key=lambda url: is_ipv6(url) if config.ip_version_priority == "ipv6" else not is_ipv6(url))
                             filtered_urls = []
                             for url in sorted_urls:
                                 if url and  is_ipv6(url) and url not in written_urls and not any(blacklist in url for blacklist in config.url_blacklist):
