@@ -3,14 +3,37 @@ import shutil
 import requests
 from datetime import datetime
 
-def download_file(url, local_filename):
-    """下载文件并保存到本地"""
-    with requests.get(url, stream=True) as r:
-        r.raise_for_status()  # 如果请求出错，抛出HTTPError异常
-        with open(local_filename, 'wb') as f:
-            for chunk in r.iter_content(chunk_size=8192):
-                f.write(chunk)
-    print(f"Downloaded {url} to {local_filename}")
+def download_file(url, local_filename, user_agent='your-user-agent-string'):
+
+    """下载文件并保存到本地，同时添加User-Agent头部"""
+
+    headers = {
+
+        'User-Agent': user_agent,
+
+    }
+
+    try:
+
+        with requests.get(url, stream=True, headers=headers) as r:
+
+            r.raise_for_status()  # 如果请求出错，抛出HTTPError异常
+
+            with open(local_filename, 'wb') as f:
+
+                for chunk in r.iter_content(chunk_size=8192):
+
+                    f.write(chunk)
+
+        print(f"Downloaded {url} to {local_filename}")
+
+    except requests.exceptions.HTTPError as http_err:
+
+        print(f"HTTP error occurred: {http_err}")
+
+    except Exception as err:
+
+        print(f"Other error occurred: {err}")
 
 def copy_to_history_with_timestamp(filename):
     """将文件复制到history目录，并添加时间戳"""
@@ -37,12 +60,16 @@ def main():
     #     local_filename = os.path.basename(url.split('/')[-1])
     #     download_file(url, local_filename)
     #     ...  # 其他处理逻辑
+    user_agent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+
+    # 这里使用一个常见的Chrome用户代理作为示例，您可以根据需要更改它
 
     for file_info in m3u_files:
         url = file_info["url"]
         local_filename = file_info["filename"]
-        # 下载文件
-        download_file(url, local_filename)  # 确保这个函数已经定义
+        # 下载文件，同时传入User-Agent头部
+
+        download_file(url, local_filename, user_agent)
 
         # 如果文件已经存在，则复制到history目录并添加时间戳
         if os.path.exists(local_filename):
