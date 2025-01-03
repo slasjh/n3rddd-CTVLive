@@ -32,12 +32,12 @@ def main():
     ]
   #for url in urls:
         #local_filename = os.path.basename(url.split('/')[-1])
-    for file_info in m3u_files:
-         url = file_info["url"]
-         local_filename = file_info["filename"]
+    for file_info in m3u_files:    
+         url = file_info["url"]    
+         local_filename = file_info["filename"]    
 # 如果文件已经存在，则复制到history目录并添加时间戳
-        if os.path.exists(local_filename):
-            copy_to_history_with_timestamp(local_filename)
+        if os.path.exists(local_filename):    
+            copy_to_history_with_timestamp(local_filename)    
             # 覆盖原文件（模拟重新下载）
             # 这里为了演示，我们重新下载的文件不会改变，所以这一步可以省略
             # 但在实际应用中，你可以在这里再次下载或处理文件
