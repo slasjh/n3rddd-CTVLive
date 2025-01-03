@@ -3,8 +3,8 @@ name: auto_donwload_m3u
 on:
   schedule:
     - cron: '30 9,21 * * *'
-  #workflow_dispatch:
-  push:
+  workflow_dispatch:
+  #push:
     branches:
       - ipv6
 
