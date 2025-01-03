@@ -23,45 +23,36 @@ def copy_to_history_with_timestamp(filename):
     shutil.copy2(filename, new_filename)
     print(f"Copied {filename} to {new_filename}")
 
+
 def main():
     m3u_files = [
-       {"url":"https://raw.githubusercontent.com/slasjh/n3rddd-CTVLive/refs/heads/ipv4/litelive.txt","filename":"v4_litelive.txt"},
-       {"url":"https://raw.githubusercontent.com/slasjh/n3rddd-CTVLive/refs/heads/ipv6/litelive.txt","filename":"v4_litelive.txt"},
-       {"url":"https://live.fanmingming.com/tv/m3u/ipv6.m3u","filename":"fmm.m3u"},
-       {"url":"https://tv.iill.top/m3u/Gather","filename":"Gather.m3u"},
+        {"url": "https://raw.githubusercontent.com/slasjh/n3rddd-CTVLive/refs/heads/ipv4/litelive.txt", "filename": "v4_litelive.txt"},
+        {"url": "https://raw.githubusercontent.com/slasjh/n3rddd-CTVLive/refs/heads/ipv6/litelive.txt", "filename": "v6_litelive.txt"},  # 注意这里我修改了文件名以避免冲突
+        {"url": "https://live.fanmingming.com/tv/m3u/ipv6.m3u", "filename": "fmm.m3u"},
+        {"url": "https://tv.iill.top/m3u/Gather", "filename": "Gather.m3u"},
     ]
-  #for url in urls:
-        #local_filename = os.path.basename(url.split('/')[-1])
-    for file_info in m3u_files:    
-         url = file_info["url"]    
-         local_filename = file_info["filename"]    
+
+    # 如果要使用这个循环，请取消注释并确保它正确缩进
+    # for url in urls:  # 这行代码是错误的，因为urls变量没有定义
+    #     local_filename = os.path.basename(url.split('/')[-1])
+    #     download_file(url, local_filename)
+    #     ...  # 其他处理逻辑
+
+    for file_info in m3u_files:
+        url = file_info["url"]
+        local_filename = file_info["filename"]
         # 下载文件
-
-        download_file(url, local_filename)
-
-        
+        download_file(url, local_filename)  # 确保这个函数已经定义
 
         # 如果文件已经存在，则复制到history目录并添加时间戳
-
         if os.path.exists(local_filename):
-
-            copy_to_history_with_timestamp(local_filename)
+            copy_to_history_with_timestamp(local_filename)  # 确保这个函数已经定义
 
             # 覆盖原文件（模拟重新下载）
-
             # 这里为了演示，我们重新下载的文件不会改变，所以这一步可以省略
-
             # 但在实际应用中，你可以在这里再次下载或处理文件
-
             # 例如，可以删除原文件再下载，或者保留原文件不变
 
- 
-
-if __name__ == "__main__":
-
-    main()
-        
-        
-
+# 确保在文件末尾或适当位置调用main函数
 if __name__ == "__main__":
     main()
