@@ -27,8 +27,8 @@ def main():
     m3u_files = [
        {"url":"https://raw.githubusercontent.com/slasjh/n3rddd-CTVLive/refs/heads/ipv4/litelive.txt","filename":"v4_litelive.txt"},
        {"url":"https://raw.githubusercontent.com/slasjh/n3rddd-CTVLive/refs/heads/ipv6/litelive.txt","filename":"v4_litelive.txt"},
-       {"url":"https://live.fanmingming.com/tv/m3u/ipv6.m3u","filename":fmm.m3u"},
-       {"url":https://tv.iill.top/m3u/Gather","filename":Gather.m3u"},
+       {"url":"https://live.fanmingming.com/tv/m3u/ipv6.m3u","filename":"fmm.m3u"},
+       {"url":"https://tv.iill.top/m3u/Gather","filename":"Gather.m3u"},
     ]
   #for url in urls:
         #local_filename = os.path.basename(url.split('/')[-1])
