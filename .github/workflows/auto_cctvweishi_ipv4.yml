@@ -1,0 +1,58 @@
+name: auto_cctvweishi_ipv6
+
+on:
+  schedule:
+    - cron: '30 10,21 * * *'
+  push:
+    branches:
+      - ipv4
+
+jobs:
+  run_script:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.10'
+
+    - name: Cache dependencies
+      uses: actions/cache@v2
+      with:
+        path: ~/.cache/pip
+        key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+        restore-keys: |
+          ${{ runner.os }}-pip-
+
+    - name: Install dependencies
+      run: |
+        pip install requests
+
+
+    - name: Run Python litemain script
+      run: python litemain_cctvweishi.py
+
+    - name: Commit and push if changed
+      run: |
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+          current_datetime=$(date +"%Y%m%d_%H%M%S")
+          cp live.txt history/"${current_datetime}_live.txt"
+          cp litelive.txt history/"${current_datetime}_litelive.txt"
+          git add history/"${current_datetime}_live.txt"
+          git add history/"${current_datetime}_litelive.txt"
+          git commit -m "Archive file with timestamp"
+        git add -A
+        
+        if ! git diff --staged --quiet; then
+          git commit -m "Auto-update live files"
+          git push
+        fi
+        
+
+    env:
+      TZ: Asia/Shanghai
