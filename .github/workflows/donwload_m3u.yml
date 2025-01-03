@@ -34,7 +34,7 @@ jobs:
         pip install requests
 
     - name: Run Python main script
-      run: python ipv6/yuan_jiekou/donwload_m3u.py
+      run: python yuan_jiekou/download_m3u.py
 
 
     - name: Commit and push if changed
