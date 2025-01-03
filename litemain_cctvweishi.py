@@ -178,7 +178,7 @@ def updateChannelUrlsM3U(channels, template_channels):
                                         f_m3u.write(new_url + "\n")
                                         f_txt.write(f"{channel_name},{new_url}\n")
                                         written_urls.add(base_url)
-                                        #index += 1
+                                        index += 1
 
             f_txt.write("\n")
 
