@@ -3,9 +3,10 @@ name: Daily Update
 on:
   schedule:
     - cron: '30 9,21 * * *'
-  workflow_dispatch:
+  #workflow_dispatch:
+  push:
     branches:
-      - main
+      - ipv6
 
 jobs:
   run_script:
