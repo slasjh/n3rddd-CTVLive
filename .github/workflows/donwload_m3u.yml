@@ -1,4 +1,4 @@
-name: Daily Update
+name: auto_donwload_m3u
 
 on:
   schedule:
