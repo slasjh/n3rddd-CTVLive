@@ -2,12 +2,13 @@ ip_version_priority = "ipv4"
 
 source_urls = [
     "http://156.238.251.122:35455/tv.m3u", #ADDED BY lee from sshh. ON 31/12/2024
-    "https://live.iptv365.org/live.txt", #ADDED BY lee from kimwang1978/collect-tv-txt (juhe) ON 31/12/2024 
+    "https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u, #ADDED BY lee from sshh. ON 4/1/2025
     "https://raw.githubusercontent.com/Guovin/TV/gd/output/result.m3u", #ADDED BY lee from Guovin/TV/gd/ (juhe) ON 31/12/2024
+    "https://raw.githubusercontent.com/zwc456baby/iptv_alive/master/live.m3u", #ADDED BY lee from zwc456baby cu (juhe) ON 31/12/2024 
     "https://live.fanmingming.com/tv/m3u/ipv6.m3u", #ADDED BY lee from fanmingming. ON 31/12/2024 
     "https://raw.githubusercontent.com/YanG-1989/m3u/main/Gather.m3u", #ADDED BY lee from https://tv.iill.top/m3u/Gather" ON 31/12/2024 
     "http://175.178.251.183:6689/live.m3u", #ADDED BY lee from yuanlz77" ON 31/12/2024  
-    "https://raw.githubusercontent.com/zwc456baby/iptv_alive/master/live.m3u", #ADDED BY lee from zwc456baby cu (juhe) ON 31/12/2024 
+    "https://live.iptv365.org/live.txt", #ADDED BY lee from kimwang1978/collect-tv-txt (juhe) ON 31/12/2024 
     "https://raw.githubusercontent.com/hero1898/tv/refs/heads/main/IPTV.m3u", #ADDED BY lee from hero1898 (juhe) ON 31/12/2024 
     "https://live.zbds.top/tv/iptv6.txt", #ADDED zbds (juhe) ON 31/12/2024 
     "https://live.zbds.top/tv/iptv4.txt", #ADDED zbds (juhe) ON 31/12/2024
