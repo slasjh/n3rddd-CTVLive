@@ -329,7 +329,7 @@ if __name__ == "__main__":
         #"https://gitlab.com/p2v5/wangtv/-/raw/main/lunbo.txt",
         #'https://gitlab.com/p2v5/wangtv/-/raw/main/wang-tvlive.txt'
         #'https://raw.githubusercontent.com/kimwang1978/collect-tv-txt/refs/heads/main/live.txt',
-        'https://raw.githubusercontent.com/slasjh/n3rddd-CTVLive/refs/heads/ipv4/litelive_cctvweishi.txt'
+        'https://raw.githubusercontent.com/slasjh/n3rddd-CTVLive/refs/heads/ipv4/litelive_cctvweishi_test.txt'
     ]
     for url in urls:
         print(f"处理URL: {url}")
@@ -346,7 +346,8 @@ if __name__ == "__main__":
 
     #input_file1 = os.path.join(parent_dir, 'live.txt')  # 输入文件路径1
     input_file1 = os.path.join(current_dir, 'live_test.txt')  # 输入文件路径1
-    input_file2 = os.path.join(current_dir, 'blacklist_auto.txt')  # 输入文件路径2 
+    #input_file2 = os.path.join(current_dir, 'blacklist_auto.txt')  # 输入文件路径2
+    input_file2 = os.path.join(current_dir, 'live_test.txt')  # 输入文件路径2 
     success_file = os.path.join(current_dir, 'whitelist_auto.txt')  # 成功清单文件路径
     success_file_tv = os.path.join(current_dir, 'whitelist_auto_tv.txt')  # 成功清单文件路径（另存一份直接引用源）
     blacklist_file = os.path.join(current_dir, 'blacklist_auto.txt')  # 黑名单文件路径
