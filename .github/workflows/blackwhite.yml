@@ -36,7 +36,7 @@ jobs:
 
 
     - name: Run Python script
-      run: python blackwhite.py
+      run: python blacklist1/blacklist1.py
 
     - name: Commit and push if changed
       run: |
