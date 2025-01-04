@@ -37,7 +37,7 @@ url_blacklist = [
 
 announcements = [
     {
-        "channel": "🤠小土豆央视卫视",
+        "channel": "🤠小土豆央视卫视ipv6",
         "entries": [
             {"name":"小土豆直播","url":"https://cors.isteed.cc/https://raw.githubusercontent.com/n3rddd/N3RD/master/JN/N3RD/W/CTVThemeSong1.mp4","logo":"https://cors.isteed.cc/https://raw.githubusercontent.com/n3rddd/N3RD/master/JN/N3RD/W/ICON1.png"},
             {"name":"免费自用勿商用","url":"https://cors.isteed.cc/https://raw.githubusercontent.com/n3rddd/N3RD/master/JN/N3RD/W/CTVThemeSong2.mp4","logo":"https://cors.isteed.cc/https://raw.githubusercontent.com/n3rddd/N3RD/master/JN/N3RD/W/ICON2.png"},
