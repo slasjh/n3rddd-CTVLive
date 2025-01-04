@@ -327,8 +327,8 @@ if __name__ == "__main__":
     # 定义要访问的多个URL
     urls = [
         "https://gitlab.com/p2v5/wangtv/-/raw/main/lunbo.txt",
-        'https://gitlab.com/p2v5/wangtv/-/raw/main/wang-tvlive.txt'
-        'https://raw.githubusercontent.com/kimwang1978/collect-tv-txt/refs/heads/main/live.txt',
+        #'https://gitlab.com/p2v5/wangtv/-/raw/main/wang-tvlive.txt'
+        #'https://raw.githubusercontent.com/kimwang1978/collect-tv-txt/refs/heads/main/live.txt',
         #''
     ]
     for url in urls:
@@ -344,7 +344,8 @@ if __name__ == "__main__":
     # # 获取根目录
     # root_dir = os.path.abspath(os.sep)  
 
-    input_file1 = os.path.join(parent_dir, 'live.txt')  # 输入文件路径1
+    #input_file1 = os.path.join(parent_dir, 'live.txt')  # 输入文件路径1
+    input_file1 = os.path.join(current_dir, 'live_test.txt')  # 输入文件路径1
     input_file2 = os.path.join(current_dir, 'blacklist_auto.txt')  # 输入文件路径2 
     success_file = os.path.join(current_dir, 'whitelist_auto.txt')  # 成功清单文件路径
     success_file_tv = os.path.join(current_dir, 'whitelist_auto_tv.txt')  # 成功清单文件路径（另存一份直接引用源）
