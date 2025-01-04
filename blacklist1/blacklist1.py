@@ -24,7 +24,7 @@ def read_txt_file(file_path):
     return lines
 
 # 检测URL是否可访问并记录响应时间
-def check_url(url, timeout=6):
+def check_url(url, timeout=2):
     start_time = time.time()
     elapsed_time = None
     success = False
@@ -340,11 +340,11 @@ if __name__ == "__main__":
     # 获取上一层目录
     parent_dir = os.path.dirname(current_dir)
     # 获取再上一层目录
-    parent2_dir = os.path.dirname(parent_dir)
+    #parent2_dir = os.path.dirname(parent_dir)
     # # 获取根目录
     # root_dir = os.path.abspath(os.sep)  
 
-    input_file1 = os.path.join(parent2_dir, 'live.txt')  # 输入文件路径1
+    input_file1 = os.path.join(parent_dir, 'live.txt')  # 输入文件路径1
     input_file2 = os.path.join(current_dir, 'blacklist_auto.txt')  # 输入文件路径2 
     success_file = os.path.join(current_dir, 'whitelist_auto.txt')  # 成功清单文件路径
     success_file_tv = os.path.join(current_dir, 'whitelist_auto_tv.txt')  # 成功清单文件路径（另存一份直接引用源）
