@@ -32,8 +32,8 @@ jobs:
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
           git add blacklist1/whitelist_auto.txt
-          git add blacklist1/whitelist_auto.txt
-          git add blacklist1/blacklist_auto_tv.txt
+          git add blacklist1/whitelist_auto_tv.txt
+          git add blacklist1/blacklist_auto.txt
           git commit -m ":tv:  (special)AutoUpdate $(date -d "+8 hours" +'%Y%m%d')"
           
     - name: Push changes
