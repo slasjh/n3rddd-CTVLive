@@ -32,7 +32,7 @@ jobs:
         pip install requests
 
 
-    - name: Run Python litemain script
+    - name: Run Python  script
       run: python litemain_cctvweishi.py
 
     - name: Commit and push if changed
