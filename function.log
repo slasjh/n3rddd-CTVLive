@@ -1,24 +1,24 @@
-2025-01-04 08:35:21,933 - ERROR - url: http://156.238.251.122:35455/tv.m3u 爬取失败❌, Error: HTTPConnectionPool(host='156.238.251.122', port=35455): Max retries exceeded with url: /tv.m3u (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8b7f88f250>: Failed to establish a new connection: [Errno 111] Connection refused'))
-2025-01-04 08:35:22,148 - INFO - url: https://live.fanmingming.com/tv/m3u/ipv6.m3u 获取成功，判断为m3u格式
-2025-01-04 08:35:22,149 - INFO - url: https://live.fanmingming.com/tv/m3u/ipv6.m3u 爬取成功✅，包含频道分类: 央视频道, 卫视频道, 数字频道, 上海频道, 浙江频道, 内蒙频道
-2025-01-04 08:35:22,244 - INFO - url: https://raw.githubusercontent.com/YanG-1989/m3u/main/Gather.m3u 获取成功，判断为m3u格式
-2025-01-04 08:35:22,245 - INFO - url: https://raw.githubusercontent.com/YanG-1989/m3u/main/Gather.m3u 爬取成功✅，包含频道分类: •4K「IPV4」, •4K「IPV6」, •央视「IPV6」, •卫视「IPV6」, •NewTV「IPV6」, •数字「IPV6」, •地区「IPV6」, •咪咕「移动」, •咪咕「网·Ⅰ」, •咪咕「网·Ⅱ」, •游戏「赛事」, •埋堆「轮播」, •影视「轮播」
-2025-01-04 08:35:24,524 - INFO - url: http://175.178.251.183:6689/live.m3u 获取成功，判断为m3u格式
-2025-01-04 08:35:24,532 - INFO - url: http://175.178.251.183:6689/live.m3u 爬取成功✅，包含频道分类: 公告信息, 央视频道, 卫视频道, 港·澳·台, 少儿频道, 影视频道, 广东频道, 浙江频道, 上海频道
-2025-01-04 08:35:24,706 - INFO - url: https://raw.githubusercontent.com/Guovin/TV/gd/output/result.m3u 获取成功，判断为m3u格式
-2025-01-04 08:35:24,711 - INFO - url: https://raw.githubusercontent.com/Guovin/TV/gd/output/result.m3u 爬取成功✅，包含频道分类: 🕘️更新时间, 📺央视频道, 💰央视付费频道, 📡卫视频道, ☘️广东频道, ☘️浙江频道, ☘️北京频道, ☘️上海频道, ☘️重庆频道, ☘️江苏频道, ☘️辽宁频道, ☘️湖南频道, ☘️湖北频道, ☘️广西频道, ☘️天津频道, ☘️四川频道, ☘️陕西频道, ☘️福建频道, ☘️海南频道, ☘️河南频道, ☘️河北频道, ☘️贵州频道, ☘️甘肃频道, ☘️新疆频道, ☘️山东频道, ☘️山西频道, ☘️安徽频道, ☘️宁夏频道, ☘️吉林频道, ☘️内蒙古频道, ☘️云南频道, ☘️青海频道, ☘️黑龙江频道, 🌊港·澳·台, 🎬电影频道, 🎥咪咕直播, 🏀体育频道, 🪁动画频道, 🎮游戏频道, 🎵音乐频道, 🏛经典剧场
-2025-01-04 08:35:24,977 - INFO - url: https://live.iptv365.org/live.txt 获取成功，判断为txt格式
-2025-01-04 08:35:25,032 - INFO - url: https://live.iptv365.org/live.txt 爬取成功✅，包含频道分类: 更新时间, 💓专享源🅰️, 💓专享源🅱️, 💓专享央视, 💓专享卫视, 💓港澳台📶, 💓 AKTV📶, 💓台湾台📶, 💓电视剧🔁, 💓优质个源, 💓儿童专享, 💓咪咕直播, 🏀SPORTS⚽️, 🍹定制台☕️, 💓英语频道, 💓4K(Test), 🌐央视频道, 📡卫视频道, 上海频道, 体育频道, 电影频道, 电视剧频道, 明星, 主题片, 港澳台, 国际台, 纪录片, 动画片, 戏曲频道, 综艺频道, 音乐频道, 游戏频道, ☘️湖南频道, ☘️湖北频道, ☘️广东频道, ☘️浙江频道, ☘️山东频道, ☘️江苏频道, ☘️安徽频道, ☘️海南频道, ☘️内蒙频道, ☘️辽宁频道, ☘️陕西频道, ☘️山西频道, ☘️云南频道, ☘️北京频道, ☘️重庆频道, ☘️福建频道, ☘️甘肃频道, ☘️广西频道, ☘️贵州频道, ☘️河北频道, ☘️河南频道, ☘️黑龙江频道, ☘️吉林频道, ☘️江西频道, ☘️宁夏频道, ☘️青海频道, ☘️四川频道, ☘️天津频道, ☘️新疆频道, 解说频道, 春晚, 直播中国, MTV, 收音机频道, ❤️与凤行, ❤️以家人之名
-2025-01-04 08:35:25,186 - INFO - url: https://raw.githubusercontent.com/zwc456baby/iptv_alive/master/live.m3u 获取成功，判断为m3u格式
-2025-01-04 08:35:25,753 - INFO - url: https://raw.githubusercontent.com/hero1898/tv/refs/heads/main/IPTV.m3u 获取成功，判断为m3u格式
-2025-01-04 08:35:25,825 - INFO - url: https://raw.githubusercontent.com/hero1898/tv/refs/heads/main/IPTV.m3u 爬取成功✅，包含频道分类: 🇨🇳央视频道🇨🇳, 🛰️卫视频道🛰️, 🥝数字频道🥝, 🦁NewTV频道🦁, 🇭🇰港澳台🇭🇰
-2025-01-04 08:35:26,093 - INFO - url: https://live.zbds.top/tv/iptv6.txt 获取成功，判断为txt格式
-2025-01-04 08:35:26,094 - INFO - url: https://live.zbds.top/tv/iptv6.txt 爬取成功✅，包含频道分类: 央视频道, 卫视频道, 电影频道, 数字频道, 儿童频道, 地方频道, 综艺频道, 体育频道, 更新时间
-2025-01-04 08:35:26,162 - INFO - url: https://live.zbds.top/tv/iptv4.txt 获取成功，判断为txt格式
-2025-01-04 08:35:26,167 - INFO - url: https://live.zbds.top/tv/iptv4.txt 爬取成功✅，包含频道分类: 央视频道, 卫视频道, 电影频道, 数字频道, 儿童频道, 地方频道, 综艺频道, 纪录频道, 体育频道, 解说频道, 游戏频道, 音乐频道, 戏曲频道, 更新时间
-2025-01-04 08:35:26,712 - INFO - url: https://raw.githubusercontent.com/n3rddd/CTVLive/master/live.m3u 获取成功，判断为m3u格式
-2025-01-04 08:35:26,766 - INFO - url: https://raw.githubusercontent.com/n3rddd/CTVLive/master/live.m3u 爬取成功✅，包含频道分类: 🤠雷蒙影视直播, 🇨🇳央视, 🇨🇳高清, 📡卫视, 🇭🇰香港, 🇹🇼台湾, 🇲🇴澳门, 🥘重庆, 🎞影视, ❤咪咕
-2025-01-04 08:35:26,939 - INFO - url: https://raw.githubusercontent.com/xiongjian83/zubo/refs/heads/main/live.txt 获取成功，判断为txt格式
-2025-01-04 08:35:26,947 - INFO - url: https://raw.githubusercontent.com/xiongjian83/zubo/refs/heads/main/live.txt 爬取成功✅，包含频道分类: 公告, 📡  央视频道, 📡  卫视频道, 📡  江西频道, 📡  北京频道, 📡  上海频道, 📡  浙江频道, 📡  江苏频道, 📡  广东频道, 📡  湖南频道, 📡  福建频道, 📡  湖北频道, 📡  天津频道, 📡  安徽频道, 📡  河南频道, 📡  河北频道, 📡  重庆频道, 📡  四川频道, 📡  陕西频道, 📡  广西频道, 🇨🇳咪咕直播, 📡  香港频道p2p, 📡  台湾频道p2p, 📡  新闻频道p2p, 📡  电影频道p2p, 📡  戏剧频道p2p, 🇨🇳数字4K, 🇨🇳虎牙直播, 🇨🇳斗鱼直播, 🇨🇳电视剧轮播, 🇨🇳 YY频道, 🇨🇳埋堆堆（港剧）, 🇨🇳 NewTV
-2025-01-04 08:35:27,114 - INFO - url: https://raw.githubusercontent.com/YueChan/Live/main/IPTV.m3u 获取成功，判断为m3u格式
-2025-01-04 08:35:27,115 - INFO - url: https://raw.githubusercontent.com/YueChan/Live/main/IPTV.m3u 爬取成功✅，包含频道分类: 央视, 卫视, 地方
+2025-01-04 08:40:32,927 - ERROR - url: http://156.238.251.122:35455/tv.m3u 爬取失败❌, Error: HTTPConnectionPool(host='156.238.251.122', port=35455): Max retries exceeded with url: /tv.m3u (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fb5cb59f250>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-01-04 08:40:33,002 - INFO - url: https://live.fanmingming.com/tv/m3u/ipv6.m3u 获取成功，判断为m3u格式
+2025-01-04 08:40:33,003 - INFO - url: https://live.fanmingming.com/tv/m3u/ipv6.m3u 爬取成功✅，包含频道分类: 央视频道, 卫视频道, 数字频道, 上海频道, 浙江频道, 内蒙频道
+2025-01-04 08:40:33,063 - INFO - url: https://raw.githubusercontent.com/YanG-1989/m3u/main/Gather.m3u 获取成功，判断为m3u格式
+2025-01-04 08:40:33,064 - INFO - url: https://raw.githubusercontent.com/YanG-1989/m3u/main/Gather.m3u 爬取成功✅，包含频道分类: •4K「IPV4」, •4K「IPV6」, •央视「IPV6」, •卫视「IPV6」, •NewTV「IPV6」, •数字「IPV6」, •地区「IPV6」, •咪咕「移动」, •咪咕「网·Ⅰ」, •咪咕「网·Ⅱ」, •游戏「赛事」, •埋堆「轮播」, •影视「轮播」
+2025-01-04 08:40:37,476 - INFO - url: http://175.178.251.183:6689/live.m3u 获取成功，判断为m3u格式
+2025-01-04 08:40:37,484 - INFO - url: http://175.178.251.183:6689/live.m3u 爬取成功✅，包含频道分类: 公告信息, 央视频道, 卫视频道, 港·澳·台, 少儿频道, 影视频道, 广东频道, 浙江频道, 上海频道
+2025-01-04 08:40:37,683 - INFO - url: https://raw.githubusercontent.com/Guovin/TV/gd/output/result.m3u 获取成功，判断为m3u格式
+2025-01-04 08:40:37,689 - INFO - url: https://raw.githubusercontent.com/Guovin/TV/gd/output/result.m3u 爬取成功✅，包含频道分类: 🕘️更新时间, 📺央视频道, 💰央视付费频道, 📡卫视频道, ☘️广东频道, ☘️浙江频道, ☘️北京频道, ☘️上海频道, ☘️重庆频道, ☘️江苏频道, ☘️辽宁频道, ☘️湖南频道, ☘️湖北频道, ☘️广西频道, ☘️天津频道, ☘️四川频道, ☘️陕西频道, ☘️福建频道, ☘️海南频道, ☘️河南频道, ☘️河北频道, ☘️贵州频道, ☘️甘肃频道, ☘️新疆频道, ☘️山东频道, ☘️山西频道, ☘️安徽频道, ☘️宁夏频道, ☘️吉林频道, ☘️内蒙古频道, ☘️云南频道, ☘️青海频道, ☘️黑龙江频道, 🌊港·澳·台, 🎬电影频道, 🎥咪咕直播, 🏀体育频道, 🪁动画频道, 🎮游戏频道, 🎵音乐频道, 🏛经典剧场
+2025-01-04 08:40:37,977 - INFO - url: https://live.iptv365.org/live.txt 获取成功，判断为txt格式
+2025-01-04 08:40:38,030 - INFO - url: https://live.iptv365.org/live.txt 爬取成功✅，包含频道分类: 更新时间, 💓专享源🅰️, 💓专享源🅱️, 💓专享央视, 💓专享卫视, 💓港澳台📶, 💓 AKTV📶, 💓台湾台📶, 💓电视剧🔁, 💓优质个源, 💓儿童专享, 💓咪咕直播, 🏀SPORTS⚽️, 🍹定制台☕️, 💓英语频道, 💓4K(Test), 🌐央视频道, 📡卫视频道, 上海频道, 体育频道, 电影频道, 电视剧频道, 明星, 主题片, 港澳台, 国际台, 纪录片, 动画片, 戏曲频道, 综艺频道, 音乐频道, 游戏频道, ☘️湖南频道, ☘️湖北频道, ☘️广东频道, ☘️浙江频道, ☘️山东频道, ☘️江苏频道, ☘️安徽频道, ☘️海南频道, ☘️内蒙频道, ☘️辽宁频道, ☘️陕西频道, ☘️山西频道, ☘️云南频道, ☘️北京频道, ☘️重庆频道, ☘️福建频道, ☘️甘肃频道, ☘️广西频道, ☘️贵州频道, ☘️河北频道, ☘️河南频道, ☘️黑龙江频道, ☘️吉林频道, ☘️江西频道, ☘️宁夏频道, ☘️青海频道, ☘️四川频道, ☘️天津频道, ☘️新疆频道, 解说频道, 春晚, 直播中国, MTV, 收音机频道, ❤️与凤行, ❤️以家人之名
+2025-01-04 08:40:38,142 - INFO - url: https://raw.githubusercontent.com/zwc456baby/iptv_alive/master/live.m3u 获取成功，判断为m3u格式
+2025-01-04 08:40:38,467 - INFO - url: https://raw.githubusercontent.com/hero1898/tv/refs/heads/main/IPTV.m3u 获取成功，判断为m3u格式
+2025-01-04 08:40:38,538 - INFO - url: https://raw.githubusercontent.com/hero1898/tv/refs/heads/main/IPTV.m3u 爬取成功✅，包含频道分类: 🇨🇳央视频道🇨🇳, 🛰️卫视频道🛰️, 🥝数字频道🥝, 🦁NewTV频道🦁, 🇭🇰港澳台🇭🇰
+2025-01-04 08:40:38,621 - INFO - url: https://live.zbds.top/tv/iptv6.txt 获取成功，判断为txt格式
+2025-01-04 08:40:38,623 - INFO - url: https://live.zbds.top/tv/iptv6.txt 爬取成功✅，包含频道分类: 央视频道, 卫视频道, 电影频道, 数字频道, 儿童频道, 地方频道, 综艺频道, 体育频道, 更新时间
+2025-01-04 08:40:38,685 - INFO - url: https://live.zbds.top/tv/iptv4.txt 获取成功，判断为txt格式
+2025-01-04 08:40:38,689 - INFO - url: https://live.zbds.top/tv/iptv4.txt 爬取成功✅，包含频道分类: 央视频道, 卫视频道, 电影频道, 数字频道, 儿童频道, 地方频道, 综艺频道, 纪录频道, 体育频道, 解说频道, 游戏频道, 音乐频道, 戏曲频道, 更新时间
+2025-01-04 08:40:39,110 - INFO - url: https://raw.githubusercontent.com/n3rddd/CTVLive/master/live.m3u 获取成功，判断为m3u格式
+2025-01-04 08:40:39,163 - INFO - url: https://raw.githubusercontent.com/n3rddd/CTVLive/master/live.m3u 爬取成功✅，包含频道分类: 🤠雷蒙影视直播, 🇨🇳央视, 🇨🇳高清, 📡卫视, 🇭🇰香港, 🇹🇼台湾, 🇲🇴澳门, 🥘重庆, 🎞影视, ❤咪咕
+2025-01-04 08:40:39,302 - INFO - url: https://raw.githubusercontent.com/xiongjian83/zubo/refs/heads/main/live.txt 获取成功，判断为txt格式
+2025-01-04 08:40:39,309 - INFO - url: https://raw.githubusercontent.com/xiongjian83/zubo/refs/heads/main/live.txt 爬取成功✅，包含频道分类: 公告, 📡  央视频道, 📡  卫视频道, 📡  江西频道, 📡  北京频道, 📡  上海频道, 📡  浙江频道, 📡  江苏频道, 📡  广东频道, 📡  湖南频道, 📡  福建频道, 📡  湖北频道, 📡  天津频道, 📡  安徽频道, 📡  河南频道, 📡  河北频道, 📡  重庆频道, 📡  四川频道, 📡  陕西频道, 📡  广西频道, 🇨🇳咪咕直播, 📡  香港频道p2p, 📡  台湾频道p2p, 📡  新闻频道p2p, 📡  电影频道p2p, 📡  戏剧频道p2p, 🇨🇳数字4K, 🇨🇳虎牙直播, 🇨🇳斗鱼直播, 🇨🇳电视剧轮播, 🇨🇳 YY频道, 🇨🇳埋堆堆（港剧）, 🇨🇳 NewTV
+2025-01-04 08:40:39,325 - INFO - url: https://raw.githubusercontent.com/YueChan/Live/main/IPTV.m3u 获取成功，判断为m3u格式
+2025-01-04 08:40:39,325 - INFO - url: https://raw.githubusercontent.com/YueChan/Live/main/IPTV.m3u 爬取成功✅，包含频道分类: 央视, 卫视, 地方
