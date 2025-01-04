@@ -3,12 +3,9 @@ name: 'Daily Job(blackwhite)'
 on:
   schedule:
     - cron: '30 23 * * *'  # UTC
-  workflow_dispatch:
-    inputs:
-      environment:
-        description: 'Daily Job(special)'
-        required: true
-        default: 'production'
+  push:
+    branches:
+      - ipv4
 
 jobs:
   run_job:
