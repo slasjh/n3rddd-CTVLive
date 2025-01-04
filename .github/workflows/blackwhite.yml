@@ -1,11 +1,14 @@
-name: 'Daily Job(blackwhite)'
+name: 'Daily blackwhite'
 
 on:
   schedule:
     - cron: '30 23 * * *'  # UTC
-  push:
-    branches:
-      - ipv4
+  workflow_dispatch:
+  branches:
+    - main
+  #push:
+    #branches:
+      #- ipv4
 
 jobs:
   run_job:
