@@ -1,47 +1,52 @@
-name: 'Daily blackwhite'
+name: blackwhite
 
 on:
   schedule:
-    - cron: '30 23 * * *'  # UTC
+    - cron: '30 10,21 * * *'
   workflow_dispatch:
-  branches:
-    - main
-  #push:
-    #branches:
-      #- ipv4
+
 
 jobs:
-  run_job:
+  run_script:
     runs-on: ubuntu-latest
-    
+
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
-      
+
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
         python-version: '3.10'
-        
+
+    - name: Cache dependencies
+      uses: actions/cache@v2
+      with:
+        path: ~/.cache/pip
+        key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+        restore-keys: |
+          ${{ runner.os }}-pip-
+
     - name: Install dependencies
       run: |
-        python -m pip install --upgrade pip
-        
+        pip install requests
+
+
     - name: Run Python script
-      run: python blacklist1/blacklist1.py
-          
-    - name: Commit changes
+      run: python blackwhite..py
+
+    - name: Commit and push if changed
       run: |
-          git config --local user.email "actions@github.com"
-          git config --local user.name "GitHub Actions"
-          git add blacklist1/whitelist_auto.txt
-          git add blacklist1/whitelist_auto_tv.txt
-          git add blacklist1/blacklist_auto.txt
-          git commit -m ":tv:  (special)AutoUpdate $(date -d "+8 hours" +'%Y%m%d')"
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
           
-    - name: Push changes
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-    
+        git add -A
         
+        if ! git diff --staged --quiet; then
+          git commit -m "Auto-update white"
+          git push
+        fi
+        
+
+    env:
+      TZ: Asia/Shanghai
