@@ -328,7 +328,7 @@ if __name__ == "__main__":
     urls = [
         "https://gitlab.com/p2v5/wangtv/-/raw/main/lunbo.txt",
         'https://gitlab.com/p2v5/wangtv/-/raw/main/wang-tvlive.txt'
-        #'',
+        'https://raw.githubusercontent.com/kimwang1978/collect-tv-txt/refs/heads/main/live.txt',
         #''
     ]
     for url in urls:
