@@ -33,6 +33,8 @@ jobs:
     - name: Install dependencies
       run: |
         pip install requests
+        sudo apt install -y ffmpeg
+        pip install subprocess
 
 
     - name: Run Python script
