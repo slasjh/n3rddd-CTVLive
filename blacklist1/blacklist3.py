@@ -452,7 +452,7 @@ if __name__ == "__main__":
     # 给successlist, blacklist排序
     # 定义排序函数
     def successlist_sort_key(item):
-        time_str = item.split(',')[0].replace('ms', '')
+        time_str = item.split(',')[0].replace('MB/S', '')
         return float(time_str)
     
     successlist=sorted(successlist, key=successlist_sort_key)
