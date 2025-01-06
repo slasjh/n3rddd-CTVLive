@@ -32,6 +32,8 @@ url_blacklist = [
     "111.230.30.193",
     "148.135.93.213:81",
     "live.goodiptv.club",
+    "wouu.net",
+    "kkk.jjjj.jiduo.me",
     "iptv.luas.edu.cn"
 ]
 
