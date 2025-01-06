@@ -3,8 +3,8 @@ name: auto_cctvweishi_ipv4
 on:
   schedule:
     - cron: '30 10,21 * * *'
-  ##workflow_dispatch:
-  push:
+  workflow_dispatch:
+  #push:
     branches:
       - ipv4
 
