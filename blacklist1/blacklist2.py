@@ -288,10 +288,10 @@ def process_urls_multithreaded(lines, max_workers=30):
     with ThreadPoolExecutor(max_workers=max_workers) as executor:
         futures = {executor.submit(process_line, line): line for line in lines}
         for future in as_completed(futures):
-            elapsed_time, result = future.result()
+            speed, elapsed_time, result = future.result()
             if result:
-                if elapsed_time is not None:
-                    successlist.append(f"{elapsed_time:.2f}ms,{result}")
+                if elapsed_time is not None and speed is not None :
+                    successlist.append(f"{speed:.2f}MB/S,{elapsed_time:.2f}ms,{result}")
                 else:
                     blacklist.append(result)
     return successlist, blacklist
@@ -441,7 +441,7 @@ if __name__ == "__main__":
         #"https://gitlab.com/p2v5/wangtv/-/raw/main/lunbo.txt",
         #'https://gitlab.com/p2v5/wangtv/-/raw/main/wang-tvlive.txt'
         #'https://raw.githubusercontent.com/kimwang1978/collect-tv-txt/refs/heads/main/live.txt',
-        'https://raw.githubusercontent.com/slasjh/n3rddd-CTVLive/refs/heads/ipv4/litelive_cctvweishi.txt'
+        'https://raw.githubusercontent.com/slasjh/n3rddd-CTVLive/refs/heads/ipv4/litelive_cctvweishi_test.txt'
     ]
     for url in urls:
         print(f"处理URL: {url}")
