@@ -266,7 +266,7 @@ def process_line(line):
             return None, None, None
         
         speed = measure_speed(url)
-        if speed < 0.5:
+        if speed < 0.001:
             logging.warning(f"URL speed is too slow: {speed} MB/s for {url}")
             return None, None, None
         
