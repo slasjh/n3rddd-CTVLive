@@ -208,7 +208,8 @@ def measure_speed(source):
 
  
 
-    download_speed = len(data) / (end_time - start_time) / (1024 ** 2)  # in MB/s
+    #download_speed = len(data) / (end_time - start_time) / (1024 ** 2)  # in MB/s
+    download_speed = len(data) / (end_time - start_time) / 1024  # in kB/s
 
     return download_speed
     
@@ -230,7 +231,7 @@ def process_line(line):
             return None, None, None
         
         speed = measure_speed(url)
-        if speed > 0.001:
+        if speed > 1:
             return speed, elapsed_time, line.strip()
         else:
             logging.error(f"URL source validation failed for {url}")
@@ -252,7 +253,7 @@ def process_urls_multithreaded(lines, max_workers=30):
             speed, elapsed_time, result = future.result()
             if result:
                 if elapsed_time is not None and speed is not None :
-                    successlist.append(f"{speed:.2f}MB/S,{elapsed_time:.2f}ms,{result}")
+                    successlist.append(f"{speed:.2f}KB/S,{elapsed_time:.2f}ms,{result}")
                 else:
                     blacklist.append(result)
     return successlist, blacklist
@@ -402,7 +403,7 @@ if __name__ == "__main__":
         #"https://gitlab.com/p2v5/wangtv/-/raw/main/lunbo.txt",
         #'https://gitlab.com/p2v5/wangtv/-/raw/main/wang-tvlive.txt'
         #'https://raw.githubusercontent.com/kimwang1978/collect-tv-txt/refs/heads/main/live.txt',
-        'https://raw.githubusercontent.com/slasjh/n3rddd-CTVLive/refs/heads/ipv4/blacklist1/live_test_black2.txt'
+        'https://raw.githubusercontent.com/slasjh/n3rddd-CTVLive/refs/heads/ipv4/litelive_cctvweishi.txt'
     ]
     for url in urls:
         print(f"处理URL: {url}")
@@ -452,7 +453,7 @@ if __name__ == "__main__":
     # 给successlist, blacklist排序
     # 定义排序函数
     def successlist_sort_key(item):
-        time_str = item.split(',')[0].replace('MB/S', '')
+        time_str = item.split(',')[0].replace('KB/S', '')
         return float(time_str)
     
     successlist=sorted(successlist, key=successlist_sort_key)
