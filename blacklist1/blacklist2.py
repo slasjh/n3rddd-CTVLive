@@ -6,6 +6,7 @@ import os
 from urllib.parse import urlparse
 import socket  #check p3p源 rtp源
 import subprocess #check rtmp源
+import requests
 
 timestart = datetime.now()
 
@@ -153,20 +154,131 @@ def check_p2p_url(url, timeout):
     except Exception as e:
         print(f"Error checking {url}: {e}")
     return False
+    
+def extract_ipv4_sources(sources):
 
+    ipv4_pattern = re.compile(r'm3u8.*?\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}')
+
+    return [src for src in sources if ipv4_pattern.search(src)]
+
+ 
+
+def validate_source(source):
+
+    try:
+
+        ffmpeg_cmd = [
+
+            'ffmpeg',
+
+            '-i', source,
+
+            '-c', 'copy',
+
+            '-f', 'null', '-',
+
+            '-v', 'error',
+
+            '-y',
+
+            '-timeout', '5000000',  # 5 seconds timeout
+
+            '-probesize', '32768',
+
+            '-analyzeduration', '32768'
+
+        ]
+
+        subprocess.run(ffmpeg_cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+
+        return True
+
+    except subprocess.CalledProcessError as e:
+
+        print(f"FFmpeg validation failed for {source}: {e.stderr.decode()}")
+
+        return False
+
+ 
+
+def measure_speed(source):
+
+    start_time = time.time()
+
+    parsed = urlparse(source)
+
+    base_url = f"{parsed.scheme}://{parsed.netloc}"
+
+    playlist_url = source
+
+ 
+
+    # Assuming the source is a direct URL to a media file, adjust the range as needed
+
+    range_request_url = f"{playlist_url}?start=0&end=1048576"  # 1MB range
+
+    try:
+
+        response = requests.get(range_request_url, stream=True, timeout=5)
+
+        response.raise_for_status()
+
+        total_length = int(response.headers.get('content-length', 0))
+
+        data = response.content
+
+    except requests.RequestException as e:
+
+        print(f"Failed to measure speed for {source}: {e}")
+
+        return 0
+
+ 
+
+    end_time = time.time()
+
+    if total_length == 0 or len(data) == 0:
+
+        return 0
+
+ 
+
+    download_speed = len(data) / (end_time - start_time) / (1024 ** 2)  # in MB/s
+
+    return download_speed
+    
 # 处理单行文本并检测URL
 def process_line(line):
-    if "#genre#" in line or "://" not in line :
-        return None, None  # 跳过包含“#genre#”的行
-    parts = line.split(',')
-    if len(parts) == 2:
+    if "#genre#" in line or "://" not in line:
+        return None, None  # 跳过包含“#genre#”的行或不含“://”的行
+    
+    try:
+        parts = line.split(',')
+        if len(parts) != 2:
+            raise ValueError("Line does not contain exactly one comma.")
+        
         name, url = parts
-        elapsed_time, is_valid = check_url(url.strip())
-        if is_valid:
-            return elapsed_time, line.strip()
+        url = url.strip()
+        
+        elapsed_time, is_valid = check_url(url)
+        if not is_valid:
+            return None, None
+        
+        speed = measure_speed(url)
+        if speed < 0.5:
+            logging.warning(f"URL speed is too slow: {speed} MB/s")
+            return None, None
+        
+        if validate_source(url):
+            return speed, elapsed_time, line.strip()
         else:
-            return None, line.strip()
-    return None, None
+            logging.error(f"URL source validation failed for {url}")
+            return None, None
+    
+    except Exception as e:
+        # 捕获任何未处理的异常并记录错误
+        logging.error(f"An unexpected error occurred while processing line: {e}")
+        return None, None
 
 # 多线程处理文本并检测URL
 def process_urls_multithreaded(lines, max_workers=30):
