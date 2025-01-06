@@ -462,7 +462,7 @@ if __name__ == "__main__":
     urls_ok = len(successlist)
     urls_ng = len(blacklist)
 
-    # 把successlist整理一下，生成一个可以直接引用的源，方便用zyplayer手动check
+    ## 把successlist整理一下，生成一个可以直接引用的源，方便用zyplayer手动check
     def remove_prefix_from_lines(lines):
         result = []
         for line in lines:
