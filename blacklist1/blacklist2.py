@@ -250,7 +250,7 @@ def measure_speed(source):
 # 处理单行文本并检测URL
 def process_line(line):
     if "#genre#" in line or "://" not in line:
-        return None, None  # 跳过包含“#genre#”的行或不含“://”的行
+        return None, None, None  # 跳过包含“#genre#”的行或不含“://”的行
     
     try:
         parts = line.split(',')
@@ -262,23 +262,23 @@ def process_line(line):
         
         elapsed_time, is_valid = check_url(url)
         if not is_valid:
-            return None, None
+            return None, None, None
         
         speed = measure_speed(url)
         if speed < 0.5:
             logging.warning(f"URL speed is too slow: {speed} MB/s")
-            return None, None
+            return None, None, None
         
         if validate_source(url):
             return speed, elapsed_time, line.strip()
         else:
             logging.error(f"URL source validation failed for {url}")
-            return None, None
+            return None, None, None
     
     except Exception as e:
         # 捕获任何未处理的异常并记录错误
         logging.error(f"An unexpected error occurred while processing line: {e}")
-        return None, None
+        return None, None, None
 
 # 多线程处理文本并检测URL
 def process_urls_multithreaded(lines, max_workers=30):
