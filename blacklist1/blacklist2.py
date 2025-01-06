@@ -267,7 +267,7 @@ def process_line(line):
         
         speed = measure_speed(url)
         if speed < 0.5:
-            logging.warning(f"URL speed is too slow: {speed} MB/s")
+            logging.warning(f"URL speed is too slow: {speed} MB/s for {url}")
             return None, None, None
         
         if validate_source(url):
@@ -442,7 +442,7 @@ if __name__ == "__main__":
         #"https://gitlab.com/p2v5/wangtv/-/raw/main/lunbo.txt",
         #'https://gitlab.com/p2v5/wangtv/-/raw/main/wang-tvlive.txt'
         #'https://raw.githubusercontent.com/kimwang1978/collect-tv-txt/refs/heads/main/live.txt',
-        'https://raw.githubusercontent.com/slasjh/n3rddd-CTVLive/refs/heads/ipv4/litelive_cctvweishi_test.txt'
+        'https://raw.githubusercontent.com/slasjh/n3rddd-CTVLive/refs/heads/ipv4/litelive_cctvweishi.txt'
     ]
     for url in urls:
         print(f"处理URL: {url}")
@@ -508,7 +508,7 @@ if __name__ == "__main__":
         for line in lines:
             if  "#genre#" not in line and "," in line and "://" in line:
                 parts = line.split(",")
-                result.append(",".join(parts[1:]))
+                result.append(",".join(parts[2:]))
         return result
 
 
@@ -517,7 +517,7 @@ if __name__ == "__main__":
     successlist_tv = ["更新时间,#genre#"] +[version] + ['\n'] +\
                   ["whitelist,#genre#"] + remove_prefix_from_lines(successlist)
     successlist = ["更新时间,#genre#"] +[version] + ['\n'] +\
-                  ["RespoTime,whitelist,#genre#"] + successlist
+                  ["speed,RespoTime,whitelist,#genre#"] + successlist
     blacklist = ["更新时间,#genre#"] +[version] + ['\n'] +\
                 ["blacklist,#genre#"]  + blacklist
 
