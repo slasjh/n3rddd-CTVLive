@@ -1,4 +1,4 @@
-name: blackwhite3
+name: blackwhite4
 
 on:
   schedule:
@@ -33,11 +33,10 @@ jobs:
     - name: Install dependencies
       run: |
         pip install requests
-        sudo apt install -y ffmpeg
 
 
     - name: Run Python script
-      run: python blacklist1/blacklist3.py
+      run: python blacklist1/blacklist4.py
 
     - name: Commit and push if changed
       run: |
@@ -47,7 +46,7 @@ jobs:
         git add -A
         
         if ! git diff --staged --quiet; then
-          git commit -m "Auto-update white"
+          git commit -m "Auto-update white&black list"
           git push
         fi
         
