@@ -26,7 +26,7 @@ def read_txt_file(file_path):
     return lines
 
 # 检测URL是否可访问并记录响应时间
-def check_url(url, timeout=6):
+def check_url(url, timeout=3):
     start_time = time.time()
     elapsed_time = None
     success = False
@@ -62,6 +62,7 @@ def check_url(url, timeout=6):
         elapsed_time = None
 
     return elapsed_time, success
+    print(f"{url}resPonse速度为: {elapsed_time},{success}")
 
 def check_rtmp_url(url, timeout):
     try:
@@ -165,19 +166,27 @@ def extract_ipv4_sources(sources):
 
 def measure_speed(url):
     url_t = url.rstrip(url.split('/')[-1])  # 提取 m3u8 链接前缀
+    headers = {
+
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+
+    }
 
     try:
-        response = requests.get(url, timeout=1)
+
+
+        response = requests.get(url, headers=headers, timeout=2)
+        #response = requests.get(url, timeout=1)
         response.raise_for_status()
         lines = response.text.strip().split('\n')
         
         for line in lines:
             stripped_line = line.strip()
             if not stripped_line.startswith('#') and '.ts' in stripped_line:
-                ts_url = stripped_line if 'http' in stripped_line else url_t + '/' + stripped_line
+                ts_url = stripped_line if 'http' in stripped_line else url_t  + stripped_line
                 break
         else:
-            print("没有找到有效的 .ts 文件条目。")
+            print("{url}没有找到有效的 .ts 文件条目。")
             return 0  # 如果没有找到 .ts 文件，直接返回 0
 
         # 测量下载速度
@@ -185,30 +194,31 @@ def measure_speed(url):
         range_request_url = f"{ts_url}?start=0&end=1048576"  # 1MB range
 
         try:
-            response = requests.get(range_request_url, stream=True, timeout=5)
+            response = requests.get(range_request_url, headers=headers, stream=True, timeout=5)
             response.raise_for_status()
             total_length = int(response.headers.get('content-length', 0))
             data = b''.join(chunk for chunk in response.iter_content(1024))  # 使用迭代来接收数据
 
             if total_length == 0 or len(data) == 0:
-                print("无法获取内容长度或数据为空，无法测量速度。")
+                print("{ts_url}无法获取内容长度或数据为空，无法测量速度。")
                 return 0
 
             end_time = time.time()
             download_speed = len(data) / (end_time - start_time) / 1024  # in kB/s
             # 或者使用 MB/s: download_speed = len(data) / (end_time - start_time) / (1024 ** 2)
             return download_speed
+            print(f"{ts_url}下载速度为: {download_speed} kB/s")
 
         except requests.RequestException as e:
             print(f"下载 {ts_url} 失败: {e}")
             return 0
 
     except requests.RequestException as e:
-        print(f"请求 m3u8 文件失败: {e}")
+        print(f"{ts_url}请求 m3u8 文件失败: {e}")
         return 0
 
 
-    print(f"下载速度为: {download_speed} kB/s")
+
     
 # 处理单行文本并检测URL
 def process_line(line):
@@ -230,6 +240,7 @@ def process_line(line):
         speed = measure_speed(url)
         if speed > 100:
             return speed, elapsed_time, line.strip()
+            print
         else:
             logging.error(f"URL source validation failed for {url}")
             return None, None, None
@@ -251,6 +262,7 @@ def process_urls_multithreaded(lines, max_workers=30):
             if result:
                 if elapsed_time is not None and speed is not None :
                     successlist.append(f"{speed:.1f}KB/S,{elapsed_time:.2f}ms,{result}")
+                    print(f"{speed:.1f}KB/S,{elapsed_time:.2f}ms,{result}")
                 else:
                     blacklist.append(result)
     return successlist, blacklist
@@ -400,7 +412,7 @@ if __name__ == "__main__":
         #"https://gitlab.com/p2v5/wangtv/-/raw/main/lunbo.txt",
         #'https://gitlab.com/p2v5/wangtv/-/raw/main/wang-tvlive.txt'
         #'https://raw.githubusercontent.com/kimwang1978/collect-tv-txt/refs/heads/main/live.txt',
-        'https://raw.githubusercontent.com/slasjh/n3rddd-CTVLive/refs/heads/ipv4/litelive_cctvweishi.txt'
+        'https://raw.githubusercontent.com/slasjh/n3rddd-CTVLive/refs/heads/ipv4/litelive_cctvweishi_test.txt'
     ]
     for url in urls:
         print(f"处理URL: {url}")
