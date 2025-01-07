@@ -208,7 +208,7 @@ def measure_speed(url):
         return 0
 
 
-print(f"下载速度为: {download_speed} kB/s")
+    print(f"下载速度为: {download_speed} kB/s")
     
 # 处理单行文本并检测URL
 def process_line(line):
