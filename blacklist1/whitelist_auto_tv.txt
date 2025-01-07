@@ -1,13 +1,9 @@
 更新时间,#genre#
-20250107-15-52-11,url
+20250107-16-04-35,url
 
 
 whitelist,#genre#
-CCTV-3综艺,http://39.134.136.161:6610/000000001000/8378175926191110263/index.m3u8?livemode=1&stbId=10&channel-id=ystenlive&Contentid=8378175926191110263
-湖南卫视,http://222.134.245.16:9901/tsfile/live/0128_1.m3u8?key=txiptv&playlive=1&authid=0
-湖南卫视,http://101.65.33.225:9901/tsfile/live/0019_1.m3u8
-CCTV-3综艺,http://39.134.136.161:6610/000000001000/1000000001000011218/index.m3u8?livemode=1&stbId=10&channel-id=ystenlive&Contentid=1000000001000011218
-湖南卫视,http://222.134.245.16:9901/tsfile/live/0128_1.m3u8
-CCTV-3综艺,http://39.134.136.161:6610/000000001000/5000000002000020548/index.m3u8?livemode=1&stbId=10&channel-id=bestzb&Contentid=5000000002000020548
-CCTV-3综艺,http://39.134.136.161:6610/000000001000/1000000005000265003/index.m3u8?livemode=1&stbId=10&channel-id=ystenlive&Contentid=1000000005000265003
 湖南卫视,http://221.224.4.170:1111/tsfile/live/0128_1.m3u8
+CCTV-3综艺,http://39.134.136.161:6610/000000001000/1000000005000265003/index.m3u8?livemode=1&stbId=10&channel-id=ystenlive&Contentid=1000000005000265003
+CCTV-3综艺,http://39.134.136.161:6610/000000001000/1000000001000011218/index.m3u8?livemode=1&stbId=10&channel-id=ystenlive&Contentid=1000000001000011218
+CCTV-3综艺,http://39.134.136.161:6610/000000001000/5000000002000020548/index.m3u8?livemode=1&stbId=10&channel-id=bestzb&Contentid=5000000002000020548
