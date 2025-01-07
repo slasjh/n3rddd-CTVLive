@@ -186,7 +186,7 @@ def measure_speed(url):
                 ts_url = stripped_line if 'http' in stripped_line else url_t  + stripped_line
                 break
         else:
-            print("{url}没有找到有效的 .ts 文件条目。")
+            print("{url_t}没有找到有效的 .ts 文件条目。")
             return 0  # 如果没有找到 .ts 文件，直接返回 0
 
         # 测量下载速度
@@ -240,9 +240,9 @@ def process_line(line):
         speed = measure_speed(url)
         if speed > 100:
             return speed, elapsed_time, line.strip()
-            print
+            
         else:
-            logging.error(f"URL source validation failed for {url}")
+            logging.error(f"URL source validation failed or slowed for {url}")
             return None, None, None
     
     except Exception as e:
