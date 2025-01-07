@@ -165,6 +165,7 @@ def extract_ipv4_sources(sources):
 
 
 def measure_speed(url):
+    
     url_t = url.rstrip(url.split('/')[-1])  # 提取 m3u8 链接前缀
     headers = {
 
@@ -184,9 +185,12 @@ def measure_speed(url):
             stripped_line = line.strip()
             if not stripped_line.startswith('#') and '.ts' in stripped_line:
                 ts_url = stripped_line if 'http' in stripped_line else url_t  + stripped_line
+                print("找到的TS文件URL:", ts_url)
+
+                # 这里可以添加进一步处理 ts_url 的代码
                 break
         else:
-            print("{url_t}没有找到有效的 .ts 文件条目。")
+            print(f"在{url}中没有找到有效的.ts文件条目。")
             return 0  # 如果没有找到 .ts 文件，直接返回 0
 
         # 测量下载速度
@@ -200,21 +204,21 @@ def measure_speed(url):
             data = b''.join(chunk for chunk in response.iter_content(1024))  # 使用迭代来接收数据
 
             if total_length == 0 or len(data) == 0:
-                print("{ts_url}无法获取内容长度或数据为空，无法测量速度。")
+                print("{url} ts file无法获取内容长度或数据为空，无法测量速度。")
                 return 0
 
             end_time = time.time()
             download_speed = len(data) / (end_time - start_time) / 1024  # in kB/s
             # 或者使用 MB/s: download_speed = len(data) / (end_time - start_time) / (1024 ** 2)
             return download_speed
-            print(f"{ts_url}下载速度为: {download_speed} kB/s")
+            print(f"{url} ts file下载速度为: {download_speed} kB/s")
 
         except requests.RequestException as e:
-            print(f"下载 {ts_url} 失败: {e}")
+            print(f"下载 {url} ts file失败: {e}")
             return 0
 
     except requests.RequestException as e:
-        print(f"{ts_url}请求 m3u8 文件失败: {e}")
+        print(f"{url}请求 m3u8 文件失败: {e}")
         return 0
 
 
