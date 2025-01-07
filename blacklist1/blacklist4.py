@@ -162,56 +162,53 @@ def extract_ipv4_sources(sources):
 
     return [src for src in sources if ipv4_pattern.search(src)]
 
- 
 
- 
-
-def measure_speed(source):
-
-    start_time = time.time()
-
-    parsed = urlparse(source)
-
-    base_url = f"{parsed.scheme}://{parsed.netloc}"
-
-    playlist_url = source
-
- 
-
-    # Assuming the source is a direct URL to a media file, adjust the range as needed
-
-    range_request_url = f"{playlist_url}?start=0&end=1048576"  # 1MB range
+def measure_speed(url):
+    url_t = url.rstrip(url.split('/')[-1])  # 提取 m3u8 链接前缀
 
     try:
-
-        response = requests.get(range_request_url, stream=True, timeout=5)
-
+        response = requests.get(url, timeout=1)
         response.raise_for_status()
+        lines = response.text.strip().split('\n')
+        
+        for line in lines:
+            stripped_line = line.strip()
+            if not stripped_line.startswith('#') and '.ts' in stripped_line:
+                ts_url = stripped_line if 'http' in stripped_line else url_t + '/' + stripped_line
+                break
+        else:
+            print("没有找到有效的 .ts 文件条目。")
+            return 0  # 如果没有找到 .ts 文件，直接返回 0
 
-        total_length = int(response.headers.get('content-length', 0))
+        # 测量下载速度
+        start_time = time.time()
+        range_request_url = f"{ts_url}?start=0&end=1048576"  # 1MB range
 
-        data = response.content
+        try:
+            response = requests.get(range_request_url, stream=True, timeout=5)
+            response.raise_for_status()
+            total_length = int(response.headers.get('content-length', 0))
+            data = b''.join(chunk for chunk in response.iter_content(1024))  # 使用迭代来接收数据
+
+            if total_length == 0 or len(data) == 0:
+                print("无法获取内容长度或数据为空，无法测量速度。")
+                return 0
+
+            end_time = time.time()
+            download_speed = len(data) / (end_time - start_time) / 1024  # in kB/s
+            # 或者使用 MB/s: download_speed = len(data) / (end_time - start_time) / (1024 ** 2)
+            return download_speed
+
+        except requests.RequestException as e:
+            print(f"下载 {ts_url} 失败: {e}")
+            return 0
 
     except requests.RequestException as e:
-
-        print(f"Failed to measure speed for {source}: {e}")
-
+        print(f"请求 m3u8 文件失败: {e}")
         return 0
 
- 
 
-    end_time = time.time()
-
-    if total_length == 0 or len(data) == 0:
-
-        return 0
-
- 
-
-    #download_speed = len(data) / (end_time - start_time) / (1024 ** 2)  # in MB/s
-    download_speed = len(data) / (end_time - start_time) / 1024  # in kB/s
-
-    return download_speed
+print(f"下载速度为: {download_speed} kB/s")
     
 # 处理单行文本并检测URL
 def process_line(line):
@@ -231,7 +228,7 @@ def process_line(line):
             return None, None, None
         
         speed = measure_speed(url)
-        if speed > 1:
+        if speed > 100:
             return speed, elapsed_time, line.strip()
         else:
             logging.error(f"URL source validation failed for {url}")
@@ -253,7 +250,7 @@ def process_urls_multithreaded(lines, max_workers=30):
             speed, elapsed_time, result = future.result()
             if result:
                 if elapsed_time is not None and speed is not None :
-                    successlist.append(f"{speed:.2f}KB/S,{elapsed_time:.2f}ms,{result}")
+                    successlist.append(f"{speed:.1f}KB/S,{elapsed_time:.2f}ms,{result}")
                 else:
                     blacklist.append(result)
     return successlist, blacklist
