@@ -210,7 +210,7 @@ def measure_speed(url):
                                 print(f"找到{url}的第二迭代m3u8文件,第二次寻找ts文件:")
                                 response_m2 = requests.get(ts_url_m2, headers=headers, timeout=2)
                                 response_m2.raise_for_status()
-                                lines_m2 = response_m.text.strip().split('\n')
+                                lines_m2 = response_m2.text.strip().split('\n')
                                 for line in lines_m2: 
                                     stripped_line_m2 = line.strip()
                                     if not stripped_line_m2.startswith('#') and '.ts' in stripped_line_m2:
@@ -231,9 +231,9 @@ def measure_speed(url):
                     break
 
 
-        else:
-            print(f"在{url}中没有找到有效的.ts文件条目。")
-            return 0  # 如果没有找到 .ts 文件，直接返回 0
+            else:
+                print(f"在{url}中没有找到有效的.ts文件条目。")
+                return 0  # 如果没有找到 .ts 文件，直接返回 0
 
         # 测量下载速度
         start_time = time.time()
