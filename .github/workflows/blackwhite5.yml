@@ -1,4 +1,4 @@
-name: blackwhite4
+name: blackwhite5
 
 on:
   schedule:
@@ -36,7 +36,7 @@ jobs:
 
 
     - name: Run Python script
-      run: python blacklist1/blacklist4.py
+      run: python blacklist1/blacklist5.py
 
     - name: Commit and push if changed
       run: |
