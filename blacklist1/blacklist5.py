@@ -210,7 +210,7 @@ def measure_speed(url):
 
             if total_length == 0 or len(data) == 0:
                 print(f"{ts_url} ts文件无法获取内容长度或数据为空，无法测量速度。")
-                return 0
+                return None
 
             end_time = time.time()
             download_speed = len(data) / (end_time - start_time) / 1024  # in kB/s
@@ -220,10 +220,10 @@ def measure_speed(url):
 
         except requests.RequestException as e:
             print(f"下载 {ts_url} ts文件失败: {e}")
-            return 0
+            return None
     else:
         print(f"在{url}中没有找到有效的.ts文件条目。")
-        return 0
+        return None
 
 # 注意：在实际使用中，确保requests库已经被导入，并且提供的URL是有效的。
 
@@ -248,17 +248,17 @@ def process_line(line):
             return None, None, url
         
         speed = measure_speed(url)
-        if not speed:
+        if speed is not None and elapsed_time is not None:
             return speed, elapsed_time, url
             
         else:
-            logging.error(f"URL source validation failed or slowed for {url}")
+            logging.error(f"URL source validation failed  for {url}")
             return None, None, url
     
     except Exception as e:
         # 捕获任何未处理的异常并记录错误
-        logging.error(f"An unexpected error occurred while processing line: {e}")
-        return None, None, line.strip()
+        logging.error(f"处理行时发生意外错误 while processing line: {e}")
+        return None, None, url
 
 # 多线程处理文本并检测URL
 def process_urls_multithreaded(lines, max_workers=30):
@@ -269,12 +269,13 @@ def process_urls_multithreaded(lines, max_workers=30):
         futures = {executor.submit(process_line, line): line for line in lines}
         for future in as_completed(futures):
             speed, elapsed_time, result = future.result()
-            if result:
+            
                 if speed is not None and elapsed_time is not None:
                     successlist.append(f"{speed:.1f}KB/S,{elapsed_time:.2f}ms,{result}")
                     print(f"{speed:.1f}KB/S,{elapsed_time:.2f}ms,{result}")
                 else:
                     blacklist.append(result)
+                    logging.info(f"URL {result} 被添加到黑名单，因为速度或耗时信息缺失。")
     return successlist, blacklist
 
 # 写入文件
