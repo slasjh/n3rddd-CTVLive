@@ -54,7 +54,7 @@ def check_url(url, timeout=3):
 
         # 如果执行到这一步，没有异常，计算时间
         elapsed_time = (time.time() - start_time) * 1000  # 转换为毫秒
-
+        print(f"{url}resPonse速度为: {elapsed_time},{success}")
     except Exception as e:
         print(f"Error checking {url}: {e}")
         record_host(get_host_from_url(url))
@@ -62,7 +62,7 @@ def check_url(url, timeout=3):
         elapsed_time = None
 
     return elapsed_time, success
-    print(f"{url}resPonse速度为: {elapsed_time},{success}")
+   
 
 def check_rtmp_url(url, timeout):
     try:
@@ -183,12 +183,53 @@ def measure_speed(url):
         
         for line in lines:
             stripped_line = line.strip()
-            if not stripped_line.startswith('#') and '.ts' in stripped_line:
-                ts_url = stripped_line if 'http' in stripped_line else url_t  + stripped_line
-                print("找到的TS文件URL:", ts_url)
-
+            #if not stripped_line.startswith('#') and '.ts' in stripped_line:
+                #ts_url = stripped_line if 'http' in stripped_line else url_t  + stripped_line
+                # print("找到的TS文件URL:", ts_url)
                 # 这里可以添加进一步处理 ts_url 的代码
-                break
+                #break
+            if not stripped_line.startswith('#') and 'http' not in stripped_line :
+                    if '.ts' in stripped_line:
+                        ts_url = url_t  + stripped_line
+                        break
+                    if '.m3u8' in stripped_line:
+                        ts_url_m = url_t  + stripped_line
+                        print(f"找到{url}的m3u8文件,再进行下一步寻找ts文件:")
+                        response_m = requests.get(ts_url_m, headers=headers, timeout=2)
+                        response_m.raise_for_status()
+                        lines_m = response_m.text.strip().split('\n')
+                        for line in lines_m: 
+                            stripped_line_m = line.strip()
+                            if not stripped_line_m.startswith('#') and '.ts' in stripped_line_m:
+                                ts_url = url_t  + stripped_line_m
+                                print(f"经过一次M3U8迭代找到{url}的TS文件:", ts_url)
+                                break
+                            if not stripped_line_m.startswith('#') and '.m3u8' in stripped_line_m:
+                                ts_url_m2 = url_t  + stripped_line_m
+                                print(f"找到{url}的第二迭代m3u8文件,第二次寻找ts文件:")
+                                response_m2 = requests.get(ts_url_m2, headers=headers, timeout=2)
+                                response_m2.raise_for_status()
+                                lines_m2 = response_m.text.strip().split('\n')
+                                for line in lines_m2: 
+                                    stripped_line_m2 = line.strip()
+                                    if not stripped_line_m2.startswith('#') and '.ts' in stripped_line_m2:
+                                        ts_url = url_t  + stripped_line_m2
+                                        print(f"经过2次M3U8迭代找到{url}的TS文件:", ts_url)
+                                        break
+                                
+                                
+            if not stripped_line.startswith('#') and  'http' in stripped_line :
+                if '.ts' in stripped_line and '?ts=' not in stripped_line :
+                    ts_url = url_t  + stripped_line
+                    print(f"找到{url}的TS文件:", ts_url)
+                    break
+                if '.ts' in stripped_line and '?ts=' in  stripped_line : 
+                    ts_url = url.split('?ts=')[-1]  # 提取 ts 链接
+                    print(f"找到{url}的TS文件:", ts_url)
+                       
+                    break
+
+
         else:
             print(f"在{url}中没有找到有效的.ts文件条目。")
             return 0  # 如果没有找到 .ts 文件，直接返回 0
