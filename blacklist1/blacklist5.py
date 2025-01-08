@@ -245,20 +245,20 @@ def process_line(line):
         
         elapsed_time, is_valid = check_url(url)
         if not is_valid:
-            return None, None, parts
+            return None, None, line.strip()
         
         speed = measure_speed(url)
         if speed is not None and elapsed_time is not None:
-            return speed, elapsed_time, parts
+            return speed, elapsed_time, line.strip()
             
         else:
             logging.error(f"URL source validation failed  for {url}")
-            return None, None, parts
+            return None, None, line.strip()
     
     except Exception as e:
         # 捕获任何未处理的异常并记录错误
         logging.error(f"处理行时发生意外错误 while processing line: {e}")
-        return None, None, parts
+        return None, None, line.strip()
 
 # 多线程处理文本并检测URL
 def process_urls_multithreaded(lines, max_workers=30):
