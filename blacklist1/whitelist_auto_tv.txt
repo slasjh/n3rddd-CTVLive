@@ -1,5 +1,5 @@
 更新时间,#genre#
-20250107-16-39-52,url
+20250108-10-55-55,url
 
 
 whitelist,#genre#
@@ -7,4 +7,3 @@ CCTV-3综艺,http://39.134.136.161:6610/000000001000/1000000001000011218/index.m
 湖南卫视,http://221.224.4.170:1111/tsfile/live/0128_1.m3u8
 CCTV-3综艺,http://39.134.136.161:6610/000000001000/5000000002000020548/index.m3u8?livemode=1&stbId=10&channel-id=bestzb&Contentid=5000000002000020548
 CCTV-3综艺,http://39.134.136.161:6610/000000001000/1000000005000265003/index.m3u8?livemode=1&stbId=10&channel-id=ystenlive&Contentid=1000000005000265003
-湖南卫视,http://222.134.245.16:9901/tsfile/live/0128_1.m3u8?key=txiptv&playlive=1&authid=0

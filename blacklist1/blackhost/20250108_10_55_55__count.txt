@@ -1,0 +1,4 @@
+hlszymgsplive.miguvideo.com: 1
+222.134.245.16:9901: 2
+stream.qhbtv.com: 1
+ottrrs.hl.chinamobile.com: 2
