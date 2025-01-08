@@ -269,13 +269,12 @@ def process_urls_multithreaded(lines, max_workers=30):
         futures = {executor.submit(process_line, line): line for line in lines}
         for future in as_completed(futures):
             speed, elapsed_time, result = future.result()
-            
-                if speed is not None and elapsed_time is not None:
-                    successlist.append(f"{speed:.1f}KB/S,{elapsed_time:.2f}ms,{result}")
-                    print(f"{speed:.1f}KB/S,{elapsed_time:.2f}ms,{result}")
-                else:
-                    blacklist.append(result)
-                    logging.info(f"URL {result} 被添加到黑名单，因为速度或耗时信息缺失。")
+            if speed is not None and elapsed_time is not None:
+                successlist.append(f"{speed:.1f}KB/S,{elapsed_time:.2f}ms,{result}")
+                print(f"{speed:.1f}KB/S,{elapsed_time:.2f}ms,{result}")
+            else:
+                blacklist.append(result)
+                logging.info(f"URL {result} 被添加到黑名单，因为速度或耗时信息缺失。")
     return successlist, blacklist
 
 # 写入文件
