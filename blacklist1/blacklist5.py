@@ -281,7 +281,8 @@ def process_urls_multithreaded(lines, max_workers=30):
 def write_list(file_path, data_list):
     with open(file_path, 'w', encoding='utf-8') as file:
         for item in data_list:
-            file.write(item + '\n')
+            item_str = str(item)
+            file.write(item_str + '\n')
 
 # 增加外部url到检测清单，同时支持检测m3u格式url
 # urls里所有的源都读到这里。
