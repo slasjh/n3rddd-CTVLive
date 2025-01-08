@@ -1,10 +1,6 @@
 更新时间,#genre#
-20250108-14-55-12,url
+20250108-15-35-40,url
 
 
 whitelist,#genre#
-CCTV-MIGU,https://hlszymgsplive.miguvideo.com/wd_r2/cctv/cctv1hd/600/index.m3u8?msisdn=207e67fd-6073-4ba5-9785-e914928026ea&mdspid=&spid=699004&netType=0&sid=2201057821&pid=2028597139&timestamp=20250108133803&Channel_ID=0131_100300010010001&ProgramID=608807420&ParentNodeID=-99&assertID=2201057821&client_ip=240e:453:de47:b7bd:8de8:a25b:8e77:6e3&SecurityKey=20250108133803&promotionId=&mvid=2201057821&mcid=500020&playurlVersion=WX-A1-7.12.1-RELEASE&userid=&jmhm=&videocodec=h264&bean=mgsph5&tid=h5&conFee=0&encrypt=f872626188a5d57513b478d881d648e0&sv=10000&ct=h5
-ganggang2-43,https://hlszymgsplive.miguvideo.com/wd_r2/cctv/cctv1hd/600/index.m3u8?msisdn=207e67fd-6073-4ba5-9785-e914928026ea&mdspid=&spid=699004&netType=0&sid=2201057821&pid=2028597139&timestamp=20250108144153&Channel_ID=0131_100300010010001&ProgramID=608807420&ParentNodeID=-99&assertID=2201057821&client_ip=240e:453:de47:b7bd:8de8:a25b:8e77:6e3&SecurityKey=20250108144153&promotionId=&mvid=2201057821&mcid=500020&playurlVersion=WX-A1-7.12.1-RELEASE&userid=&jmhm=&videocodec=h264&bean=mgsph5&tid=h5&conFee=0&encrypt=fbb5b976d59076f869a5ce5a9c57115f&sv=10000&ct=h5
-CCTV-3综艺,http://39.134.136.161:6610/000000001000/5000000002000020548/index.m3u8?livemode=1&stbId=10&channel-id=bestzb&Contentid=5000000002000020548
-湖南卫视,http://221.224.4.170:1111/tsfile/live/0128_1.m3u8
-CCTV-3综艺,http://39.134.136.161:6610/000000001000/1000000001000011218/index.m3u8?livemode=1&stbId=10&channel-id=ystenlive&Contentid=1000000001000011218
+http://hulun.top:35455/gaoma/cctv1.m3u8
