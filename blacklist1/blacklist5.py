@@ -164,8 +164,7 @@ def extract_ipv4_sources(sources):
 
     return [src for src in sources if ipv4_pattern.search(src)]
 
-import requests
-import time
+
 
 def measure_speed(url):
     url_t = url.rstrip(url.split('/')[-1])  # 提取 m3u8 链接前缀
@@ -271,7 +270,7 @@ def process_urls_multithreaded(lines, max_workers=30):
         for future in as_completed(futures):
             speed, elapsed_time, result = future.result()
             if result:
-                if not elapsed_time and not speed  :
+                if speed is not None and elapsed_time is not None:
                     successlist.append(f"{speed:.1f}KB/S,{elapsed_time:.2f}ms,{result}")
                     print(f"{speed:.1f}KB/S,{elapsed_time:.2f}ms,{result}")
                 else:
