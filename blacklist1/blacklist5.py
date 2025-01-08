@@ -60,6 +60,7 @@ def check_url(url, timeout=3):
         record_host(get_host_from_url(url))
         # 在发生异常的情况下，将 elapsed_time 设置为 None
         elapsed_time = None
+        success = False
 
     return elapsed_time, success
    
@@ -245,20 +246,20 @@ def process_line(line):
         
         elapsed_time, is_valid = check_url(url)
         if not is_valid:
-            return None, None, None
+            return None, None, url
         
         speed = measure_speed(url)
-        if speed > 100:
-            return speed, elapsed_time, line.strip()
+        if not speed:
+            return speed, elapsed_time, url
             
         else:
             logging.error(f"URL source validation failed or slowed for {url}")
-            return None, None, None
+            return None, None, url
     
     except Exception as e:
         # 捕获任何未处理的异常并记录错误
         logging.error(f"An unexpected error occurred while processing line: {e}")
-        return None, None, None
+        return None, None, line.strip()
 
 # 多线程处理文本并检测URL
 def process_urls_multithreaded(lines, max_workers=30):
@@ -270,7 +271,7 @@ def process_urls_multithreaded(lines, max_workers=30):
         for future in as_completed(futures):
             speed, elapsed_time, result = future.result()
             if result:
-                if elapsed_time is not None and speed is not None :
+                if not elapsed_time and not speed  :
                     successlist.append(f"{speed:.1f}KB/S,{elapsed_time:.2f}ms,{result}")
                     print(f"{speed:.1f}KB/S,{elapsed_time:.2f}ms,{result}")
                 else:
