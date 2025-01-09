@@ -3,7 +3,7 @@ name: auto-sort
 on:
   schedule:
     - cron: '10 10,17 * * *'
-  workflow_dispatch:
+  #workflow_dispatch:
   push:
     branches:
     - ipv4
