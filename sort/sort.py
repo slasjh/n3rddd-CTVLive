@@ -192,3 +192,17 @@ with open("itvlist.m3u", 'w', encoding='utf-8') as file:
                 file.write(f"#EXTINF:-1 group-title=\"其他频道\",{channel_name}\n")
                 file.write(f"{channel_url}\n")
                 channel_counters[channel_name] = 1
+
+if __name__ == "__main__":
+    # 定义要访问的多个URL
+    urls = [
+        #"https://gitlab.com/p2v5/wangtv/-/raw/main/lunbo.txt",
+        #'https://gitlab.com/p2v5/wangtv/-/raw/main/wang-tvlive.txt'
+        #'https://raw.githubusercontent.com/kimwang1978/collect-tv-txt/refs/heads/main/live.txt',
+        'https://raw.githubusercontent.com/slasjh/n3rddd-CTVLive/refs/heads/ipv4/litelive_cctvweishi.txt'
+    ]
+    for url in urls:
+        print(f"处理URL: {url}")
+        channels = fetch_channels(url)   #读取上面url清单
+        write_txt(channels)
+        
