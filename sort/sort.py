@@ -103,7 +103,7 @@ def replace_channel_name(name):
 
 def write_txt(channels):
 
-    with open("itvlist.txt", 'w', encoding='utf-8') as file:
+    with open("tvlist.txt", 'w', encoding='utf-8') as file:
 
         result_counter = 8  # 每个频道最多写入的次数
 
