@@ -3,10 +3,10 @@ name: blackwhite56okhttp
 on:
   schedule:
     - cron: '10 10,17 * * *'
-  workflow_dispatch:
   #push:
-    branches:
-    - ipv4
+    #paths:
+      #- 'blacklist6okhttp.yml'
+  workflow_dispatch:
 
 
 jobs:
