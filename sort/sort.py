@@ -113,7 +113,7 @@ def write_txt(channels):
  
 
         # 处理央视频道
-
+        print("开始写入央视频道...")
         file.write('央视频道,#genre#\n')
 
         categories = sorted(channels.keys())
@@ -135,7 +135,8 @@ def write_txt(channels):
         # 但为了清晰起见，并且避免与央视频道的计数器混淆（尽管在这个例子中不是必需的），
 
         # 我们可以使用一个新的字典来跟踪卫视频道的计数器（但这里为了简化代码，我仍然使用同一个字典）
-
+        print("开始写入卫视频道...")
+        
         file.write('\n卫视频道,#genre#\n')  # 注意添加了换行符来分隔央视频道和卫视频道部分
 
         # 注意：上面的代码实际上没有“重置”channel_counters，因为它在同一个作用域内，
@@ -176,4 +177,11 @@ if __name__ == "__main__":
         channels = fetch_channels(url)   #读取上面url清单
         print(f"获取到的频道数据: {channels}")
         write_txt(channels)
+        # 打开文件并读取内容
+
+        with open('tvlist.txt', 'r') as file:
+
+        content = file.read()
+        # 打印文件内容
+        print(content)
         
