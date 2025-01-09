@@ -40,21 +40,17 @@ def check_url(url, timeout=3):
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
             }
             req = urllib.request.Request(encoded_url, headers=headers)
+            req.allow_redirects = True  # 允许自动重定向（Python 3.4+）
             with urllib.request.urlopen(req, timeout=timeout) as response:
                 if response.status == 200:
                     success = True
-        elif url.startswith("p3p"):
-            success = check_p3p_url(url, timeout)
-        elif url.startswith("p2p"):
-            success = check_p2p_url(url, timeout)        
-        elif url.startswith("rtmp") or url.startswith("rtsp") :
-            success = check_rtmp_url(url, timeout)
-        elif url.startswith("rtp"):
-            success = check_rtp_url(url, timeout)
+        elif url.startswith("p3p") or url.startswith("p2p") or url.startswith("rtmp") or url.startswith("rtsp") or url.startswith("rtp"):
+            success = False
+            print(f"{url}此链接为rtp/p2p/rtmp/rtsp等，舍弃不检测")
 
         # 如果执行到这一步，没有异常，计算时间
         elapsed_time = (time.time() - start_time) * 1000  # 转换为毫秒
-        print(f"{url}resPonse速度为: {elapsed_time},{success}")
+        print(f"{url} http速度为: {elapsed_time},{success}")
     except Exception as e:
         print(f"Error checking {url}: {e}")
         record_host(get_host_from_url(url))
@@ -63,101 +59,8 @@ def check_url(url, timeout=3):
         success = False
 
     return elapsed_time, success
-   
 
-def check_rtmp_url(url, timeout):
-    try:
-        result = subprocess.run(['ffprobe', url], stdout=subprocess.PIPE, stderr=subprocess.PIPE, timeout=timeout)
-        if result.returncode == 0:
-            return True
-    except subprocess.TimeoutExpired:
-        print(f"Timeout checking {url}")
-    except Exception as e:
-        print(f"Error checking {url}: {e}")
-    return False
 
-def check_rtp_url(url, timeout):
-    try:
-        # 解析URL
-        parsed_url = urlparse(url)
-        
-        # 提取主机名（IP地址）和端口号
-        host = parsed_url.hostname
-        port = parsed_url.port
-
-        # 创建一个 socket 连接
-        with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as s:
-            s.settimeout(timeout)  # 设置超时时间
-            s.connect((host, port))
-            s.sendto(b'', (host, port))  # 发送空的UDP数据包
-            s.recv(1)  # 尝试接收数据
-        return True
-    except (socket.timeout, socket.error):
-        return False
-
-def check_p3p_url(url, timeout):
-    try:
-        # 解析URL
-        parsed_url = urlparse(url)
-        host = parsed_url.hostname
-        port = parsed_url.port or (80 if parsed_url.scheme == "http" else 443)
-        path = parsed_url.path or "/"
-        
-        # 检查解析是否成功
-        if not host or not port or not path:
-            raise ValueError("Invalid p3p URL")
-
-        # 创建一个 TCP 连接
-        with socket.create_connection((host, port), timeout=timeout) as s:
-            # 发送一个简单的请求（根据协议定义可能需要调整）
-            # request = f"GET {path} P3P/1.0\r\nHost: {host}\r\n\r\n"
-            # 构造请求
-            request = (
-                f"GET {path} P3P/1.0\r\n"
-                f"Host: {host}\r\n"
-                f"User-Agent: CustomClient/1.0\r\n"
-                f"Connection: close\r\n\r\n"
-            )
-            s.sendall(request.encode())
-            
-            # 读取响应
-            response = s.recv(1024)
-            
-            # 简单判断是否收到有效响应
-            if b"P3P" in response:
-                return True
-    except Exception as e:
-        print(f"Error checking {url}: {e}")
-    return False
-
-def check_p2p_url(url, timeout):
-    try:
-        # 解析URL
-        parsed_url = urlparse(url)
-        host = parsed_url.hostname
-        port = parsed_url.port
-        path = parsed_url.path
-
-        # 检查解析是否成功
-        if not host or not port or not path:
-            raise ValueError("Invalid P2P URL")
-
-        # 创建一个 TCP 连接
-        with socket.create_connection((host, port), timeout=timeout) as s:
-            # 自定义请求，这里只是一个占位符，需根据具体协议定义
-            request = f"YOUR_CUSTOM_REQUEST {path}\r\nHost: {host}\r\n\r\n"
-            s.sendall(request.encode())
-            
-            # 读取响应
-            response = s.recv(1024)
-            
-            # 自定义响应解析，这里简单示例
-            if b"SOME_EXPECTED_RESPONSE" in response:
-                return True
-    except Exception as e:
-        print(f"Error checking {url}: {e}")
-    return False
-    
 def extract_ipv4_sources(sources):
 
     ipv4_pattern = re.compile(r'm3u8.*?\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}')
@@ -195,9 +98,10 @@ def measure_speed(url):
                     process_m3u8(url_t + stripped_line if not stripped_line.startswith('http') else stripped_line)
                     if found:
                         break
-
+    elapsed_time, success = check_url(url)
+    if elapsed_time >100 and success=true
     # 处理初始的m3u8文件
-    process_m3u8(url)
+        process_m3u8(url)
 
     if found:
         print(f"找到的TS文件: {ts_url}")
@@ -244,12 +148,9 @@ def process_line(line):
         name, url = parts
         url = url.strip()
         
-        elapsed_time, is_valid = check_url(url)
-        if not is_valid:
-            return None, None, line.strip()
-        
+     
         speed = measure_speed(url)
-        if speed is not None and elapsed_time is not None:
+        if speed is not None:
             return speed, elapsed_time, line.strip()
             
         else:
