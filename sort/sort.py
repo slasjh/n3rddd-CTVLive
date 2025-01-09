@@ -102,6 +102,7 @@ def replace_channel_name(name):
                          
 
 def write_txt(channels):
+    print("开始写入tvlist.txt文件...")
 
     with open("tvlist.txt", 'w', encoding='utf-8') as file:
 
@@ -173,5 +174,6 @@ if __name__ == "__main__":
     for url in urls:
         print(f"处理URL: {url}")
         channels = fetch_channels(url)   #读取上面url清单
+        print(f"获取到的频道数据: {channels}")
         write_txt(channels)
         
