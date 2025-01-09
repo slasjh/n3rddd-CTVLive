@@ -181,7 +181,7 @@ if __name__ == "__main__":
 
         with open('tvlist.txt', 'r') as file:
 
-        content = file.read()
+            content = file.read()
         # 打印文件内容
-        print(content)
+            print(content)
         
