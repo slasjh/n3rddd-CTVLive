@@ -5,7 +5,7 @@ on:
     - cron: '10 10,17 * * *'
   push:
     paths:
-      - 'blacklist1/blacklist8.py'
+      - 'litelive_cctvweishi.txt'
   #workflow_dispatch:
 
 
