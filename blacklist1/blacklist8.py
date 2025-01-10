@@ -385,8 +385,10 @@ if __name__ == "__main__":
     def successlist_sort_key(item):
         time_str = item.split(',')[0].replace('KB/S', '')
         return float(time_str)
+        # 定义排序函数
+
     
-    successlist=sorted(successlist, key=successlist_sort_key)
+    successlist=sorted(successlist, key=successlist_sort_key, reverse=True)
     blacklist=sorted(blacklist)
 
     # 计算check后ok和ng个数
