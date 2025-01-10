@@ -7,6 +7,8 @@ on:
   #workflow_dispatch:
     branches:
       - ipv4
+    paths:
+      - 'blacklist1/whitelist_auto_tv2.txt'  # 注意这里的路径是基于仓库根目录的，如果live.txt位于sort文件夹下
 
 jobs:
   run_script:
