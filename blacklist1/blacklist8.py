@@ -87,8 +87,8 @@ def measure_speed(url):
         nonlocal found, ts_url
         response = requests.get(m3u8_url, allow_redirects=True, headers=headers, timeout=2)  # 发送请求并跟随重定向
         response.raise_for_status()
-        # 获取最终的URL（这里假设重定向最终指向了index.m3u8）
-        final_url = response.m3u8_url
+        # 获取最终的URL（这里假设重定向最终指向）
+        final_url = response.url
         final_url_t = final_url.rstrip(final_url.split('/')[-1])  # 提取 重定向m3u8 链接前缀
         response_f = requests.get(final_url, headers=headers, timeout=2)  # 发送请求
         response_f.raise_for_status()       
