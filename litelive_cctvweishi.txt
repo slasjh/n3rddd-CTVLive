@@ -70,7 +70,7 @@ CCTV-1综合,http://113.220.233.47:9999/tsfile/live/0017_1.m3u8$小土豆•IPV4
 CCTV-1综合,http://106.118.70.215:9901/tsfile/live/0001_1.m3u8$小土豆•IPV4『线路69』
 CCTV-1综合,http://175.20.235.74:9901/tsfile/live/0001_1.m3u8$小土豆•IPV4『线路70』
 CCTV-1综合,http://125.43.245.50:9901/tsfile/live/0001_1.m3u8$小土豆•IPV4『线路71』
-CCTV-1综合,http://1.30.24.181:9901/tsfile/live/0001_1.m3u8$小土豆•IPV4『线路72』
+
 CCTV-1综合,http://115.48.63.125:9901/tsfile/live/0001_1.m3u8$小土豆•IPV4『线路73』
 CCTV-1综合,http://58.221.214.82:9901/tsfile/live/0001_1.m3u8$小土豆•IPV4『线路74』
 CCTV-1综合,http://183.136.148.214:9901/tsfile/live/0001_1.m3u8$小土豆•IPV4『线路75』
