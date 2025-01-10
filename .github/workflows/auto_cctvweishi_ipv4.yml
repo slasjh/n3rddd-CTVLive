@@ -4,9 +4,9 @@ on:
   schedule:
     - cron: '30 10,21 * * *'
   workflow_dispatch:
-  #push:
+  push:
     branches:
-      - ipv4
+      - mian
 
 jobs:
   run_script:
