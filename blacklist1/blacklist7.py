@@ -160,7 +160,7 @@ def process_line(line):
     except Exception as e:
         # 捕获任何未处理的异常并记录错误
         logging.error(f"处理行时发生意外错误 while processing line: {e}")
-        return None, elapsed_time, line.strip()
+        return None, None, line.strip()
 
 # 多线程处理文本并检测URL
 def process_urls_multithreaded(lines, max_workers=30):
