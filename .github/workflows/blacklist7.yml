@@ -6,7 +6,7 @@ on:
   push:
     paths:
       - '/.github/workflows/blacklist7.yml'
-  workflow_dispatch:
+  #workflow_dispatch:
 
 
 jobs:
