@@ -1,0 +1,5 @@
+hlszymgsplive.miguvideo.com:8080: 1
+hlszymgsplive.miguvideo.com: 1
+221.224.4.170:1111: 1
+ottrrs.hl.chinamobile.com: 2
+stream.qhbtv.com: 1
