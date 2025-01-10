@@ -72,7 +72,7 @@ def extract_ipv4_sources(sources):
 def measure_speed(url):
     url_t = url.rstrip(url.split('/')[-1])  # 提取 m3u8 链接前缀
     headers = {
-        ''User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
         #'Accept': '*/*',
        #'Connection': 'keep-alive',
     }
