@@ -104,7 +104,7 @@ def replace_channel_name(name):
 def write_txt(channels):
     print("开始写入tvlist.txt文件...")
 
-    with open("tvlist.txt", 'w', encoding='utf-8') as file:
+    with open(input_file1, 'w', encoding='utf-8') as file:
 
         result_counter = 8  # 每个频道最多写入的次数
 
@@ -170,8 +170,19 @@ if __name__ == "__main__":
         #"https://gitlab.com/p2v5/wangtv/-/raw/main/lunbo.txt",
         #'https://gitlab.com/p2v5/wangtv/-/raw/main/wang-tvlive.txt'
         #'https://raw.githubusercontent.com/kimwang1978/collect-tv-txt/refs/heads/main/live.txt',
-        'https://raw.githubusercontent.com/slasjh/n3rddd-CTVLive/refs/heads/ipv4/litelive_cctvweishi_test.txt'
+        'https://raw.githubusercontent.com/slasjh/n3rddd-CTVLive/refs/heads/ipv4/blacklist1/whitelist_auto_tv2.txt'
     ]
+    # 获取当前脚本所在的目录
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    # 获取上一层目录
+    parent_dir = os.path.dirname(current_dir)
+    # 获取再上一层目录
+    #parent2_dir = os.path.dirname(parent_dir)
+    # # 获取根目录
+    # root_dir = os.path.abspath(os.sep)  
+
+    #input_file1 = os.path.join(parent_dir, 'live.txt')  # 输入文件路径1
+    input_file1 = os.path.join(current_dir, 'tvlist.txt')  # 输入文件路径1
     for url in urls:
         print(f"处理URL: {url}")
         channels = fetch_channels(url)   #读取上面url清单
@@ -179,9 +190,9 @@ if __name__ == "__main__":
         write_txt(channels)
         # 打开文件并读取内容
 
-        with open('tvlist.txt', 'r') as file:
+        #with open(input_file1, 'r') as file:
 
-            content = file.read()
+            #content = file.read()
         # 打印文件内容
-            print(content)
+           # print(content)
         
