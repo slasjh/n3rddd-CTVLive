@@ -74,8 +74,8 @@ def measure_speed(url):
     headers = {
         'User-Agent': 'Mozilla/5.0 (Linux; Android 14; 22221211T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.6261.119 Mobile Safari/537.36',
         #'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
-        #'Accept': '*/*',
-       #'Connection': 'keep-alive',
+        'Accept': 'application/vnd.apple.mpegurl',
+        'Connection': 'keep-alive',
     }
 
     ts_url = None
