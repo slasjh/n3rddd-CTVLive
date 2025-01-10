@@ -1,5 +1,9 @@
 更新时间,#genre#
-20250110-13-56-46,url
+20250110-14-16-59,url
 
 
 whitelist,#genre#
+CCTV-3综艺,http://39.134.136.161:6610/000000001000/1000000001000011218/index.m3u8?livemode=1&stbId=10&channel-id=ystenlive&Contentid=1000000001000011218
+CCTV-3综艺,http://39.134.136.161:6610/000000001000/5000000002000020548/index.m3u8?livemode=1&stbId=10&channel-id=bestzb&Contentid=5000000002000020548
+CCTV-2z.b-2,http://go.bkpcp.top/mg/cctv2
+CCTV-1z.b-1,http://z.b.bkpcp.top/m.php?id=cctv1
