@@ -1,11 +1,11 @@
-name: blackwhite57
+name: blackwhite58
 
 on:
   schedule:
     - cron: '10 10,17 * * *'
   push:
     paths:
-      - 'blacklist1/blacklist7.py'
+      - 'blacklist1/blacklist8.py'
   #workflow_dispatch:
 
 
@@ -36,7 +36,7 @@ jobs:
 
 
     - name: Run Python script
-      run: python blacklist1/blacklist7.py
+      run: python blacklist1/blacklist8.py
 
     - name: Commit and push if changed
       run: |
