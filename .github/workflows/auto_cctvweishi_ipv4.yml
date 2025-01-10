@@ -5,7 +5,7 @@ on:
     - cron: '30 10,21 * * *'
   push:
     branches:
-      - mian
+      - ipv4
 
 jobs:
   run_script:
