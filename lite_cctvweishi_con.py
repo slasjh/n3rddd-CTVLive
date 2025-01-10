@@ -1,9 +1,9 @@
 ip_version_priority = "ipv4"
 
 source_urls = [
-    "http://156.238.251.122:35455/tv.m3u", #ADDED BY lee from sshh. ON 31/12/2024
-    "https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u", #ADDED BY lee from sshh. ON 4/1/2025
-    "https://raw.githubusercontent.com/Guovin/TV/gd/output/result.m3u", #ADDED BY lee from Guovin/TV/gd/ (juhe) ON 31/12/2024
+    #"http://156.238.251.122:35455/tv.m3u", #ADDED BY lee from sshh. ON 31/12/2024
+    "https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u", #ADDED BY lee from sshh. ON 4/1/2025  (migu)
+    "https://raw.githubusercontent.com/Guovin/TV/gd/output/result.m3u", #ADDED BY lee from Guovin/TV/gd/ (juhe) ON 31/12/2024 (migu)
     "https://raw.githubusercontent.com/zwc456baby/iptv_alive/master/live.m3u", #ADDED BY lee from zwc456baby cu (juhe) ON 31/12/2024 
     "https://live.fanmingming.com/tv/m3u/ipv6.m3u", #ADDED BY lee from fanmingming. ON 31/12/2024 
     "https://raw.githubusercontent.com/YanG-1989/m3u/main/Gather.m3u", #ADDED BY lee from https://tv.iill.top/m3u/Gather" ON 31/12/2024 
