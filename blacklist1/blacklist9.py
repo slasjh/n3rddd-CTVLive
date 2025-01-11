@@ -30,7 +30,7 @@ def check_url(url, timeout=2):
     start_time = time.time()
     elapsed_time = None
     success = False
-     headers = {
+    headers = {
     'User-Agent': 'Lavf/58.12.100',
     'Accept': '*/*',
     }
