@@ -35,7 +35,7 @@ def check_url(url, timeout=2):
     encoded_url = urllib.parse.quote(url, safe=':/?&=')
     
     try:
-        if url.startswith("http") 
+        if url.startswith("http"):
             if "/udp/" not in url or "/rtp/" not in url:
                 headers = {
                 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
@@ -76,7 +76,7 @@ def device_headers(device_type):
             'Accept': '*/*'
         },
         'easybox': {
-            'User-Agent': 'Lavf 58.12.100',
+            'User-Agent': 'Lavf/58.12.100',
             'Accept': '*/*'
         },
         'pc': {
