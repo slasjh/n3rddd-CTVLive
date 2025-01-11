@@ -9,7 +9,8 @@ on:
       - ipv4
     paths:
       - 'blacklist1/*.txt'  # 注意这里的路径是基于仓库根目录的，如果live.txt位于sort文件夹下
-
+      - 'sort/sort.py'
+      - '.github/workflows/sort.yml'
 jobs:
   run_script:
     runs-on: ubuntu-latest
