@@ -113,7 +113,7 @@ def measure_speed(url):
         nonlocal found, ts_url
         response = requests.get(m3u8_url, allow_redirects=True, headers=device_headers('easybox'), timeout=2)  # 发送请求并跟随重定向
         response.raise_for_status()
-        # 获取最终的URL（这里假设重定向最终指向）
+        # 获取最终的URL （这里假设重定向最终指向）
         final_url = response.url
         final_url_t = final_url.rstrip(final_url.split('/')[-1])  # 提取 重定向m3u8 链接前缀
         response_f = requests.get(final_url, headers=headers, timeout=2)  # 发送请求
@@ -193,10 +193,10 @@ def process_line(line):
     
     except Exception as e:
         # 捕获任何未处理的异常并记录错误
-        logging.error(f"处理行时发生意外错误 while processing line: {e}")
+        logging.error(f"{url}处理行时发生意外错误 while processing line: {e}")
         return None, None, line.strip()
 
-# 多线程处理文本并检测URL
+# 多线程处理文本并检测m3u8 URL
 def process_urls_multithreaded(lines, max_workers=30):
     blacklist =  [] 
     successlist = []
