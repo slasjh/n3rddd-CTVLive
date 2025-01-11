@@ -1,122 +1,48 @@
 on:
-
   schedule:
-
-    - cron: '10 10,17 * * *' # 每天上午 10:10 和下午 5:10（UTC 时间）
-
+    - cron: '10 10,17 * * *' # 每天上午10:10和下午5:10（UTC）
   push:
-
     branches:
-
-      - ipv4 # 仅在 ipv4 分支上监视文件更改
-
+      - ipv4
     paths:
-
-      - 'litelive_cctvweishi_test.txt' # 监视这个文件
-
-      - 'litelive_cctvweishi.txt' # 监视另一个文件
-
-      - '.github/workflows/blacklist8.yml' # 监视另一个文件
-
-      - 'some_directory/specific_file.txt' # 监视特定目录下的特定文件
-
-      # 如果想要监视某个目录下的所有 .txt 文件，可以使用通配符
-
+      - 'litelive_cctvweishi_test.txt'
+      - 'litelive_cctvweishi.txt'
+      - '.github/workflows/blacklist8.yml'
+      - 'some_directory/specific_file.txt'
       - 'some_directory/*.txt'
 
 jobs:
   run_script:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout repository
+    - name: Checkout
       uses: actions/checkout@v2
-
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
         python-version: '3.10'
-
     - name: Cache dependencies
       uses: actions/cache@v2
       with:
         path: ~/.cache/pip
         key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
-        restore-keys: |
-          ${{ runner.os }}-pip-
-        clean: true # 清理工作目录中的未跟踪文件和目录（可选，但有助于确保工作目录干净）
-
+        restore-keys: ${{ runner.os }}-pip-
+        clean: true
     - name: Install dependencies
-      run: |
-        pip install requests
-
+      run: pip install requests
     - name: Run Python script
       run: python blacklist1/blacklist8.py
-
-        - name: Prepare for commit
-
+    - name: Prepare for commit
       run: |
-
-        # 配置 Git 用户信息
-
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
-
         git config --local user.name "github-actions[bot]"
-
- 
-
-        # 储藏未暂存的更改（如果需要的话，以避免冲突）
-
-        # 注意：这将丢弃所有未暂存的更改，请谨慎使用
-
         if ! git diff-files --quiet --ignore-submodules --; then
-
           git stash save --include-untracked --keep-index "Unstaged changes before auto-update"
-
         fi
-
- 
-
-        # 假设接下来的步骤会生成一些需要提交的文件
-
-        # ... 生成文件的命令 ...
-
- 
-
-        # 添加生成的文件（使用具体路径，避免添加不相关的更改）
-
-        # 例如：git add path/to/generated/files
-
-        # 这里为了简化，我们仍然使用 .，但请确保这不会添加不相关的更改
-
         git add .
-
- 
-
-        # 检查是否有更改需要提交
-
         if ! git diff --cached --quiet; then
-
-          # 提交更改
-
           git commit -m "Auto-update generated files"
-
- 
-
-          # 推送更改到远程仓库
-
-          # 注意：直接在 Actions 中使用 git push 可能会带来安全风险
-
-          # 更好的做法是使用 GitHub 的 REST API 或 GraphQL API 来创建拉取请求
-
-          # 但这里为了简化示例，我们仍然使用 git push
-
-          # 确保您已经设置了正确的 GITHUB_TOKEN 环境变量，并且它具有推送更改的权限
-
-          git push
-
+          git push # 注意：直接在Actions中使用git push可能有安全风险
         else
-
           echo "No changes to commit."
-
         fi
