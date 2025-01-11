@@ -1,11 +1,26 @@
 on:
+
   schedule:
+
     - cron: '10 10,17 * * *' # 每天上午 10:10 和下午 5:10（UTC 时间）
+
   push:
+
     branches:
+
       - ipv4 # 仅在 ipv4 分支上监视文件更改
+
     paths:
-      - 'litelive_cctvweishi.txt_test' # 当此文件发生更改时触发
+
+      - 'litelive_cctvweishi_test.txt' # 监视这个文件
+
+      - 'litelive_cctvweishi.txt' # 监视另一个文件
+
+      - 'some_directory/specific_file.txt' # 监视特定目录下的特定文件
+
+      # 如果想要监视某个目录下的所有 .txt 文件，可以使用通配符
+
+      - 'some_directory/*.txt'
 
 jobs:
   run_script:
