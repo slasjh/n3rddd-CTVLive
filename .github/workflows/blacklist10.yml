@@ -1,4 +1,4 @@
-name: blackwhite9
+name: blackwhite10
 on:
   schedule:
     - cron: '10 10,17 * * *' # 每天上午10:10和下午5:10（UTC）
@@ -8,7 +8,8 @@ on:
     paths:
       - 'litelive_cctvweishi_test.txt'
       - 'litelive_cctvweishi.txt'
-      - '.github/workflows/blacklist9.yml'
+      - '.github/workflows/blacklist10.yml'
+      - 'blacklist1/blacklist10.py'
       - 'some_directory/specific_file.txt'
       - 'some_directory/*.txt'
 
