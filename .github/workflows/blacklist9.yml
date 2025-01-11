@@ -1,7 +1,7 @@
 name: blackwhite9
 on:
   schedule:
-    - cron: '10 10,17 * * *' # 每天 上午10:10和下午5:10（UTC）
+    - cron: '10 10,17 * * *' # 每天上午10:10和下午5:10（UTC）
   push:
     branches:
       - ipv4
