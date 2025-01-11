@@ -27,23 +27,36 @@ def read_txt_file(file_path):
 
 # 检测URL是否可访问并记录响应时间
 def check_url(url, timeout=2):
+
     start_time = time.time()
+
     elapsed_time = None
+
     success = False
+
     headers = {
-    'User-Agent': 'Lavf/58.12.100',
-    'Accept': '*/*',
-    }
-    # 将 URL 中的汉字编码
-    #encoded_url = urllib.parse.quote(url, safe=':/?&=')
-    
+
+        'User-Agent': 'Lavf/58.12.100',
+
+        'Accept': '*/*',
+
+    }    
+
     try:
+
         if url.startswith("http"):
-            if "/udp/" not in url or "/rtp/" not in url:
+
+            if "/udp/" not in url and "/rtp/" not in url:  # 使用 and 而不是 or，确保 URL 中不包含 /udp/ 和 /rtp/
+
                 response = requests.get(url, allow_redirects=True, headers=headers, timeout=timeout)
-                response.raise_for_status()
-                    if response.status_code == 200 or response.status == 206:
-                        success = True
+
+                response.raise_for_status()  # 如果响应状态码不是 200 OK，将引发 HTTPError 异常
+                
+                # 注意：response 对象没有 status 属性，只有 status_code 属性
+
+                if response.status_code == 200 or response.status_code == 206:  # 部分内容响应也是成功的
+
+                    success = True
                 #req = urllib.request.Request(encoded_url, headers=headers)
                 #req.allow_redirects = True  # 允许自动重定向（Python 3.4+）
                 #with urllib.request.urlopen(req, timeout=timeout) as response:
