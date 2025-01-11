@@ -35,15 +35,16 @@ def check_url(url, timeout=2):
     encoded_url = urllib.parse.quote(url, safe=':/?&=')
     
     try:
-        if url.startswith("http"):
-            headers = {
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
-            }
-            req = urllib.request.Request(encoded_url, headers=headers)
-            req.allow_redirects = True  # 允许自动重定向（Python 3.4+）
-            with urllib.request.urlopen(req, timeout=timeout) as response:
-                if response.status == 200:
-                    success = True
+        if url.startswith("http") 
+            if "/udp/" not in url or "/rtp/" not in url:
+                headers = {
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
+                }
+                req = urllib.request.Request(encoded_url, headers=headers)
+                req.allow_redirects = True  # 允许自动重定向（Python 3.4+）
+                with urllib.request.urlopen(req, timeout=timeout) as response:
+                    if response.status == 200:
+                        success = True
         elif url.startswith("p3p") or url.startswith("p2p") or url.startswith("rtmp") or url.startswith("rtsp") or url.startswith("rtp"):
             success = False
             print(f"{url}此链接为rtp/p2p/rtmp/rtsp等，舍弃不检测")
@@ -68,6 +69,31 @@ def extract_ipv4_sources(sources):
     return [src for src in sources if ipv4_pattern.search(src)]
 
 
+def device_headers(device_type):
+    headers = {
+        'tvbox': {
+            'User-Agent': 'com.github.tvbox.osc.base.App/1.1.1(Linux;Android 14) ExoplayerLib/2.18.7',
+            'Accept': '*/*'
+        },
+        'easybox': {
+            'User-Agent': 'FFmpeg/Lavf 58.12.100 (Custom TV Box; Linux; Android 9; YourAppName/1.0)',
+            'Accept': '*/*'
+        },
+        'pc': {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.6429.15 Safari/537.36',
+            'Accept': '*/*'
+        },
+        'android': {
+            'User-Agent': 'Mozilla/5.0 (Linux;Android 14;22021211RC) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.6261.119 Safari/537.36 XiaoMi/MiuiBrowser/18.9.71225',
+            'Accept': '*/*',
+            'Accept-Language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7'
+        }
+    }
+    
+    if device_type in headers:
+        return headers[device_type]
+    else:
+        raise ValueError("Unknown device type")
 
 def measure_speed(url):
     url_t = url.rstrip(url.split('/')[-1])  # 提取 m3u8 链接前缀
