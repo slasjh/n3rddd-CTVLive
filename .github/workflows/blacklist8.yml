@@ -53,22 +53,70 @@ jobs:
     - name: Run Python script
       run: python blacklist1/blacklist8.py
 
-    - name: Add and commit generated files
+        - name: Prepare for commit
+
       run: |
+
+        # 配置 Git 用户信息
+
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
+
         git config --local user.name "github-actions[bot]"
-        
-        # 添加所有由 Actions 生成的更改（假设这些更改是新文件或已修改的文件）
-        git add . # 注意：这里使用 . 可能会添加所有更改，包括可能不需要提交的更改。
-                  # 如果知道生成的文件的确切路径，应该使用更具体的路径，例如 git add path/to/generated/files
-        
-        # 检查是否有更改需要提交
-        if ! git diff --cached --quiet; then
-          # 提交更改
-          git commit -m "Auto-update generated files"
-          # 推送更改到远程仓库
-          git push
+
+ 
+
+        # 储藏未暂存的更改（如果需要的话，以避免冲突）
+
+        # 注意：这将丢弃所有未暂存的更改，请谨慎使用
+
+        if ! git diff-files --quiet --ignore-submodules --; then
+
+          git stash save --include-untracked --keep-index "Unstaged changes before auto-update"
+
         fi
-        
-    env:
-      TZ: Asia/Shanghai
+
+ 
+
+        # 假设接下来的步骤会生成一些需要提交的文件
+
+        # ... 生成文件的命令 ...
+
+ 
+
+        # 添加生成的文件（使用具体路径，避免添加不相关的更改）
+
+        # 例如：git add path/to/generated/files
+
+        # 这里为了简化，我们仍然使用 .，但请确保这不会添加不相关的更改
+
+        git add .
+
+ 
+
+        # 检查是否有更改需要提交
+
+        if ! git diff --cached --quiet; then
+
+          # 提交更改
+
+          git commit -m "Auto-update generated files"
+
+ 
+
+          # 推送更改到远程仓库
+
+          # 注意：直接在 Actions 中使用 git push 可能会带来安全风险
+
+          # 更好的做法是使用 GitHub 的 REST API 或 GraphQL API 来创建拉取请求
+
+          # 但这里为了简化示例，我们仍然使用 git push
+
+          # 确保您已经设置了正确的 GITHUB_TOKEN 环境变量，并且它具有推送更改的权限
+
+          git push
+
+        else
+
+          echo "No changes to commit."
+
+        fi
