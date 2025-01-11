@@ -7,7 +7,7 @@ on:
     paths:
       - 'litelive_cctvweishi_test.txt'
       - 'litelive_cctvweishi.txt'
-      - '.github/workflows/blacklist8.yml'
+      - '.github/workflows/blacklist9.yml'
       - 'some_directory/specific_file.txt'
       - 'some_directory/*.txt'
 
@@ -31,7 +31,7 @@ jobs:
     - name: Install dependencies
       run: pip install requests
     - name: Run Python script
-      run: python blacklist1/blacklist8.py
+      run: python blacklist1/blacklist9.py
     - name: Prepare for commit
       run: |
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
