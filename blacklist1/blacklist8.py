@@ -76,7 +76,7 @@ def device_headers(device_type):
             'Accept': '*/*'
         },
         'easybox': {
-            'User-Agent': 'FFmpeg/Lavf 58.12.100 (Custom TV Box; Linux; Android 9; YourAppName/1.0)',
+            'User-Agent': 'Lavf 58.12.100',
             'Accept': '*/*'
         },
         'pc': {
@@ -111,7 +111,7 @@ def measure_speed(url):
 
     def process_m3u8(m3u8_url):
         nonlocal found, ts_url
-        response = requests.get(m3u8_url, allow_redirects=True, headers=headers, timeout=2)  # 发送请求并跟随重定向
+        response = requests.get(m3u8_url, allow_redirects=True, headers=device_headers(easybox), timeout=2)  # 发送请求并跟随重定向
         response.raise_for_status()
         # 获取最终的URL（这里假设重定向最终指向）
         final_url = response.url
@@ -359,7 +359,7 @@ if __name__ == "__main__":
         #"https://gitlab.com/p2v5/wangtv/-/raw/main/lunbo.txt",
         #'https://gitlab.com/p2v5/wangtv/-/raw/main/wang-tvlive.txt'
         #'https://raw.githubusercontent.com/kimwang1978/collect-tv-txt/refs/heads/main/live.txt',
-        'https://raw.githubusercontent.com/slasjh/n3rddd-CTVLive/refs/heads/ipv4/litelive_cctvweishi.txt'
+        'https://raw.githubusercontent.com/slasjh/n3rddd-CTVLive/refs/heads/ipv4/litelive_cctvweishi_test.txt'
     ]
     for url in urls:
         print(f"处理URL: {url}")
