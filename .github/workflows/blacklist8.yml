@@ -1,19 +1,11 @@
 on:
-
   schedule:
-
     - cron: '10 10,17 * * *' # 每天上午 10:10 和下午 5:10（UTC 时间）
-
   push:
-
     branches:
-
       - ipv4 # 仅在 ipv4 分支上监视文件更改
-
     paths:
-
       - 'litelive_cctvweishi.txt' # 当此文件发生更改时触发
-
 
 jobs:
   run_script:
@@ -22,6 +14,8 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
+      with:
+        persist-credentials: false # 不要保存凭证到 git 配置中
 
     - name: Set up Python
       uses: actions/setup-python@v2
@@ -40,22 +34,27 @@ jobs:
       run: |
         pip install requests
 
-
     - name: Run Python script
       run: python blacklist1/blacklist8.py
 
-    - name: Commit and push if changed
+    - name: Pull latest changes and commit if changed
       run: |
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
-          
+        
+        # 拉取最新的远程更改
+        git pull origin ipv4 --rebase
+        
+        # 添加所有更改
         git add -A
         
-        if ! git diff --staged --quiet; then
+        # 检查是否有更改需要提交
+        if ! git diff --cached --quiet; then
+          # 提交更改
           git commit -m "Auto-update white&black list"
+          # 推送更改到远程仓库
           git push
         fi
         
-
     env:
       TZ: Asia/Shanghai
