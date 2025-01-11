@@ -5,7 +5,7 @@ on:
     branches:
       - ipv4 # 仅在 ipv4 分支上监视文件更改
     paths:
-      - 'litelive_cctvweishi.txt' # 当此文件发生更改时触发
+      - 'litelive_cctvweishi.txt_test' # 当此文件发生更改时触发
 
 jobs:
   run_script:
