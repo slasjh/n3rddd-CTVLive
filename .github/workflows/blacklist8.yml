@@ -31,11 +31,24 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
       with:
-        persist-credentials: false # 不要保存凭证到 git 配置中
+        python-version: '3.10'
+
+    - name: Cache dependencies
+      uses: actions/cache@v2
+      with:
+        path: ~/.cache/pip
+        key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+        restore-keys: |
+          ${{ runner.os }}-pip-
         clean: true # 清理工作目录中的未跟踪文件和目录（可选，但有助于确保工作目录干净）
 
-    # ... 其他步骤，如设置 Python 环境、安装依赖等 ...
+    - name: Install dependencies
+      run: |
+        pip install requests
 
     - name: Run Python script
       run: python blacklist1/blacklist8.py
@@ -59,4 +72,3 @@ jobs:
         
     env:
       TZ: Asia/Shanghai
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # 确保这里使用了具有推送权限的令牌
