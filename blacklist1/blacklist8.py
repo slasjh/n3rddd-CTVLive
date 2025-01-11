@@ -100,10 +100,13 @@ def measure_speed(url):
 
     ts_url = None
     found = False
-
+    headers = {
+            'User-Agent': 'Lavf/58.12.100',
+            'Accept': '*/*'
+    }
     def process_m3u8(m3u8_url):
         nonlocal found, ts_url
-        response = requests.get(m3u8_url, allow_redirects=True, headers=device_headers('easybox'), timeout=2)  # 发送请求并跟随重定向
+        response = requests.get(m3u8_url, allow_redirects=True, headers=headers, timeout=2)  # 发送请求并跟随重定向
         response.raise_for_status()
         # 获取最终的URL （这里假设重定向最终指向）
         final_url = response.url
