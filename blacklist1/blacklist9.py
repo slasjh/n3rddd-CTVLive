@@ -30,22 +30,25 @@ def check_url(url, timeout=2):
     start_time = time.time()
     elapsed_time = None
     success = False
-
+     headers = {
+    'User-Agent': 'Lavf/58.12.100',
+    'Accept': '*/*',
+    }
     # 将 URL 中的汉字编码
-    encoded_url = urllib.parse.quote(url, safe=':/?&=')
+    #encoded_url = urllib.parse.quote(url, safe=':/?&=')
     
     try:
         if url.startswith("http"):
             if "/udp/" not in url or "/rtp/" not in url:
-                headers = {
-                'User-Agent': 'Lavf/58.12.100',
-                'Accept': '*/*',
-                }
-                req = urllib.request.Request(encoded_url, headers=headers)
-                req.allow_redirects = True  # 允许自动重定向（Python 3.4+）
-                with urllib.request.urlopen(req, timeout=timeout) as response:
-                    if response.status == 200 or response.status == 206:
+                response = requests.get(url, allow_redirects=True, headers=headers, timeout=timeout)
+                response.raise_for_status()
+                    if response.status_code == 200 or response.status == 206:
                         success = True
+                #req = urllib.request.Request(encoded_url, headers=headers)
+                #req.allow_redirects = True  # 允许自动重定向（Python 3.4+）
+                #with urllib.request.urlopen(req, timeout=timeout) as response:
+                    #if response.status == 200 or response.status == 206:
+                        #success = True
         elif url.startswith("p3p") or url.startswith("p2p") or url.startswith("rtmp") or url.startswith("rtsp") or url.startswith("rtp"):
             success = False
             print(f"{url}此链接为rtp/p2p/rtmp/rtsp等，舍弃不检测")
@@ -133,8 +136,11 @@ def measure_speed(url):
                     if found:
                         break
     elapsed_time, success = check_url(url)
+
     if success and elapsed_time is not None:
-    # 处理初始的m3u8文件
+
+        # 现在 process_m3u8(url) 在这里被正确调用，受 if 语句的控制
+
         process_m3u8(url)
         
         if found :
