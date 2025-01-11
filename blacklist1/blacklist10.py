@@ -8,6 +8,7 @@ import socket  #check p3p源 rtp源
 import subprocess #check rtmp源
 import requests
 import logging
+import json
 
 timestart = datetime.now()
 
@@ -112,8 +113,7 @@ def device_headers(device_type):
     else:
         raise ValueError("Unknown device type")
 
-import requests
-import time
+
 
 # 定义一个包含多个 headers 的列表
 headers_list = [
@@ -151,10 +151,12 @@ def measure_speed(url):
         nonlocal found, ts_url
         if processed_headers is None:
             processed_headers = set()
+        # 将headers字典转换为字符串
 
-        if headers in processed_headers:
+        headers_str = json.dumps(headers, sort_keys=True)
+        if headers_str in processed_headers:
             return
-        processed_headers.add(headers)
+        processed_headers.add(headers_str)
 
         response = requests.get(m3u8_url, allow_redirects=True, headers=headers, timeout=2)
         response.raise_for_status()
