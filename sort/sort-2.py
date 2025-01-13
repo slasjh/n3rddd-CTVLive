@@ -155,6 +155,8 @@ def write_txt_optimized(channels,out_file):
                                 last_genre = genre
 
                             file.write(f"{channel_name},{channel_url}\n")
+                            print(f"{channel_name}")
+                            print(f"{channel_counters[channel_name]}")
 
                             channel_counters[channel_name] += 1
 
