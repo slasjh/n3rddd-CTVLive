@@ -6,9 +6,9 @@ on:
   push:
   ##workflow_dispatch:
     branches:
-      - ipv4
+      - ipv6
     paths:
-      - 'auto_cctvweishi_ipv6.py'
+      - '*.py'
       - '.github/workflows/auto_cctvweishi_ipv6.yml'
 
 jobs:
