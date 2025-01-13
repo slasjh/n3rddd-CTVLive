@@ -205,7 +205,7 @@ if __name__ == "__main__":
      # 写入央视频道卫视频道到output_file2
      # Define the categories to extract (as a set)
     channels_to_extract = {'央视频道', '卫视频道'}
-    extract_channels(out_file1, out_file2, channels_to_extract)
+    extract_channels(output_file1, output_file2, channels_to_extract)
     print("央视频道卫视频道写入tvlist-yw.txt完成。")
 
         
