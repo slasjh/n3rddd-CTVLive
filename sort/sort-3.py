@@ -100,9 +100,10 @@ def replace_channel_name(name):
 
     return name
  
- def write_txt(channels):
+def write_txt(channels):
     print("开始写入tvlist.txt文件...")
 
+    input_file1 = 'tvlist.txt'  # 添加了缺失的变量定义
     with open(input_file1, 'w', encoding='utf-8') as file:
         result_counter = 8  # 每个频道最多写入的次数
         channel_counters = {}
@@ -199,7 +200,7 @@ if __name__ == "__main__":
         channels = fetch_channels(url)   #读取上面url清单
         print(f"获取到的频道数据: {channels}")
         # 写入频道到input_file1
-        write_txt(channels):
+        write_txt(channels)
         print("写入完成。")
      
      # 写入央视频道卫视频道到input_file2
