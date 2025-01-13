@@ -1,0 +1,53 @@
+name: sort Update
+
+on:
+  schedule:
+    - cron: '30 9,21 * * *'
+  push:
+  #workflow_dispatch:
+    branches:
+      - ipv4
+    paths:
+      - 'blacklist1/*.txt'  # 注意这里的路径是基于仓库根目录的，如果live.txt位于sort文件夹下
+      - 'sort/sort-q.py'
+      - '.github/workflows/sort-q.yml'
+jobs:
+  run_script:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.10'
+
+    - name: Cache dependencies
+      uses: actions/cache@v2
+      with:
+        path: ~/.cache/pip
+        key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+        restore-keys: |
+          ${{ runner.os }}-pip-
+
+    - name: Install dependencies
+      run: |
+        pip install requests
+
+    - name: Run Python sort script
+      run: python sort/sort-q.py
+
+    - name: Commit and push if changed
+      run: |
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        git add -A
+        if ! git diff --staged --quiet; then
+          git commit -m "Auto-update live files"
+          git push
+        fi
+
+    env:
+      TZ: Asia/Shanghai
