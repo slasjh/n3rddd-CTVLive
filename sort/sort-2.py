@@ -105,7 +105,7 @@ def write_txt_optimized(channels, out_file):
 
     result_counter = 8
     channel_counters = {}
-    last_genre = ''
+    current_genre = None  # 新增变量来跟踪当前正在写入的类别
     category_mappers = {
         'CCTV': '央视频道',
         '卫视': '卫视频道',
@@ -125,19 +125,15 @@ def write_txt_optimized(channels, out_file):
                         # 确保在访问之前，字典中已经有这个键（或安全地访问）
                         current_count = channel_counters.get(channel_name, 0)
                         if current_count < result_counter:
-                            if genre != last_genre:
+                            # 检查是否需要写入新的类别标题
+                            if genre != current_genre:
                                 file.write(f"\n{genre},#genre#\n")
-                                last_genre = genre
+                                current_genre = genre  # 更新当前类别
                             file.write(f"{channel_name},{channel_url}\n")
-                            # 这里不需要再打印 current_count，因为它已经被安全获取
 
                             # 更新字典中的计数
                             channel_counters[channel_name] = current_count + 1
                         break  # 找到匹配的类别后退出内层循环
-
-# 注意：这里的 channels 变量应该是一个已经定义好的、符合上述函数要求的字典结构
-# 例如：channels = {'some_category': [('延边卫视', 'http://example.com/1'), ...], ...}
-# 你需要确保在调用 write_txt_optimized 函数之前，channels 已经被正确加载和解析
 
 
        
