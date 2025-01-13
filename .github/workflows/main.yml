@@ -3,9 +3,16 @@ name: ipv4 Daily Update
 on:
   schedule:
     - cron: '30 9,21 * * *'
-  workflow_dispatch:
+  push:
     branches:
       - ipv4
+    paths:
+      - 'live.txt'
+      - '.github/workflows/main.yml'
+      - '*.py'
+      - 'some_directory/specific_file.txt'
+      - 'some_directory/*.txt'
+
 
 jobs:
   run_script:
