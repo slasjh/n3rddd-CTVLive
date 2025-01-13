@@ -99,118 +99,58 @@ def replace_channel_name(name):
         name = name.replace(old, new)
 
     return name
-                         
+def write_channels_to_file(channels, filename, categories):
+    result_counter = 8  # 每个频道最多写入的次数
+    channel_counters = {}
 
-def write_txt(channels):
-    print("开始写入tvlist.txt文件...")
-
-    with open(input_file1, 'w', encoding='utf-8') as file:
-
-        result_counter = 8  # 每个频道最多写入的次数
-
-        channel_counters = {}
-
- 
-
-        # 处理央视频道
-        print("开始写入央视频道...")
-        file.write('央视频道,#genre#\n')
-
-        categories = sorted(channels.keys())
-
-        for category in categories:
-
-            for channel_name, channel_url in channels[category]:
-
-                if 'CCTV' in channel_name:
-
+    def write_channels(file, category_name, keyword_list):
+        print(f"开始写入{filename}中的{category_name}...")
+        file.write(f"\n{category_name},#genre#\n")
+        # 注意：这里不再遍历sorted(channels.keys())，因为我们要按categories的顺序处理
+        if category_name in channels:  # 确保category_name在channels中存在
+            # 对当前类别下的频道按名称排序
+            sorted_channels = sorted(channels[category_name], key=lambda x: x[0])  # x[0]是频道名称
+            for channel_name, channel_url in sorted_channels:
+                if any(keyword in channel_name for keyword in keyword_list):
                     if channel_counters.get(channel_name, 0) < result_counter:
-
                         file.write(f"{channel_name},{channel_url}\n")
-
                         channel_counters[channel_name] = channel_counters.get(channel_name, 0) + 1
+        else:
+            print(f"警告：{category_name}在频道数据中不存在。")
 
-        # 处理卫视频道（注意：这里不应该重置channel_counters，而是应该继续使用它进行检查）
+    # 注意：修复了原始代码中的语法错误（缺少逗号）
+    keyword_list_map = {
+        "央视频道": ['CCTV'],
+        "卫视频道": ['卫视'],
+        "港澳台": ['香港', '澳门', '台湾'],  # 合并其他关键词
+        "少儿频道": ['儿童', '少儿', '动漫', '卡通', '动画'],  # 合并其他关键词
+        "电影频道": ['电影', '影院'],  # 合并其他关键词
+    }
 
-        # 但为了清晰起见，并且避免与央视频道的计数器混淆（尽管在这个例子中不是必需的），
+    # 检查categories中的每个项是否在keyword_list_map中有对应的关键词列表
+    # 如果不是，您可能需要处理这种情况（例如，跳过该类别或打印警告）
+    # 但在这里，我们假设categories是有效的，并且与keyword_list_map中的键匹配
 
-        # 我们可以使用一个新的字典来跟踪卫视频道的计数器（但这里为了简化代码，我仍然使用同一个字典）
-        print("开始写入卫视频道...")
-        
-        file.write('\n卫视频道,#genre#\n')  # 注意添加了换行符来分隔央视频道和卫视频道部分
+    with open(filename, 'w', encoding='utf-8') as file:
+        for category_name in categories:
+            keyword_list = keyword_list_map.get(category_name, [])  # 使用get以防category_name不在映射中
+            if keyword_list:  # 确保有关键词列表才写入
+                write_channels(file, category_name, keyword_list)
 
-        # 注意：上面的代码实际上没有“重置”channel_counters，因为它在同一个作用域内，
 
-        # 我们只是继续用它来跟踪新的频道写入。如果要在逻辑上分隔得更清楚，
+# 定义输入文件和频道数据
+#input_file1 = 'output1.txt'  # 第一个输出文件
+#input_file2 = 'output2.txt'  # 第二个输出文件
+#channels = {
+    # 示例频道数据
+    #'category1': [('CCTV1', 'http://example.com/cctv1'), ('CCTV2', 'http://example.com/cctv2')],
+    #'category2': [('北京卫视', 'http://example.com/bjtv'), ('湖南卫视', 'http://example.com/hntv')],
+    # 其他类别...
+#}
 
-        # 可以考虑将处理央视频道和卫视频道的代码放入不同的函数中。
 
-        for category in categories:  # 这里不需要再次排序，因为我们已经有了排序后的列表
 
-            for channel_name, channel_url in channels[category]:
 
-                if '卫视' in channel_name:
-
-                    if channel_counters.get(channel_name, 0) < result_counter:
-
-                        # 注意：这里我们使用同一个channel_counters字典，
-
-                        # 但逻辑上它是连续的，因为我们没有在写入卫视频道前清空它。
-
-                        # 如果想要逻辑上更清晰，可以使用一个单独的卫视频道计数器字典。
-
-                        file.write(f"{channel_name},{channel_url}\n")
-
-                        channel_counters[channel_name] = channel_counters.get(channel_name, 0) + 1
-
-        print("开始写入港澳台频道...")
-        
-        file.write('\n港澳台频道,#genre#\n')  # 注意添加了换行符来分隔央视频道和卫视频道部分
-
-        for category in categories:  # 这里不需要再次排序，因为我们已经有了排序后的列表
-
-            for channel_name, channel_url in channels[category]:
-
-                if '香港' or '澳门' or '台湾' in channel_name:
-
-                    if channel_counters.get(channel_name, 0) < result_counter:
-
-                        file.write(f"{channel_name},{channel_url}\n")
-
-                        channel_counters[channel_name] = channel_counters.get(channel_name, 0) + 1
-                     
-        print("开始写入少儿频道...")
-        
-        file.write('\n儿童频道,#genre#\n')  # 注意添加了换行符来分隔央视频道和卫视频道部分
-
-        for category in categories:  # 这里不需要再次排序，因为我们已经有了排序后的列表
-
-            for channel_name, channel_url in channels[category]:
-
-                if '儿童' or '少儿' or '动漫'  or '卡通'  or '动画'  in channel_name:
-
-                    if channel_counters.get(channel_name, 0) < result_counter:
-
-                        # 注意：这里我们使用同一个channel_counters字典，
-
-                        file.write(f"{channel_name},{channel_url}\n")
-
-                        channel_counters[channel_name] = channel_counters.get(channel_name, 0) + 1
-                             print("开始写入少儿频道...")
-        
-        file.write('\n电影频道,#genre#\n')  # 注意添加了换行符来分隔央视频道和卫视频道部分
-
-        for category in categories:  # 这里不需要再次排序，因为我们已经有了排序后的列表
-
-            for channel_name, channel_url in channels[category]:
-
-                if '电影' or '影院'  in channel_name:
-
-                    if channel_counters.get(channel_name, 0) < result_counter:
-
-                        file.write(f"{channel_name},{channel_url}\n")
-
-                        channel_counters[channel_name] = channel_counters.get(channel_name, 0) + 1
 
 if __name__ == "__main__":
     # 定义要访问的多个URL
@@ -230,15 +170,22 @@ if __name__ == "__main__":
     # root_dir = os.path.abspath(os.sep)  
 
     #input_file1 = os.path.join(parent_dir, 'live.txt')  # 输入文件路径1
-    input_file1 = os.path.join(current_dir, 'tvlist-q.txt')  # 输入文件路径1
+    input_file1 = os.path.join(current_dir, 'tvlist.txt')  # 输入文件路径1
+    input_file2 = os.path.join(current_dir, 'tvlist-q.txt')  # 输入文件路径2
     if not os.path.exists(input_file1):
         os.makedirs(input_file1)
+    if not os.path.exists(input_file2):
+        os.makedirs(input_file2)
     for url in urls:
         print(f"处理URL: {url}")
         channels = fetch_channels(url)   #读取上面url清单
         print(f"获取到的频道数据: {channels}")
-        write_txt(channels)
-        # 打开文件并读取内容
+        # 写入央视频道和卫视频道到input_file2
+        write_channels_to_file(channels, input_file1, ['央视频道', '卫视频道'])
+        # 写入其他频道到input_file1
+        write_channels_to_file(channels, input_file2, ['央视频道', '卫视频道','港澳台', '少儿频道', '电影频道'])
+        print("写入完成。")
+
 
         #with open(input_file1, 'r') as file:
 
