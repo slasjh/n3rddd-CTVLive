@@ -158,7 +158,7 @@ def write_txt_optimized(channels,out_file):
                             print(f"{channel_name}")
                             print(f"{channel_counters[channel_name]}")
 
-                            channel_counters[channel_name] += 1
+                            channel_counters[channel_name] = channel_counters.get(channel_name, 0) + 1
 
                             break
 
