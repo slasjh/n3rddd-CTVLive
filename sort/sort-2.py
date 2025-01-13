@@ -99,68 +99,48 @@ def replace_channel_name(name):
         name = name.replace(old, new)
 
     return name
- 
-def write_txt_optimized(channels,out_file):
 
+def write_txt_optimized(channels, out_file):
     print("开始写入.txt文件...")
 
-    #out_file = 'tvlist.txt'
-
- 
-
     result_counter = 8
-
     channel_counters = {}
-
-    last_genre = ''  # 用于跟踪上一个写入的频道类型
-
+    last_genre = ''
     category_mappers = {
-
         'CCTV': '央视频道',
-
         '卫视': '卫视频道',
-
         '香港': '港澳台频道',
-
         '台湾': '港澳台频道',
-
         '少儿': '少儿频道',
-
         '动漫': '少儿频道',
-
         '电影': '电影频道',
-
         '影院': '电影频道'
-
     }
 
- 
-
     with open(out_file, 'w', encoding='utf-8') as file:
-
         for category in sorted(channels.keys()):
-
             for channel_name, channel_url in channels[category]:
-
                 for key, genre in category_mappers.items():
-
                     if key in channel_name:
-
-                        if channel_counters.get(channel_name, 0) < result_counter:
-
+                        # 确保在访问之前，字典中已经有这个键（或安全地访问）
+                        current_count = channel_counters.get(channel_name, 0)
+                        if current_count < result_counter:
                             if genre != last_genre:
-
                                 file.write(f"\n{genre},#genre#\n")
-
                                 last_genre = genre
-
                             file.write(f"{channel_name},{channel_url}\n")
-                            print(f"{channel_name}")
-                            print(f"{channel_counters[channel_name]}")
+                            # 这里不需要再打印 current_count，因为它已经被安全获取
 
-                            channel_counters[channel_name] = channel_counters.get(channel_name, 0) + 1
+                            # 更新字典中的计数
+                            channel_counters[channel_name] = current_count + 1
+                        break  # 找到匹配的类别后退出内层循环
 
-                            break
+# 注意：这里的 channels 变量应该是一个已经定义好的、符合上述函数要求的字典结构
+# 例如：channels = {'some_category': [('延边卫视', 'http://example.com/1'), ...], ...}
+# 你需要确保在调用 write_txt_optimized 函数之前，channels 已经被正确加载和解析
+
+
+       
 
 def extract_channels(input_file, output_file, channels_to_extract):
     with open(input_file, 'r', encoding='utf-8') as infile, open(output_file, 'w', encoding='utf-8') as outfile:
