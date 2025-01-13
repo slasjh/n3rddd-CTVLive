@@ -99,55 +99,65 @@ def replace_channel_name(name):
         name = name.replace(old, new)
 
     return name
-def write_channels_to_file(channels, filename, categories):
-    result_counter = 8  # 每个频道最多写入的次数
-    channel_counters = {}
+ 
+ def write_txt(channels):
+    print("开始写入tvlist.txt文件...")
 
-    def write_channels(file, category_name, keyword_list):
-        print(f"开始写入{filename}中的{category_name}...")
-        file.write(f"\n{category_name},#genre#\n")
-        # 注意：这里不再遍历sorted(channels.keys())，因为我们要按categories的顺序处理
-        if category_name in channels:  # 确保category_name在channels中存在
-            # 对当前类别下的频道按名称排序
-            sorted_channels = sorted(channels[category_name], key=lambda x: x[0])  # x[0]是频道名称
-            for channel_name, channel_url in sorted_channels:
-                if any(keyword in channel_name for keyword in keyword_list):
+    with open(input_file1, 'w', encoding='utf-8') as file:
+        result_counter = 8  # 每个频道最多写入的次数
+        channel_counters = {}
+
+        # 处理央视频道
+        print("开始写入央视频道...")
+        file.write('央视频道,#genre#\n')
+
+        categories = sorted(channels.keys())
+        for category in categories:
+            for channel_name, channel_url in channels[category]:
+                if 'CCTV' in channel_name:
                     if channel_counters.get(channel_name, 0) < result_counter:
                         file.write(f"{channel_name},{channel_url}\n")
                         channel_counters[channel_name] = channel_counters.get(channel_name, 0) + 1
-        else:
-            print(f"警告：{category_name}在频道数据中不存在。")
 
-    # 注意：修复了原始代码中的语法错误（缺少逗号）
-    keyword_list_map = {
-        "央视频道": ['CCTV'],
-        "卫视频道": ['卫视'],
-        "港澳台": ['香港', '澳门', '台湾'],  # 合并其他关键词
-        "少儿频道": ['儿童', '少儿', '动漫', '卡通', '动画'],  # 合并其他关键词
-        "电影频道": ['电影', '影院'],  # 合并其他关键词
-    }
+        # 处理卫视频道
+        print("开始写入卫视频道...")
+        file.write('\n卫视频道,#genre#\n')
+        for category in categories:
+            for channel_name, channel_url in channels[category]:
+                if '卫视' in channel_name:
+                    if channel_counters.get(channel_name, 0) < result_counter:
+                        file.write(f"{channel_name},{channel_url}\n")
+                        channel_counters[channel_name] = channel_counters.get(channel_name, 0) + 1
 
-    # 检查categories中的每个项是否在keyword_list_map中有对应的关键词列表
-    # 如果不是，您可能需要处理这种情况（例如，跳过该类别或打印警告）
-    # 但在这里，我们假设categories是有效的，并且与keyword_list_map中的键匹配
+        # 处理港澳台频道
+        print("开始写入港澳台频道...")
+        file.write('\n港澳台频道,#genre#\n')
+        for category in categories:
+            for channel_name, channel_url in channels[category]:
+                if '香港' in channel_name or '台湾' in channel_name:
+                    if channel_counters.get(channel_name, 0) < result_counter:
+                        file.write(f"{channel_name},{channel_url}\n")
+                        channel_counters[channel_name] = channel_counters.get(channel_name, 0) + 1
 
-    with open(filename, 'w', encoding='utf-8') as file:
-        for category_name in categories:
-            keyword_list = keyword_list_map.get(category_name, [])  # 使用get以防category_name不在映射中
-            if keyword_list:  # 确保有关键词列表才写入
-                write_channels(file, category_name, keyword_list)
+        # 处理少儿频道
+        print("开始写入少儿频道...")
+        file.write('\n少儿频道,#genre#\n')
+        for category in categories:
+            for channel_name, channel_url in channels[category]:
+                if '少儿' in channel_name or '动漫' in channel_name:
+                    if channel_counters.get(channel_name, 0) < result_counter:
+                        file.write(f"{channel_name},{channel_url}\n")
+                        channel_counters[channel_name] = channel_counters.get(channel_name, 0) + 1
 
-
-# 定义输入文件和频道数据
-#input_file1 = 'output1.txt'  # 第一个输出文件
-#input_file2 = 'output2.txt'  # 第二个输出文件
-#channels = {
-    # 示例频道数据
-    #'category1': [('CCTV1', 'http://example.com/cctv1'), ('CCTV2', 'http://example.com/cctv2')],
-    #'category2': [('北京卫视', 'http://example.com/bjtv'), ('湖南卫视', 'http://example.com/hntv')],
-    # 其他类别...
-#}
-
+        # 处理电影频道
+        print("开始写入电影频道...")
+        file.write('\n电影频道,#genre#\n')
+        for category in categories:
+            for channel_name, channel_url in channels[category]:
+                if '电影' in channel_name or '影院' in channel_name:
+                    if channel_counters.get(channel_name, 0) < result_counter:
+                        file.write(f"{channel_name},{channel_url}\n")
+                        channel_counters[channel_name] = channel_counters.get(channel_name, 0) + 1
 
 
 
