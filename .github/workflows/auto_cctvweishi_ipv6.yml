@@ -4,8 +4,12 @@ on:
   schedule:
     - cron: '30 10,21 * * *'
   push:
+  #workflow_dispatch:
     branches:
-      - mian
+      - ipv4
+    paths:
+      - 'auto_cctvweishi_ipv6.py'
+      - '.github/workflows/auto_cctvweishi_ipv6.yml'
 
 jobs:
   run_script:
