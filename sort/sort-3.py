@@ -103,8 +103,7 @@ def replace_channel_name(name):
 def write_txt(channels):
     print("开始写入tvlist.txt文件...")
 
-    input_file1 = 'tvlist.txt'  # 添加了缺失的变量定义
-    with open(input_file1, 'w', encoding='utf-8') as file:
+    with open(output_file1, 'w', encoding='utf-8') as file:
         result_counter = 8  # 每个频道最多写入的次数
         channel_counters = {}
 
@@ -192,27 +191,21 @@ if __name__ == "__main__":
     # root_dir = os.path.abspath(os.sep)  
 
     #input_file1 = os.path.join(parent_dir, 'live.txt')  # 输入文件路径1
-    input_file1 = os.path.join(current_dir, 'tvlist.txt')  # 输入文件路径1
-    input_file2 = os.path.join(current_dir, 'tvlist-yw.txt')  # 输入文件路径2
+    output_file1 = os.path.join(current_dir, 'tvlist.txt')  # 输入文件路径1
+    output_file2 = os.path.join(current_dir, 'tvlist-yw.txt')  # 输入文件路径2
  
     for url in urls:
         print(f"处理URL: {url}")
         channels = fetch_channels(url)   #读取上面url清单
         print(f"获取到的频道数据: {channels}")
-        # 写入频道到input_file1
+        # 写入频道到output_file1
         write_txt(channels)
         print("写入完成。")
      
-     # 写入央视频道卫视频道到input_file2
+     # 写入央视频道卫视频道到output_file2
      # Define the categories to extract (as a set)
     channels_to_extract = {'央视频道', '卫视频道'}
     extract_channels(out_file1, out_file2, channels_to_extract)
     print("央视频道卫视频道写入tvlist-yw.txt完成。")
 
-
-        #with open(input_file1, 'r') as file:
-
-            #content = file.read()
-        # 打印文件内容
-           # print(content)
         
