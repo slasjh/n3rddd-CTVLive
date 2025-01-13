@@ -172,10 +172,7 @@ if __name__ == "__main__":
     #input_file1 = os.path.join(parent_dir, 'live.txt')  # 输入文件路径1
     input_file1 = os.path.join(current_dir, 'tvlist.txt')  # 输入文件路径1
     input_file2 = os.path.join(current_dir, 'tvlist-q.txt')  # 输入文件路径2
-    if not os.path.exists(input_file1):
-        os.makedirs(input_file1)
-    if not os.path.exists(input_file2):
-        os.makedirs(input_file2)
+ 
     for url in urls:
         print(f"处理URL: {url}")
         channels = fetch_channels(url)   #读取上面url清单
