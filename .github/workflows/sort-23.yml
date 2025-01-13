@@ -1,4 +1,4 @@
-name: sort2 Update
+name: sort3 Update
 
 on:
   schedule:
@@ -9,8 +9,8 @@ on:
       - ipv4
     paths:
       - 'blacklist1/*.txt'  # 注意这里的路径是基于仓库根目录 的，如果live.txt位于sort文件夹下
-      - 'sort/sort-2.py'
-      - '.github/workflows/sort-2.yml'
+      - 'sort/sort-3.py'
+      - '.github/workflows/sort-3.yml'
 jobs:
   run_script:
     runs-on: ubuntu-latest
@@ -37,7 +37,7 @@ jobs:
         pip install requests
 
     - name: Run Python sort script
-      run: python sort/sort-2.py
+      run: python sort/sort-3.py
 
     - name: Commit and push if changed
       run: |
