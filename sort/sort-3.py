@@ -159,7 +159,18 @@ def replace_channel_name(name):
                         file.write(f"{channel_name},{channel_url}\n")
                         channel_counters[channel_name] = channel_counters.get(channel_name, 0) + 1
 
-
+def extract_channels(input_file, output_file, channels_to_extract):
+    with open(input_file, 'r', encoding='utf-8') as infile, open(output_file, 'w', encoding='utf-8') as outfile:
+        current_category = None
+        for line in infile:
+            line = line.strip()
+            if line.endswith(',#genre#'):
+                current_category = line[:-len(',#genre#')].strip()
+                if current_category in channels_to_extract:
+                    outfile.write(f'{current_category},#genre#\n')
+            elif  ',' in line :
+                channel_name, url = line.split(',', 1)
+                outfile.write(f"{channel_name.strip()}, {url.strip()}\n")
 
 
 if __name__ == "__main__":
@@ -181,17 +192,21 @@ if __name__ == "__main__":
 
     #input_file1 = os.path.join(parent_dir, 'live.txt')  # 输入文件路径1
     input_file1 = os.path.join(current_dir, 'tvlist.txt')  # 输入文件路径1
-    input_file2 = os.path.join(current_dir, 'tvlist-q.txt')  # 输入文件路径2
+    input_file2 = os.path.join(current_dir, 'tvlist-yw.txt')  # 输入文件路径2
  
     for url in urls:
         print(f"处理URL: {url}")
         channels = fetch_channels(url)   #读取上面url清单
         print(f"获取到的频道数据: {channels}")
-        # 写入央视频道和卫视频道到input_file2
-        write_channels_to_file(channels, input_file1, ['央视频道', '卫视频道'])
-        # 写入其他频道到input_file1
-        write_channels_to_file(channels, input_file2, ['央视频道', '卫视频道','港澳台', '少儿频道', '电影频道'])
+        # 写入频道到input_file1
+        write_txt(channels):
         print("写入完成。")
+     
+     # 写入央视频道卫视频道到input_file2
+     # Define the categories to extract (as a set)
+    channels_to_extract = {'央视频道', '卫视频道'}
+    extract_channels(out_file1, out_file2, channels_to_extract)
+    print("央视频道卫视频道写入tvlist-yw.txt完成。")
 
 
         #with open(input_file1, 'r') as file:
