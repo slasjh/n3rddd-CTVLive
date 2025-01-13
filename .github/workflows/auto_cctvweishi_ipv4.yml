@@ -5,7 +5,14 @@ on:
     - cron: '30 10,21 * * *'
   push:
     branches:
-      - mian
+      - ipv4
+    paths:
+      - 'litelive.txt'
+      - 'litelive_cctvweishi.txt'
+      - '.github/workflows/auto_cctvweishi_ipv4.yml'
+      - '*.py'
+      - 'some_directory/specific_file.txt'
+      - 'some_directory/*.txt'
 
 jobs:
   run_script:
