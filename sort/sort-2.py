@@ -105,7 +105,7 @@ def write_txt_optimized(channels, out_file):
 
     result_counter = 8
     channel_counters = {}
-    current_genre = None  # 新增变量来跟踪当前正在写入的类别
+    current_genre = None  # 新增变量来跟踪当前 正在写入的类别
     category_mappers = {
         'CCTV': '央视频道',
         '卫视': '卫视频道',
