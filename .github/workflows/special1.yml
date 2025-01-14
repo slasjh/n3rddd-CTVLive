@@ -1,0 +1,49 @@
+name: special1
+on:
+  schedule:
+    - cron: '10 10,17 * * *' # 每天上午10:10和下午5:10（UTC）
+  push:
+    branches:
+      - ipv4
+    paths:
+      - 'live.txt'
+      - '.github/workflows/special1.yml'
+      - 'special/special1.py'
+      - 'some_directory/specific_file.txt'
+      - 'some_directory/*.txt'
+
+jobs:
+  run_job:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+      
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.10'
+        
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        
+    - name: Run Python script
+      run: python special/special.py
+          
+    - name: Commit changes
+      run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+          git add special/migu.txt
+
+          git add special/cm.txt
+          git commit -m ":tv:  (special)AutoUpdate $(date -d "+8 hours" +'%Y%m%d')"
+          
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+    
+        
