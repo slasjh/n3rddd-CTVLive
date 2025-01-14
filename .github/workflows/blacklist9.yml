@@ -6,7 +6,7 @@ on:
     branches:
       - ipv4
     paths:
-      - 'litelive.txt'
+      - 'live.txt'
       - '.github/workflows/blacklist9.yml'
       - 'blacklist1/blacklist9.py'
       - 'some_directory/specific_file.txt'
