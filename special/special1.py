@@ -67,19 +67,34 @@ output_file1 = "assets/special/cm.txt"
 gjz1 = "移动CM"
 output_file2 = "assets/special/migu.txt"
 gjz2 = "migu"
+
+# 调用函数示例
 tiqu_gjz(output_file1,gjz1)
 tiqu_gjz(output_file2,gjz2)
 
-def tiqu_gjz(output_file,gjz):
-try:
+def tiqu_gjz(output_file, gjz):
 
-    with open(output_file, 'w', encoding='utf-8') as f:
-        f.write('{gjz},#genre#\n')
+    try:
+        # 假设all_lines是从某个地方获取的文本行列表，这里需要您根据实际情况定义
+        # 例如，可以从文件读取或者从网络获取等
+        # all_lines = [...]  # 您需要定义这个变量
+        # 为了示例，这里假设all_lines是一个示例列表
+        all_lines = [
+            "这是一行测试文本。",
+            "包含chinamobile.com的文本行：http://www.chinamobile.com/something",
+            "另一行不包含目标网址的文本。"
+        ]
+ 
+        with open(output_file, 'w', encoding='utf-8') as f:
+            f.write(f'{gjz},#genre#\n')  # 使用f-string格式化字符串
             for line in all_lines:
-                if '.chinamobile.com' in line :
+                if '.chinamobile.com' in line:
                     f.write(line + '\n')
-   print(f"合并后的文本已保存到文件: {output_file}")
-   print(f"time: {datetime.now().strftime("%Y%m%d_%H_%M_%S")}")
 
-except Exception as e:
-    print(f"保存文件时发生错误：{e}")
+        print(f"合并后的文本已保存到文件: {output_file}")
+        print(f"time: {datetime.now().strftime("%Y%m%d_%H_%M_%S")}")
+
+    except Exception as e:
+        print(f"保存文件时发生错误：{e}")
+
+ 
