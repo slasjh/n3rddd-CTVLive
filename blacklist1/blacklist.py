@@ -44,9 +44,9 @@ def check_url(url, timeout=2):
 
     try:
 
-        if url.startswith("http"):
+        if url.startswith("http") and is_ipv6(url):
 
-            if "/udp/" not in url and "/rtp/" not in url:  # 使用 and 而不是 or，确保 URL 中不包含 /udp/ 和 /rtp/
+            if "/udp/" not in url or "/rtp/" not in url:  # 使用 and 而不是 or，确保 URL 中不包含 /udp/ 和 /rtp/
 
                 response = requests.get(url, allow_redirects=True, headers=headers, timeout=timeout)
 
@@ -62,9 +62,9 @@ def check_url(url, timeout=2):
                 #with urllib.request.urlopen(req, timeout=timeout) as response:
                     #if response.status == 200 or response.status == 206:
                         #success = True
-        elif url.startswith("p3p") or url.startswith("p2p") or url.startswith("rtmp") or url.startswith("rtsp") or url.startswith("rtp"):
+        elif (url.startswith("p3p") or url.startswith("p2p") or url.startswith("rtmp") or url.startswith("rtsp") or url.startswith("rtp") or not is_ipv6(url) or "/udp/" in url or "/rtp/" in url):
             success = False
-            print(f"{url}此链接为rtp/p2p/rtmp/rtsp等，舍弃不检测")
+            print(f"{url}此链接为rtp/p2p/rtmp/rtsp/ipv4//udp/ /rtp/等，舍弃不检测")
 
         # 如果执行到这一步，没有异常，计算时间
         elapsed_time = (time.time() - start_time) * 1000  # 转换为毫秒
@@ -77,7 +77,8 @@ def check_url(url, timeout=2):
         success = False
 
     return elapsed_time, success
-
+def is_ipv6(url):
+    return re.match(r'^http:\/\/\[[0-9a-fA-F:]+\]', url) is not None
 
 def extract_ipv4_sources(sources):
 
@@ -150,7 +151,7 @@ def measure_speed(url):
                         break
     elapsed_time, success = check_url(url)
 
-    if success and elapsed_time is not None:
+    if success and elapsed_time is not None :
 
         # 现在 process_m3u8(url) 在这里被正确调用，受 if 语句的控制
 
@@ -200,7 +201,6 @@ def process_line(line):
         
         name, url = parts
         url = url.strip()
-        
      
         speed, elapsed_time = measure_speed(url)
         if speed and elapsed_time is not None:
