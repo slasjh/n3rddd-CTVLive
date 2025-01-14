@@ -36,9 +36,10 @@ jobs:
       run: |
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
-          git add -A
+          #git add -A
 
-          #git add special/cm.txt
+          git add special/cm.txt
+          git add special/migu.txt
           git commit -m ":tv:  (special)AutoUpdate $(date -d "+8 hours" +'%Y%m%d')"
           
     - name: Push changes
