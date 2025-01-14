@@ -9,6 +9,7 @@ on:
       - 'live.txt'
       - '.github/workflows/special1.yml'
       - 'special/special1.py'
+      - 'special/*.txt'
       - 'some_directory/specific_file.txt'
       - 'some_directory/*.txt'
 
