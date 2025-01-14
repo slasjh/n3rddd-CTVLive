@@ -21,27 +21,31 @@ def read_txt_to_array(file_name):
 
 def process_url(url):
     try:
-
-        # 创建一个请求对象并添加自定义header
         req = urllib.request.Request(url)
-        req.add_header('User-Agent', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3')
-
-        # 打开URL并读取内容
+        req.add_header('User-Agent', 'Mozilla/5.0 ... Chrome/58.0 ...')
         with urllib.request.urlopen(req) as response:
-            # 以二进制方式读取数据
-            data = response.read()
-            # 将二进制数据解码为字符串
-            text = data.decode('utf-8')
-            # 逐行处理内容
+            text = response.read().decode('utf-8')
             lines = text.split('\n')
             print(f"行数: {len(lines)}")
-            for line in lines:
-                line = line.strip()
-                if  "#genre#" not in line and "," in line and "://" in line and line not in excudelist_lines:
-                    # 拆分成频道名和URL部分
-                    # channel_name, channel_address = line.split(',', 1)
-                    all_lines.append(line.strip())
-
+            is_m3u = any("#EXTINF" in line for line in lines[:15])
+            source_type = "m3u" if is_m3u else "txt"
+            logging.info(f"url: {url} 获取成功，判断为{source_type}格式")
+            
+            if is_m3u:
+                for line in lines:
+                    line = line.strip()
+                    if line.startswith("#EXTINF"):
+                        match = re.search(r'group-title="(.*?)",(.*)', line)
+                        if match:
+                            channel_name = match.group(2).strip()
+                    elif line and not line.startswith("#"):
+                        channel_url = line.strip()
+                        all_lines.append((channel_name, channel_url))
+            else:
+                for line in lines:
+                    line = line.strip()
+                    if "#genre#" not in line and "," in line and "://" in line:
+                        all_lines.append(line)
     except Exception as e:
         print(f"处理URL时发生错误：{e}")
 # 去重复源 2024-08-06 (检测前剔除重复url，提高检测效率)
