@@ -132,8 +132,8 @@ all_lines =  []
 excudelist_lines=read_txt_to_array('special/ExcludeList.txt') 
 # 定义
 urls = [
-    #"https://ua.fongmi.eu.org/box.php?url=https://xn--dkw0c.v.nxog.top/m/tv",
-    #"https://ua.fongmi.eu.org/box.php?url=http://%E6%88%91%E4%B8%8D%E6%98%AF.%E6%91%B8%E9%B1%BC%E5%84%BF.com/live.php",
+    "https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u",
+    "https://raw.githubusercontent.com/kimwang1978/collect-tv-txt/main/merged_output.txt",
     "https://raw.githubusercontent.com/slasjh/n3rddd-CTVLive/refs/heads/ipv4/live.txt",
     "https://raw.githubusercontent.com/slasjh/n3rddd-CTVLive/refs/heads/ipv6/live.txt",
 ]
@@ -156,15 +156,29 @@ gjz1 = ".chinamobile.com"
 
 output_file2 = "special/migu.txt"
 feilei2 = "migu分类"
-gjz2 = [".migu.", "mg.php", "m.php", "/mg/","live.php"]  # 使用列表来存储多个关键字
+gjz2 = [".migu.", "mg.php", "m.php", "/mg/","live.php",".php?"]  # 使用列表来存储多个关键字
 
 output_file3 = "special/gaoma.txt"
 feilei3 = "gaoma分类"
 gjz3 = ":35455/"
 
+output_file4 = "special/movie.txt"
+feilei4 = "movie分类"
+gjz4 = ["经典", "影院", "电影","iHOT爱","newtv","NEWTV","剧场","电视剧","热剧","大片","大剧"]  # 使用列表来存储多个关键字
+
+output_file5 = "special/zixun.txt"
+feilei5 = "资讯分类"
+gjz5 = ["资讯", "新闻", "凤凰","翡翠"]  # 使用列表来存储多个关键字
+output_file6 = "special/child.txt"
+feilei6 = "少儿分类"
+gjz6 = ["儿童", "少儿", "动漫","卡通","动画"]  # 使用列表来存储多个关键字
+
 # 调用函数示例，注意现在第三个参数对于第二个文件是一个列表
 tiqu_gjz(output_file1, feilei1, gjz1)
 tiqu_gjz(output_file2, feilei2, gjz2)
 tiqu_gjz(output_file3, feilei3, gjz3)
+tiqu_gjz(output_file4, feilei4, gjz4)
+tiqu_gjz(output_file5, feilei4, gjz5)
+tiqu_gjz(output_file6, feilei6, gjz6)
 
  
