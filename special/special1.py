@@ -17,9 +17,7 @@ def read_txt_to_array(file_name):
         print(f"An error occurred: {e}")
         return []
 
-all_lines =  []
-#读取文本
-excudelist_lines=read_txt_to_array('special/ExcludeList.txt') 
+
 
 def process_url(url):
     try:
@@ -46,7 +44,53 @@ def process_url(url):
 
     except Exception as e:
         print(f"处理URL时发生错误：{e}")
+# 去重复源 2024-08-06 (检测前剔除重复url，提高检测效率)
+def remove_duplicates_url(lines):
+    urls =[]
+    newlines=[]
+    for line in lines:
+        if "," in line and "://" in line:
+            # channel_name=line.split(',')[0].strip()
+            channel_url=line.split(',')[1].strip()
+            if channel_url not in urls: # 如果发现当前url不在清单中，则假如newlines
+                urls.append(channel_url)
+                newlines.append(line)
+    return newlines
 
+# 处理带$的URL，把$之后的内容都去掉（包括$也去掉） 【2024-08-08 22:29:11】
+#def clean_url(url):
+#    last_dollar_index = url.rfind('$')  # 安全起见找最后一个$处理
+#    if last_dollar_index != -1:
+#        return url[:last_dollar_index]
+#    return url
+def clean_url(lines):
+    urls =[]
+    newlines=[]
+    for line in lines:
+        if "," in line and "://" in line:
+            last_dollar_index = line.rfind('$')
+            if last_dollar_index != -1:
+                line=line[:last_dollar_index]
+            newlines.append(line)
+    return newlines
+
+# 处理带#的URL  【2024-08-09 23:53:26】
+def split_url(lines):
+    newlines=[]
+    for line in lines:
+        # 拆分成频道名和URL部分
+        channel_name, channel_address = line.split(',', 1)
+        #需要加处理带#号源=予加速源
+        if  "#" not in channel_address:
+            newlines.append(line)
+        elif  "#" in channel_address and "://" in channel_address: 
+            # 如果有“#”号，则根据“#”号分隔
+            url_list = channel_address.split('#')
+            for url in url_list:
+                if "://" in url: 
+                    newline=f'{channel_name},{url}'
+                    newlines.append(line)
+    return newlines
 
 
 
@@ -83,12 +127,14 @@ def tiqu_gjz(output_file, feilei, gjz_or_gjzs):
     except Exception as e:
         print(f"保存文件时发生错误：{e}")
 
-
+all_lines =  []
+#读取文本
+excudelist_lines=read_txt_to_array('special/ExcludeList.txt') 
 # 定义
 urls = [
-    "https://ua.fongmi.eu.org/box.php?url=https://xn--dkw0c.v.nxog.top/m/tv",
-    "https://ua.fongmi.eu.org/box.php?url=http://%E6%88%91%E4%B8%8D%E6%98%AF.%E6%91%B8%E9%B1%BC%E5%84%BF.com/live.php",
-    "https://ua.fongmi.eu.org/box.php?url=http://sinopacifichk.com/tv/live",
+    #"https://ua.fongmi.eu.org/box.php?url=https://xn--dkw0c.v.nxog.top/m/tv",
+    #"https://ua.fongmi.eu.org/box.php?url=http://%E6%88%91%E4%B8%8D%E6%98%AF.%E6%91%B8%E9%B1%BC%E5%84%BF.com/live.php",
+    "https://raw.githubusercontent.com/slasjh/n3rddd-CTVLive/refs/heads/ipv4/live.txt",
 ]
 # 处理
 for url in urls:
@@ -96,6 +142,12 @@ for url in urls:
         # print(f"time: {datetime.now().strftime("%Y%m%d_%H_%M_%S")}")
         print(f"处理URL: {url}")
         process_url(url)
+# 分级带#号直播源地址
+all_lines=split_url(all_lines)
+# 去$
+all_lines=clean_url(all_lines)
+# 去重
+all_lines=remove_duplicates_url(all_lines)
 # 将合并后的文本写入文件
 output_file1 = "special/cm.txt"
 feilei1 = "移动CM"
