@@ -52,9 +52,42 @@ jobs:
           #git stash save --include-untracked --keep-index "Unstaged changes before auto-update"
         #fi
         git add .
+    - name: Commit changes if any
+
+      id: commit
+
+      run: |
+
         if ! git diff --cached --quiet; then
+
           git commit -m "Auto-update generated files"
-          git push # 注意：直接在Actions中使用git push可能有安全风险
+
+          echo "::set-output name=committed::true"
+
         else
+
           echo "No changes to commit."
+
+          echo "::set-output name=committed::false"
+
         fi
+
+ 
+
+    - name: Create Pull Request
+
+      if: steps.commit.outputs.committed == 'true'
+
+      uses: peter-evans/create-pull-request@v3
+
+      with:
+
+        commit-message: Auto-update generated files
+
+        title: Auto-update generated files
+
+        branch: ipv4-update  # 创建一个新的分支来包含这些更改（可选）
+
+        base: ipv4          # 指定要合并到的目标分支
+
+        delete-branch: true # 如果 PR 被合并，则删除这个分支（可选）
