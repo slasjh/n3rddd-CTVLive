@@ -120,5 +120,14 @@ CCTV-16,http://z.b.bkpcp.top/m.php?id=cctv16\
 云南卫视,http://8.138.90.107/公众号【睡眼迷离的猫】/mg.php?id=ynws
 西藏卫视,http://8.138.90.107/公众号【睡眼迷离的猫】/mg.php?id=xzws
 海峡卫视,http://8.138.90.107/公众号【睡眼迷离的猫】/mg.php?id=hxws
+翡翠台,http://185.243.7.13:80/play/live.php?mac=00:1A:79:45:5E:9A&stream=941619&extension=ts&play_token=p2yEuU1aFS
+TVB星河,http://185.243.7.13:80/play/live.php?mac=00:1A:79:45:5E:9A&stream=941620&extension=ts&play_token=TBgeJuh42H
+TVB星河,http://185.243.7.13:80/play/live.php?mac=00:1A:79:45:5E:9A&stream=571186&extension=ts&play_token=HnxccIWiNo
+TVB星河,http://185.243.7.13:80/play/live.php?mac=00:1A:79:45:5E:9A&stream=153506&extension=ts&play_token=miEIuxsBcN
+TVBS新闻,http://185.243.7.13:80/play/live.php?mac=00:1A:79:45:5E:9A&stream=941622&extension=ts&play_token=E9ymAxKoVJ
+TVBS亚洲,http://185.243.7.13:80/play/live.php?mac=00:1A:79:45:5E:9A&stream=941621&extension=ts&play_token=vFR5CkmzbA
+TVBS亚洲,http://185.243.7.13:80/play/live.php?mac=00:1A:79:45:5E:9A&stream=571185&extension=ts&play_token=wD7CZpooiF
+中天亚洲台,http://line.greatstar.me:80/play/live.php?mac=00:1A:79:13:54:E8&stream=571212&extension=ts
+中天亚洲台,http://line.greatstar.me:80/play/live.php?mac=00:1A:79:51:45:21&stream=571212&extension=ts
 CHC动作电影,http://8.138.90.107/公众号【睡眼迷离的猫】/mg.php?id=chcdzdy
 CHC家庭影院,http://8.138.90.107/公众号【睡眼迷离的猫】/mg.php?id=chcjtdy
