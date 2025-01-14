@@ -160,7 +160,7 @@ gjz2 = [".migu.", "mg.php", "m.php", "/mg/","live.php"]  # 使用列表来存储
 
 output_file3 = "special/gaoma.txt"
 feilei3 = "gaoma分类"
-gjz3 = ":35455/gaoma/"
+gjz3 = ":35455/"
 
 # 调用函数示例，注意现在第三个参数对于第二个文件是一个列表
 tiqu_gjz(output_file1, feilei1, gjz1)
