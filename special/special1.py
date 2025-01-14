@@ -55,13 +55,13 @@ def tiqu_gjz(output_file, feilei, gjz_or_gjzs):
     try:
         # 假设all_lines是从某个地方获取的文本行列表
         # 这里为了示例，我们将其硬编码在函数内部
-        all_lines = [
-            "这是一行测试文本。",
-            "包含chinamobile.com的文本行：http://www.chinamobile.com/something",
-            "另一行包含migu的文本：http://example.com/migu.php",
-            "还有一行包含mg的文本：http://example.com/mg.php",
-            "以及一行不包含目标网址的文本。"
-        ]
+        #all_lines = [
+            #"这是一行测试文本。",
+            #"包含chinamobile.com的文本行：http://www.chinamobile.com/something",
+            #"另一行包含migu的文本：http://example.com/migu.php",
+            #"还有一行包含mg的文本：http://example.com/mg.php",
+            #"以及一行不包含目标网址的文本。"
+        #]
 
         # 如果gjz_or_gjzs是字符串，则将其转换为单元素集合以便统一处理
         if isinstance(gjz_or_gjzs, str):
@@ -78,7 +78,7 @@ def tiqu_gjz(output_file, feilei, gjz_or_gjzs):
                     f.write(line + '\n')
 
         print(f"合并后的文本已保存到文件: {output_file}")
-        print("time: {}".format(datetime.datetime.now().strftime("%Y%m%d_%H_%M_%S")))
+        #print("time: {}".format(datetime.datetime.now().strftime("%Y%m%d_%H_%M_%S")))
 
     except Exception as e:
         print(f"保存文件时发生错误：{e}")
