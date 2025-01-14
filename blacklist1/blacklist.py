@@ -8,6 +8,7 @@ import socket  #check p3p源 rtp源1
 import subprocess #check rtmp源
 import requests
 import logging
+import re
 
 timestart = datetime.now()
 
