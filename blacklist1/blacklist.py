@@ -80,11 +80,12 @@ def check_url(url, timeout=2):
 def is_ipv6(url):
     return re.match(r'^http:\/\/\[[0-9a-fA-F:]+\]', url) is not None
 
-def extract_ipv4_sources(sources):
-
-    ipv4_pattern = re.compile(r'm3u8.*?\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}')
-
-    return [src for src in sources if ipv4_pattern.search(src)]
+def is_ipv4(url):
+    # 简单的 IPv4 地址模式，不考虑前导文本
+    ipv4_pattern = re.compile(r'\b(?:\d{1,3}\.){3}\d{1,3}\b')
+    
+    # 使用列表推导式提取包含 IPv4 地址的源
+    return [src for src in url if ipv4_pattern.search(src)]
 
 
 def device_headers(device_type):
