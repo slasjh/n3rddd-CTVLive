@@ -156,7 +156,7 @@ gjz1 = ".chinamobile.com"
 
 output_file2 = "special/migu.txt"
 feilei2 = "migu分类"
-gjz2 = [".migu.", "mg.php", "m.php", "/mg/"]  # 使用列表来存储多个关键字
+gjz2 = [".migu.", "mg.php", "m.php", "/mg/","live.php"]  # 使用列表来存储多个关键字
 
 output_file3 = "special/gaoma.txt"
 feilei3 = "gaoma分类"
