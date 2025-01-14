@@ -376,9 +376,9 @@ if __name__ == "__main__":
     # 定义要访问的多个URL
     urls = [
         "https://raw.githubusercontent.com/fanmingming/live/refs/heads/main/tv/m3u/ipv6.m3u",
-        'https://raw.githubusercontent.com/YanG-1989/m3u/main/Gather.m3u'
+        'https://raw.githubusercontent.com/YanG-1989/m3u/main/Gather.m3u',
         'https://raw.githubusercontent.com/kimwang1978/collect-tv-txt/refs/heads/main/live.txt',
-        #'https://raw.githubusercontent.com/slasjh/n3rddd-CTVLive/refs/heads/ipv4/live.txt'
+        'https://raw.githubusercontent.com/yuanzl77/IPTV/refs/heads/main/live.txt',
     ]
     for url in urls:
         print(f"处理URL: {url}")
