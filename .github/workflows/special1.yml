@@ -30,15 +30,15 @@ jobs:
         python -m pip install --upgrade pip
         
     - name: Run Python script
-      run: python special/special.py
+      run: python special/special1.py
           
     - name: Commit changes
       run: |
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
-          git add special/migu.txt
+          git add -A
 
-          git add special/cm.txt
+          #git add special/cm.txt
           git commit -m ":tv:  (special)AutoUpdate $(date -d "+8 hours" +'%Y%m%d')"
           
     - name: Push changes
