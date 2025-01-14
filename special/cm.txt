@@ -1,1 +1,2 @@
-
+移动CM,#genre#
+包含chinamobile.com的文本行：http://www.chinamobile.com/something
