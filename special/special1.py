@@ -19,7 +19,7 @@ def read_txt_to_array(file_name):
 
 all_lines =  []
 #读取文本
-excudelist_lines=read_txt_to_array('assets/special/ExcludeList.txt') 
+excudelist_lines=read_txt_to_array('special/ExcludeList.txt') 
 
 def process_url(url):
     try:
@@ -97,11 +97,11 @@ for url in urls:
         print(f"处理URL: {url}")
         process_url(url)
 # 将合并后的文本写入文件
-output_file1 = "assets/special/cm.txt"
+output_file1 = "special/cm.txt"
 feilei1 = "移动CM"
 gjz1 = ".chinamobile.com"
 
-output_file2 = "assets/special/migu.txt"
+output_file2 = "special/migu.txt"
 feilei2 = "migu分类"
 gjz2 = [".migu.", "mg.php", "m.php"]  # 使用列表来存储多个关键字
 
