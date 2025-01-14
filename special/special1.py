@@ -48,6 +48,42 @@ def process_url(url):
         print(f"处理URL时发生错误：{e}")
 
 
+
+
+
+def tiqu_gjz(output_file, feilei, gjz_or_gjzs):
+    try:
+        # 假设all_lines是从某个地方获取的文本行列表
+        # 这里为了示例，我们将其硬编码在函数内部
+        all_lines = [
+            "这是一行测试文本。",
+            "包含chinamobile.com的文本行：http://www.chinamobile.com/something",
+            "另一行包含migu的文本：http://example.com/migu.php",
+            "还有一行包含mg的文本：http://example.com/mg.php",
+            "以及一行不包含目标网址的文本。"
+        ]
+
+        # 如果gjz_or_gjzs是字符串，则将其转换为单元素集合以便统一处理
+        if isinstance(gjz_or_gjzs, str):
+            gjz_set = {gjz_or_gjzs}
+        else:
+            gjz_set = set(gjz_or_gjzs)
+
+        with open(output_file, 'w', encoding='utf-8') as f:
+            # 注意：这里我们不再写入gjz_or_gjzs到文件，因为它可能是多个值
+            # 如果您确实需要写入某种标识符，请考虑使用feilei参数
+            f.write(f'{feilei},#genre#\n')  # 使用f-string格式化字符串并写入分类信息
+            for line in all_lines:
+                if any(gjz in line for gjz in gjz_set):
+                    f.write(line + '\n')
+
+        print(f"合并后的文本已保存到文件: {output_file}")
+        print(f"time: {datetime.datetime.now().strftime("%Y%m%d_%H_%M_%S")}")
+
+    except Exception as e:
+        print(f"保存文件时发生错误：{e}")
+
+
 # 定义
 urls = [
     "https://ua.fongmi.eu.org/box.php?url=https://xn--dkw0c.v.nxog.top/m/tv",
@@ -60,41 +96,17 @@ for url in urls:
         # print(f"time: {datetime.now().strftime("%Y%m%d_%H_%M_%S")}")
         print(f"处理URL: {url}")
         process_url(url)
-
-
 # 将合并后的文本写入文件
 output_file1 = "assets/special/cm.txt"
-gjz1 = "移动CM"
+feilei1 = "移动CM"
+gjz1 = ".chinamobile.com"
+
 output_file2 = "assets/special/migu.txt"
-gjz2 = "migu"
+feilei2 = "migu分类"
+gjz2 = [".migu.", "mg.php", "m.php"]  # 使用列表来存储多个关键字
 
-# 调用函数示例
-tiqu_gjz(output_file1,gjz1)
-tiqu_gjz(output_file2,gjz2)
-
-def tiqu_gjz(output_file, gjz):
-
-    try:
-        # 假设all_lines是从某个地方获取的文本行列表，这里需要您根据实际情况定义
-        # 例如，可以从文件读取或者从网络获取等
-        # all_lines = [...]  # 您需要定义这个变量
-        # 为了示例，这里假设all_lines是一个示例列表
-        all_lines = [
-            "这是一行测试文本。",
-            "包含chinamobile.com的文本行：http://www.chinamobile.com/something",
-            "另一行不包含目标网址的文本。"
-        ]
- 
-        with open(output_file, 'w', encoding='utf-8') as f:
-            f.write(f'{gjz},#genre#\n')  # 使用f-string格式化字符串
-            for line in all_lines:
-                if '.chinamobile.com' in line:
-                    f.write(line + '\n')
-
-        print(f"合并后的文本已保存到文件: {output_file}")
-        print(f"time: {datetime.now().strftime("%Y%m%d_%H_%M_%S")}")
-
-    except Exception as e:
-        print(f"保存文件时发生错误：{e}")
+# 调用函数示例，注意现在第三个参数对于第二个文件是一个列表
+tiqu_gjz(output_file1, feilei1, gjz1)
+tiqu_gjz(output_file2, feilei2, gjz2)
 
  
