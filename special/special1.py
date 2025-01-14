@@ -42,7 +42,8 @@ def process_url(url):
                             channel_name = match.group(2).strip()
                     elif line and not line.startswith("#"):
                         channel_url = line.strip()
-                        all_lines.append((channel_name, channel_url))
+                        all_lines.append(f"{channel_name},{channel_url}")  # 添加由逗号分隔的字符串
+                        #all_lines.append((channel_name, channel_url))
             else:
                 for line in lines:
                     line = line.strip()
