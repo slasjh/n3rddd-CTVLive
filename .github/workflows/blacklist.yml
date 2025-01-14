@@ -1,7 +1,7 @@
 name: ipv6-blackwhite
 on:
   schedule:
-    - cron: '10 10,17 * * *' # 每天上午10:10和下午5:10（UTC）
+    - cron: '10 10,17 * * *' # 每天上午10:10和下午5:10UTC）
   push:
     branches:
       - ipv6
