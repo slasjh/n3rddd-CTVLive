@@ -30,16 +30,51 @@ jobs:
     - name: Run Python script
       run: python special/special.py
           
-    - name: Commit changes
+ 
+    - name: Prepare for commit
       run: |
-          git config --local user.email "actions@github.com"
-          git config --local user.name "GitHub Actions"
-          git add special/special.txt
-          git commit -m ":tv:  (special)AutoUpdate $(date -d "+8 hours" +'%Y%m%d')"
-          
-    - name: Push changes
-      uses: ad-m/github-push-action@master
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        #if ! git diff-files --quiet --ignore-submodules --; then
+          #git stash save --include-untracked --keep-index "Unstaged changes before auto-update"
+        #fi
+        git add .
+    - name: Commit changes if any
+
+      id: commit
+
+      run: |
+
+        if ! git diff --cached --quiet; then
+
+          git commit -m "Auto-update generated files"
+
+          echo "::set-output name=committed::true"
+
+        else
+
+          echo "No changes to commit."
+
+          echo "::set-output name=committed::false"
+
+        fi
+
+ 
+
+    - name: Create Pull Request
+
+      if: steps.commit.outputs.committed == 'true'
+
+      uses: peter-evans/create-pull-request@v3
+
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-    
-        
+
+        commit-message: Auto-update generated files
+
+        title: Auto-update generated files
+
+        branch: ipv4-update  # 创建一个新的分支来包含这些更改（可选）
+
+        base: ipv4          # 指定要合并到的目标分支
+
+        delete-branch: true # 如果 PR 被合并，则删除这个分支（可选）
