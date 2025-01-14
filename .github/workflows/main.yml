@@ -43,23 +43,27 @@ jobs:
     - name: Run Python litemain script
       run: python litemain.py
 
-    - name: Commit and push if changed
+    - name: Prepare for commit
       run: |
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
-          current_datetime=$(date +"%Y%m%d_%H%M%S")
-          cp live.txt history/"${current_datetime}_live.txt"
-          cp litelive.txt history/"${current_datetime}_litelive.txt"
-          git add history/"${current_datetime}_live.txt"
-          git add history/"${current_datetime}_litelive.txt"
-          git commit -m "Archive file with timestamp"
-        git add -A
-        
-        if ! git diff --staged --quiet; then
-          git commit -m "Auto-update live files"
-          git push
-        fi
-        
+        git add .
 
-    env:
-      TZ: Asia/Shanghai
+    - name: Commit changes if any
+      id: commit
+      run: |
+        if ! git diff --cached --quiet; then
+          git commit -m "Auto-update generated files"
+          echo "::set-output name=committed::true"
+        else
+          echo "No changes to commit."
+          echo "::set-output name=committed::false"
+        fi
+
+    - name: Push changes to GitHub
+      if: steps.commit.outputs.committed == 'true'
+      run: |
+        git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+        git push origin ipv4
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # 使用 GitHub Actions 的内置 token
