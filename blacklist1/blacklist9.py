@@ -8,6 +8,7 @@ import socket  #check p3p源 rtp源
 import subprocess #check rtmp源
 import requests
 import logging
+import re
 
 timestart = datetime.now()
 
@@ -44,7 +45,7 @@ def check_url(url, timeout=2):
 
     try:
 
-        if url.startswith("http"):
+        if url.startswith("http") and is_ipv4(url):
 
             if "/udp/" not in url and "/rtp/" not in url:  # 使用 and 而不是 or，确保 URL 中不包含 /udp/ 和 /rtp/
 
@@ -62,9 +63,9 @@ def check_url(url, timeout=2):
                 #with urllib.request.urlopen(req, timeout=timeout) as response:
                     #if response.status == 200 or response.status == 206:
                         #success = True
-        elif url.startswith("p3p") or url.startswith("p2p") or url.startswith("rtmp") or url.startswith("rtsp") or url.startswith("rtp"):
+        elif url.startswith("p3p") or url.startswith("p2p") or url.startswith("rtmp") or url.startswith("rtsp") or url.startswith("rtp") or not is_ipv4(url) or "/udp/" in url or "/rtp/" in url:
             success = False
-            print(f"{url}此链接为rtp/p2p/rtmp/rtsp等，舍弃不检测")
+            #print(f"{url}此链接为rtp/p2p/rtmp/rtsp等，舍弃不检测")
 
         # 如果执行到这一步，没有异常，计算时间
         elapsed_time = (time.time() - start_time) * 1000  # 转换为毫秒
@@ -78,12 +79,17 @@ def check_url(url, timeout=2):
 
     return elapsed_time, success
 
+def is_ipv6(url):
+    # 检查 URL 是否以 http://[IPv6 地址] 开头
+    return re.match(r'^http:\/\/\[[0-9a-fA-F:]+\]', url) is not None
 
-def extract_ipv4_sources(sources):
-
-    ipv4_pattern = re.compile(r'm3u8.*?\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}')
-
-    return [src for src in sources if ipv4_pattern.search(src)]
+def is_ipv4(url):
+    # 编译一个 IPv4 地址的正则表达式模式
+    ipv4_pattern = re.compile(r'\b(?:\d{1,3}\.){3}\d{1,3}\b')
+    
+    # 使用 search 方法检查 URL 中是否包含 IPv4 地址
+    # 注意：这里我们假设 url 是一个字符串，而不是字符串列表
+    return ipv4_pattern.search(url) is not None
 
 
 def device_headers(device_type):
@@ -378,7 +384,7 @@ if __name__ == "__main__":
         #"https://gitlab.com/p2v5/wangtv/-/raw/main/lunbo.txt",
         #'https://gitlab.com/p2v5/wangtv/-/raw/main/wang-tvlive.txt'
         #'https://raw.githubusercontent.com/kimwang1978/collect-tv-txt/refs/heads/main/live.txt',
-        'https://raw.githubusercontent.com/slasjh/n3rddd-CTVLive/refs/heads/ipv4/live.txt'
+        'https://raw.githubusercontent.com/slasjh/n3rddd-CTVLive/refs/heads/ipv4/litelive.txt'
     ]
     for url in urls:
         print(f"处理URL: {url}")
