@@ -135,6 +135,7 @@ urls = [
     #"https://ua.fongmi.eu.org/box.php?url=https://xn--dkw0c.v.nxog.top/m/tv",
     #"https://ua.fongmi.eu.org/box.php?url=http://%E6%88%91%E4%B8%8D%E6%98%AF.%E6%91%B8%E9%B1%BC%E5%84%BF.com/live.php",
     "https://raw.githubusercontent.com/slasjh/n3rddd-CTVLive/refs/heads/ipv4/live.txt",
+    "https://raw.githubusercontent.com/slasjh/n3rddd-CTVLive/refs/heads/ipv6/live.txt",
 ]
 # 处理
 for url in urls:
@@ -155,10 +156,15 @@ gjz1 = ".chinamobile.com"
 
 output_file2 = "special/migu.txt"
 feilei2 = "migu分类"
-gjz2 = [".migu.", "mg.php", "m.php"]  # 使用列表来存储多个关键字
+gjz2 = [".migu.", "mg.php", "m.php", "/mg/"]  # 使用列表来存储多个关键字
+
+output_file3 = "special/gaoma.txt"
+feilei3 = "gaoma分类"
+gjz3 = :35455/gaoma/"
 
 # 调用函数示例，注意现在第三个参数对于第二个文件是一个列表
 tiqu_gjz(output_file1, feilei1, gjz1)
 tiqu_gjz(output_file2, feilei2, gjz2)
+tiqu_gjz(output_file3, feilei3, gjz3)
 
  
