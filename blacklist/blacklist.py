@@ -375,10 +375,10 @@ def record_host(host):
 if __name__ == "__main__":
     # 定义要访问的多个URL
     urls = [
-        #"https://gitlab.com/p2v5/wangtv/-/raw/main/lunbo.txt",
+        "https://live.fanmingming.com/tv/m3u/ipv6.m3u",
         #'https://gitlab.com/p2v5/wangtv/-/raw/main/wang-tvlive.txt'
         #'https://raw.githubusercontent.com/kimwang1978/collect-tv-txt/refs/heads/main/live.txt',
-        'https://raw.githubusercontent.com/slasjh/n3rddd-CTVLive/refs/heads/ipv4/live.txt'
+        #'https://raw.githubusercontent.com/slasjh/n3rddd-CTVLive/refs/heads/ipv4/live.txt'
     ]
     for url in urls:
         print(f"处理URL: {url}")
