@@ -152,11 +152,12 @@ all_lines=remove_duplicates_url(all_lines)
 # 将合并后的文本写入文件
 output_file1 = "special/cm.txt"
 feilei1 = "移动CM"
-gjz1 = ".chinamobile.com"
+#gjz1 = ".chinamobile.com"
+gjz1 = [".chinamobile.com", "channel-id=bestzb"]  # 使用列表来存储多个关键字
 
 output_file2 = "special/migu.txt"
 feilei2 = "migu分类"
-gjz2 = [".migu.", "mg.php", "m.php", "/mg/","live.php",".php?"]  # 使用列表来存储多个关键字
+gjz2 = [".migu.", "/migu/", "mg.php", "m.php", "/mg/","live.php",".php?"]  # 使用列表来存储多个关键字
 
 output_file3 = "special/gaoma.txt"
 feilei3 = "gaoma分类"
