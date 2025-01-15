@@ -132,13 +132,13 @@ def measure_speed(url):
     }
     def process_m3u8(m3u8_url):
         nonlocal found, ts_url
-        response = requests.get(m3u8_url, allow_redirects=True, headers=headers, timeout=2)
+        response = requests.get(m3u8_url, allow_redirects=True, headers=headers, timeout=1.5)
         #response = requests.get(m3u8_url, allow_redirects=True, headers=headers, timeout=2)  # 发送请求并跟随重定向
         response.raise_for_status()
         # 获取最终的URL （这里假设重定向最终指向）
         final_url = response.url
         final_url_t = final_url.rstrip(final_url.split('/')[-1])  # 提取 重定向m3u8 链接前缀
-        response_f = requests.get(final_url, headers=headers, timeout=2)  # 发送请求
+        response_f = requests.get(final_url, headers=headers, timeout=1.5)  # 发送请求
         response_f.raise_for_status()       
         lines = response_f.text.strip().split('\n')
         for line in lines:
@@ -165,9 +165,9 @@ def measure_speed(url):
         if found :
             print(f"找到的TS文件: {ts_url}")
             start_time = time.time()
-            range_request_url = f"{ts_url}?start=0&end=1048576"  # 1MB range
+            range_request_url = f"{ts_url}?start=0&end=524288"  # 1MB /2 range  1048576"
             try:
-                response = requests.get(range_request_url, headers=headers, stream=True, timeout=5)
+                response = requests.get(range_request_url, headers=headers, stream=True, timeout=2.5)
                 response.raise_for_status()
                 total_length = int(response.headers.get('content-length', 0))
                 data = b''.join(chunk for chunk in response.iter_content(1024))  # 使用迭代来接收数据
