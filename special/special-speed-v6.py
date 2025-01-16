@@ -51,9 +51,8 @@ def process_url(url):
                     if "#genre#" not in line and "," in line and "://" in line:
                         channel_name = line.split(',')[-2].strip() # 获取频道名称
                         channel_url= line.split(',')[-1].strip() # 获取url
-                            if is_ipv6(channel_url):
-                                #all_lines.append(line)
-                                all_lines.append(f"{channel_name},{channel_url}")
+                        if is_ipv6(channel_url):
+                            all_lines.append(f"{channel_name},{channel_url}")
     except Exception as e:
         print(f"处理URL时发生错误：{e}")
 # 去重复源 2024-08-06 (检测前剔除重复url，提高检测效率)
