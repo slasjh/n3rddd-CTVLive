@@ -1,4 +1,4 @@
-name: specia1-speed-v6
+name: special-speed-v6.py
 on:
   schedule:
     - cron: '10 10,17 * * *' # 每天上午10:10 和下午5:10（UTC）
@@ -7,7 +7,7 @@ on:
       - ipv4
     paths:
       - 'live.txt'
-      - '.github/workflows/specia1-speed-v6.yml'
+      - '.github/workflows/special-speed-v6.yml'
       - 'special/special-speed-v6.py'
       - 'special/*.txt'
       - 'some_directory/specific_file.txt'
