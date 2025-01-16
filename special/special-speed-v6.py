@@ -42,7 +42,7 @@ def process_url(url):
                             channel_name = match.group(2).strip()
                     elif line and not line.startswith("#"):
                         channel_url = line.strip()
-                        if is_ipv6(channel_url)
+                        if is_ipv6(channel_url):
                             all_lines.append(f"{channel_name},{channel_url}")  # 添加由逗号分隔的字符串
                         #all_lines.append((channel_name, channel_url))
             else:
@@ -51,7 +51,7 @@ def process_url(url):
                     if "#genre#" not in line and "," in line and "://" in line:
                         channel_name = line.split(',')[-2].strip() # 获取频道名称
                         channel_url= line.split(',')[-1].strip() # 获取url
-                            if is_ipv6(channel_url)
+                            if is_ipv6(channel_url):
                                 #all_lines.append(line)
                                 all_lines.append(f"{channel_name},{channel_url}")
     except Exception as e:
