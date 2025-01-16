@@ -1,6 +1,8 @@
 import urllib.request
 from urllib.parse import urlparse
 from datetime import datetime, timedelta, timezone
+import re
+import logging
 
 
 #读取文本方法
@@ -21,27 +23,37 @@ def read_txt_to_array(file_name):
 
 def process_url(url):
     try:
-
-        # 创建一个请求对象并添加自定义header
         req = urllib.request.Request(url)
-        req.add_header('User-Agent', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3')
-
-        # 打开URL并读取内容
+        req.add_header('User-Agent', 'Mozilla/5.0 ... Chrome/58.0 ...')
         with urllib.request.urlopen(req) as response:
-            # 以二进制方式读取数据
-            data = response.read()
-            # 将二进制数据解码为字符串
-            text = data.decode('utf-8')
-            # 逐行处理内容
+            text = response.read().decode('utf-8')
             lines = text.split('\n')
             print(f"行数: {len(lines)}")
-            for line in lines:
-                line = line.strip()
-                if  "#genre#" not in line and "," in line and "://" in line and line not in excudelist_lines:
-                    # 拆分成频道名和URL部分
-                    # channel_name, channel_address = line.split(',', 1)
-                    all_lines.append(line.strip())
-
+            is_m3u = any("#EXTINF" in line for line in lines[:15])
+            source_type = "m3u" if is_m3u else "txt"
+            logging.info(f"url: {url} 获取成功，判断为{source_type}格式")
+            
+            if is_m3u:
+                for line in lines:
+                    line = line.strip()
+                    if line.startswith("#EXTINF"):
+                        match = re.search(r'group-title="(.*?)",(.*)', line)
+                        if match:
+                            channel_name = match.group(2).strip()
+                    elif line and not line.startswith("#"):
+                        channel_url = line.strip()
+                        if is_ipv6(channel_url)
+                            all_lines.append(f"{channel_name},{channel_url}")  # 添加由逗号分隔的字符串
+                        #all_lines.append((channel_name, channel_url))
+            else:
+                for line in lines:
+                    line = line.strip()
+                    if "#genre#" not in line and "," in line and "://" in line:
+                        channel_name = line.split(',')[-2].strip() # 获取频道名称
+                        channel_url= line.split(',')[-1].strip() # 获取url
+                            if is_ipv6(channel_url)
+                                #all_lines.append(line)
+                                all_lines.append(f"{channel_name},{channel_url}")
     except Exception as e:
         print(f"处理URL时发生错误：{e}")
 # 去重复源 2024-08-06 (检测前剔除重复url，提高检测效率)
@@ -126,16 +138,30 @@ def tiqu_gjz(output_file, feilei, gjz_or_gjzs):
 
     except Exception as e:
         print(f"保存文件时发生错误：{e}")
+def is_ipv6(url):
+    # 检查 URL 是否以 http://[IPv6 地址] 开头
+    return re.match(r'^http:\/\/\[[0-9a-fA-F:]+\]', url) is not None
 
+def is_ipv4(url):
+    # 编译一个 IPv4 地址的正则表达式模式
+    ipv4_pattern = re.compile(r'\b(?:\d{1,3}\.){3}\d{1,3}\b')
+    
+    # 使用 search 方法检查 URL 中是否包含 IPv4 地址
+    # 注意：这里我们假设 url 是一个字符串，而不是字符串列表
+    return ipv4_pattern.search(url) is not None
 all_lines =  []
 #读取文本
 excudelist_lines=read_txt_to_array('special/ExcludeList.txt') 
 # 定义
 urls = [
+    "https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6.m3u",
     "https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u",
-    "https://raw.githubusercontent.com/kimwang1978/collect-tv-txt/main/merged_output.txt",
-    "https://raw.githubusercontent.com/slasjh/n3rddd-CTVLive/refs/heads/ipv4/live.txt",
-    "https://raw.githubusercontent.com/slasjh/n3rddd-CTVLive/refs/heads/ipv6/live.txt",
+    "https://raw.githubusercontent.com/yuanzl77/IPTV/refs/heads/main/live.m3u",   #每天自动更新IPTV直播源
+    "https://raw.githubusercontent.com/zwc456baby/iptv_alive/master/live.txt",   #筛选网络环境：联通cu 每天凌晨自动筛选并提交 内部源的 ipv6 可用性很高，建议优先使用ipv6
+    "https://raw.githubusercontent.com/Guovin/iptv-api/gd/output/result.m3u",    #每天自动更新
+    #"https://raw.githubusercontent.com/kimwang1978/collect-tv-txt/main/merged_output.txt",
+    #"https://gh.tryxd.cn/raw.githubusercontent.com/suxuang/myIPTV/main/ipv6.m3u",#shoudong新IPTV直播源
+    "https://raw.githubusercontent.com/xiongjian83/zubo/refs/heads/main/live.txt",
 ]
 # 处理
 for url in urls:
@@ -150,27 +176,27 @@ all_lines=clean_url(all_lines)
 # 去重
 all_lines=remove_duplicates_url(all_lines)
 # 将合并后的文本写入文件
-output_file1 = "special/cm.txt"
+output_file1 = "special/v6/cm.txt"
 feilei1 = "移动CM"
 #gjz1 = ".chinamobile.com"
-gjz1 = [".chinamobile.com", "channel-id=bestzb"]  # 使用列表来存储多个关键字
+gjz1 = [".chinamobile.com", "channel-id=bestzb", "channel-id=ystenlive"]  # 使用列表来存储多个关键字
+output_file2 = "special/v6/CCTV.txt"
+feilei2 = "CCTV"
+#gjz1 = "CCTV"
+gjz2 = ["CCTV", "cctv"]  # 使用列表来存储多个关键字
 
-output_file2 = "special/migu.txt"
-feilei2 = "migu分类"
-gjz2 = [".migu.", "/migu/", "mg.php", "m.php", "/mg/","live.php",".php?"]  # 使用列表来存储多个关键字
+output_file3 = "special/v6/weishi.txt"
+feilei3 = "weishi"
+gjz3 = ["卫视", "湖南卫视"]  # 使用列表来存储多个关键字
 
-output_file3 = "special/gaoma.txt"
-feilei3 = "gaoma分类"
-gjz3 = ":35455/"
-
-output_file4 = "special/movie.txt"
+output_file4 = "special/v6/movie.txt"
 feilei4 = "movie分类"
 gjz4 = ["经典", "影院", "电影","iHOT爱","newtv","NEWTV","剧场","电视剧","热剧","大片","大剧"]  # 使用列表来存储多个关键字
 
-output_file5 = "special/zixun.txt"
+output_file5 = "special/v6/zixun.txt"
 feilei5 = "资讯分类"
-gjz5 = ["资讯", "新闻", "凤凰","翡翠"]  # 使用列表来存储多个关键字
-output_file6 = "special/child.txt"
+gjz5 = ["资讯", "新闻", "凤凰","翡翠","香港"]  # 使用列表来存储多个关键字
+output_file6 = "special/v6/child.txt"
 feilei6 = "少儿分类"
 gjz6 = ["儿童", "少儿", "动漫","卡通","动画"]  # 使用列表来存储多个关键字
 
