@@ -1,4 +1,4 @@
-name: special1-speed-v6
+name: specia1-speed-v6
 on:
   schedule:
     - cron: '10 10,17 * * *' # 每天上午10:10和下午5:10（UTC）
@@ -7,8 +7,8 @@ on:
       - ipv4
     paths:
       - 'live.txt'
-      - '.github/workflows/special1-speed-v6.yml'
-      - 'special/special1-speed-v6.py'
+      - '.github/workflows/specia1-speed-v6.yml'
+      - 'special/special-speed-v6.py'
       - 'special/*.txt'
       - 'some_directory/specific_file.txt'
       - 'some_directory/*.txt'
@@ -33,7 +33,7 @@ jobs:
         python -m pip install --upgrade pip
         
     - name: Run Python script
-      run: python special/special1-speed-v6.py
+      run: python special/special-speed-v6.py
           
     - name: Prepare for commit
       run: |
