@@ -236,6 +236,7 @@ def process_urls_multithreaded(lines, max_workers=30):
             else:
                 blacklist.append(result)
                 logging.info(f"URL {result} 被添加到黑名单，因为速度或耗时信息缺失。")
+    print(f"所有检测完毕，成功和失败已写入列表")
     return successlist, blacklist
 
 # 写入文件
@@ -322,6 +323,7 @@ def remove_duplicates_url(lines):
             if channel_url not in urls: # 如果发现当前url不在清单中，则假如newlines
                 urls.append(channel_url)
                 newlines.append(line)
+    print(f"去重复源已造成")
     return newlines
 
 # 处理带$的URL，把$之后的内容都去掉（包括$也去掉） 【2024-08-08 22:29:11】
@@ -339,6 +341,7 @@ def clean_url(lines):
             if last_dollar_index != -1:
                 line=line[:last_dollar_index]
             newlines.append(line)
+    print(f"去除url后面的$完成")
     return newlines
 
 # 处理带#的URL  【2024-08-09 23:53:26】
@@ -385,7 +388,7 @@ def split_url(lines):
         except ValueError:
             # 如果行格式不正确（即不包含逗号），则记录日志并跳过该行
             print(f"警告: 行格式错误: {line}")
-    
+    print(f"一行多#url分离完成")
     return newlines
 
 # 取得host
