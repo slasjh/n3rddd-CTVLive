@@ -342,7 +342,7 @@ def clean_url(lines):
     return newlines
 
 # 处理带#的URL  【2024-08-09 23:53:26】
-def split_url(lines):
+def split_url0(lines):
     newlines=[]
     for line in lines:
         # 拆分成频道名和URL部分
@@ -357,6 +357,35 @@ def split_url(lines):
                 if "://" in url: 
                     newline=f'{channel_name},{url}'
                     newlines.append(line)
+    return newlines
+# 处理带#的URL  【2025-1-16】
+def split_url(lines):
+    newlines = []
+    for line in lines:
+        try:
+            # 尝试拆分频道名和URL部分
+            channel_name, channel_address = line.split(',', 1)
+            
+            # 检查URL是否有效（这里简单检查是否包含"://"）
+            if "://" in channel_address:
+                # 如果URL包含"#"符号，则分割并处理每个部分
+                if "#" in channel_address:
+                    url_list = channel_address.split('#')
+                    for url in url_list:
+                        if "://" in url:  # 再次检查以确保每个部分都是有效的URL
+                            newline = f'{channel_name},{url.strip()}'  # 去除可能的空白字符
+                            newlines.append(newline)
+                else:
+                    # 如果没有"#"符号，则直接添加该行（去除URL前后的空白字符）
+                    newline = f'{channel_name},{channel_address.strip()}'
+                    newlines.append(newline)
+            else:
+                # 如果原始URL无效，则可以选择记录日志、跳过或添加默认处理
+                print(f"警告: 无效URL: {line}")
+        except ValueError:
+            # 如果行格式不正确（即不包含逗号），则记录日志并跳过该行
+            print(f"警告: 行格式错误: {line}")
+    
     return newlines
 
 # 取得host
