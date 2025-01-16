@@ -143,6 +143,7 @@ urls = [
     "https://raw.githubusercontent.com/kimwang1978/collect-tv-txt/main/merged_output.txt",
     "https://raw.githubusercontent.com/slasjh/n3rddd-CTVLive/refs/heads/ipv4/live.txt",
     "https://raw.githubusercontent.com/slasjh/n3rddd-CTVLive/refs/heads/ipv6/live.txt",
+    "https://raw.githubusercontent.com/xiongjian83/zubo/refs/heads/main/live.txt",
 ]
 # 处理
 for url in urls:
@@ -160,7 +161,7 @@ all_lines=remove_duplicates_url(all_lines)
 output_file1 = "special/cm.txt"
 feilei1 = "移动CM"
 #gjz1 = ".chinamobile.com"
-gjz1 = [".chinamobile.com", "channel-id=bestzb"]  # 使用列表来存储多个关键字
+gjz1 = [".chinamobile.com", "channel-id=bestzb", "channel-id=ystenlive"]  # 使用列表来存储多个关键字
 
 output_file2 = "special/migu.txt"
 feilei2 = "migu分类"
