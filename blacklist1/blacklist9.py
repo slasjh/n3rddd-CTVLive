@@ -384,7 +384,7 @@ if __name__ == "__main__":
         #"https://gitlab.com/p2v5/wangtv/-/raw/main/lunbo.txt",
         #'https://gitlab.com/p2v5/wangtv/-/raw/main/wang-tvlive.txt'
         #'https://raw.githubusercontent.com/kimwang1978/collect-tv-txt/refs/heads/main/live.txt',
-        'https://raw.githubusercontent.com/slasjh/n3rddd-CTVLive/refs/heads/ipv4/litelive.txt'
+        'https://raw.githubusercontent.com/slasjh/n3rddd-CTVLive/refs/heads/ipv4/special/migu.txt'
     ]
     for url in urls:
         print(f"处理URL: {url}")
@@ -401,11 +401,10 @@ if __name__ == "__main__":
 
     #input_file1 = os.path.join(parent_dir, 'live.txt')  # 输入文件路径1
     input_file1 = os.path.join(current_dir, 'live_test.txt')  # 输入文件路径1
-    #input_file2 = os.path.join(current_dir, 'blacklist_auto2.txt')  # 输入文件路径2
     input_file2 = os.path.join(current_dir, 'live_test.txt')  # 输入文件路径2 
-    success_file = os.path.join(current_dir, 'whitelist_auto2.txt')  # 成功清单文件路径
-    success_file_tv = os.path.join(current_dir, 'whitelist_auto_tv2.txt')  # 成功清单文件路径（另存一份直接引用源）
-    blacklist_file = os.path.join(current_dir, 'blacklist_auto2.txt')  # 黑名单文件路径
+    success_file = os.path.join(current_dir, 'whitelist_auto_migu.txt')  # 成功清单文件路径
+    success_file_tv = os.path.join(current_dir, 'whitelist_auto_tv_migu.txt')  # 成功清单文件路径（另存一份直接引用源）
+    blacklist_file = os.path.join(current_dir, 'blacklist_auto_migu.txt')  # 黑名单文件路径
 
     # 读取输入文件内容
     lines1 = read_txt_file(input_file1)
