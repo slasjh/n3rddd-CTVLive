@@ -155,12 +155,13 @@ excudelist_lines=read_txt_to_array('special/ExcludeList.txt')
 urls = [
     "https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6.m3u",
     "https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u",
-    "https://raw.githubusercontent.com/yuanzl77/IPTV/refs/heads/main/live.m3u",   #每天自动更新IPTV直播源
     "https://raw.githubusercontent.com/zwc456baby/iptv_alive/master/live.txt",   #筛选网络环境：联通cu 每天凌晨自动筛选并提交 内部源的 ipv6 可用性很高，建议优先使用ipv6
     "https://raw.githubusercontent.com/Guovin/iptv-api/gd/output/result.m3u",    #每天自动更新
+    "https://raw.githubusercontent.com/xiongjian83/zubo/refs/heads/main/live.txt",
+    "https://raw.githubusercontent.com/yuanzl77/IPTV/refs/heads/main/live.m3u",   #每天自动更新IPTV直播源
     #"https://raw.githubusercontent.com/kimwang1978/collect-tv-txt/main/merged_output.txt",
     #"https://gh.tryxd.cn/raw.githubusercontent.com/suxuang/myIPTV/main/ipv6.m3u",#shoudong新IPTV直播源
-    "https://raw.githubusercontent.com/xiongjian83/zubo/refs/heads/main/live.txt",
+
 ]
 # 处理
 for url in urls:
