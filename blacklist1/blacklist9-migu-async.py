@@ -1,4 +1,5 @@
 import urllib.request
+from urllib.parse import urlparse
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import time
 from datetime import datetime
@@ -279,7 +280,7 @@ async def process_line_async(line):
 
 # 多线程处理文本并检测m3u8 URL（异步版）
 
-async def process_urls_multithreaded_async(lines, max_workers=30):
+async def process_urls_multithreaded_async(lines, max_workers=10):
 
     blacklist = []
 
@@ -316,7 +317,7 @@ async def process_urls_and_print_results(lines):
 
     async with aiohttp.ClientSession() as session:
 
-        successlist, blacklist = await process_urls_multithreaded_async(lines, session=session)
+        successlist, blacklist = await process_urls_multithreaded_async(lines, max_workers=10)
 
         # 这里可以添加打印或其他处理 successlist 和 blacklist 的代码
 
@@ -337,14 +338,7 @@ def write_list(file_path, data_list):
 # urls里所有的源都读到这里。
 urls_all_lines = []
 
-def get_url_file_extension(url):
-    # 解析URL
-    parsed_url = urlparse(url)
-    # 获取路径部分
-    path = parsed_url.path
-    # 提取文件扩展名
-    extension = os.path.splitext(path)[1]
-    return extension
+
 
 def convert_m3u_to_txt(m3u_content):
     # 分行处理
@@ -373,6 +367,14 @@ def convert_m3u_to_txt(m3u_content):
     return txt_lines
 
 url_statistics=[]
+def get_url_file_extension(url):
+    # 解析URL
+    parsed_url = urlparse(url)
+    # 获取路径部分
+    path = parsed_url.path
+    # 提取文件扩展名
+    extension = os.path.splitext(path)[1]
+    return extension
 
 def process_url(url):
     try:
