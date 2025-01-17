@@ -105,7 +105,7 @@ async def fetch_m3u8(session: aiohttp.ClientSession, url: str):
 
             response.raise_for_status()
 
-            final_url = response.url  # 获取最终的URL
+            final_url = response.url  # 获取最终 的URL
 
             async with session.get(final_url, timeout=aiohttp.ClientTimeout(total=1.5)) as final_response:
 
