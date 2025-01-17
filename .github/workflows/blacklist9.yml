@@ -8,7 +8,7 @@ on:
     paths:
       - 'live.txt'
       - '.github/workflows/blacklist9.yml'
-      - 'blacklist1/blacklist9-migu-async.py'
+      - 'blacklist1/blacklist91.py'
       - 'some_directory/specific_file.txt'
       - 'some_directory/*.txt'
 
@@ -35,7 +35,7 @@ jobs:
         pip install aiohttp
         
     - name: Run Python script
-      run: python blacklist1/blacklist9-migu-async.py
+      run: python blacklist1/blacklist91.py
     - name: Prepare for commit
       run: |
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
