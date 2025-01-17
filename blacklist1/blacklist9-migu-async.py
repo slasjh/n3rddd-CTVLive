@@ -173,7 +173,8 @@ async def process_m3u8_async(session: ClientSession, m3u8_url: str):
 
 async def measure_speed_async(url):
 
-    url_t = url.rstrip(url.split('/')[-1])    
+    url_t = url.rstrip(url.split('/')[-1])
+    start_time_measure = time.time()  # 定义开始时间
 
     async with aiohttp.ClientSession() as session:
 
@@ -260,7 +261,7 @@ async def process_line_async(line):
 
         speed, elapsed_time = await measure_speed_async(url)
 
-        if speed and elapsed_time is not None:
+        if speed is not None and elapsed_time is not None:
 
             return speed, elapsed_time, line.strip()
 
@@ -268,7 +269,7 @@ async def process_line_async(line):
 
             logging.error(f"ts下载failed  for {url}")
 
-            return None, elapsed_time, line.strip()
+            return None, None, line.strip()
 
     
 
@@ -294,7 +295,7 @@ async def process_urls_multithreaded_async(lines, max_workers=10):
 
         speed, elapsed_time, result = await task
 
-        if speed and elapsed_time is not None:
+        if speed is not None and elapsed_time is not None:
 
             successlist.append(f"{speed:.1f}KB/S,{elapsed_time:.2f}ms,{result}")
 
