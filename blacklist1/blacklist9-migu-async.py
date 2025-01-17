@@ -3,12 +3,11 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 import time
 from datetime import datetime
 import os
-from urllib.parse import urlparse
-import socket  #check p3p源 rtp源
-import subprocess #check rtmp源
 import requests
 import logging
 import re
+import aiohttp
+import asyncio
 
 timestart = datetime.now()
 
