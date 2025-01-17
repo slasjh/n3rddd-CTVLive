@@ -561,7 +561,9 @@ if __name__ == "__main__":
 
     # 处理URL并生成成功清单和黑名单
     #successlist, blacklist = process_urls_multithreaded(lines)
-    asyncio.run(process_urls_and_print_results(lines))
+    # 运行异步函数并接收返回的数据
+
+    successlist, blacklist = asyncio.run(process_urls_and_print_results(lines))
     
     # 给successlist, blacklist排序
     # 定义排序函数
