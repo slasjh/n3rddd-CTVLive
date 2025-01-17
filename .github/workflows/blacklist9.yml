@@ -1,4 +1,4 @@
-name: blackwhite9
+name: blacklist9-migu-async.py
 on:
   schedule:
     - cron: '10 10,17 * * *' # 每天上午10:10和下午5:10（UTC）
@@ -8,7 +8,7 @@ on:
     paths:
       - 'live.txt'
       - '.github/workflows/blacklist9.yml'
-      - 'blacklist1/blacklist9.py'
+      - 'blacklist1/blacklist9-migu-async.py'
       - 'some_directory/specific_file.txt'
       - 'some_directory/*.txt'
 
@@ -32,7 +32,7 @@ jobs:
     - name: Install dependencies
       run: pip install requests
     - name: Run Python script
-      run: python blacklist1/blacklist9.py
+      run: python blacklist1/blacklist9-migu-async.py
     - name: Prepare for commit
       run: |
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
