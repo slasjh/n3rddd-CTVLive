@@ -169,6 +169,9 @@ async def process_m3u8_async(session: ClientSession, m3u8_url: str):
 
                     break
 
+    return ts_url, found  # 确保始终返回元组
+    
+
 
 
 async def measure_speed_async(url):
