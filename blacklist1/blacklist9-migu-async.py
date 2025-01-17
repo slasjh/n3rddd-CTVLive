@@ -35,7 +35,7 @@ def read_txt_file(file_path):
 
 # 检测URL是否可访问并记录响应时间
 
-async def check_url(session: ClientSession = None, url, timeout=2):
+async def check_url(url, session: ClientSession = None, timeout=2):
 
     start_time = time.time()
 
@@ -181,7 +181,7 @@ async def measure_speed_async(url):
 
     async with aiohttp.ClientSession() as session:
 
-        elapsed_time, success = await check_url(session=session, url)
+        elapsed_time, success = await check_url(url, session=session)
 
         
         if success and elapsed_time is not None:
