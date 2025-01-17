@@ -118,7 +118,11 @@ async def fetch_m3u8(session: aiohttp.ClientSession, url: str):
 
 async def process_m3u8_async(session: ClientSession, m3u8_url: str):
 
-    nonlocal ts_url, found
+    # ts_url 和 found 作为局部变量
+
+    ts_url = None
+
+    found = False
 
     m3u8_content = await fetch_m3u8(session, m3u8_url)
 
@@ -159,35 +163,27 @@ async def process_m3u8_async(session: ClientSession, m3u8_url: str):
                     break
 
 
+
 async def measure_speed_async(url):
 
-    global ts_url, found
-
-    ts_url = None
-
-    found = False
-
-    url_t = url.rstrip(url.split('/')[-1])
-
-    
+    url_t = url.rstrip(url.split('/')[-1])    
 
     async with aiohttp.ClientSession() as session:
 
         elapsed_time, success = await check_url(url, session=session)
 
         
-
         if success and elapsed_time is not None:
 
-            await process_m3u8_async(session, url)
-
-            
+            #await process_m3u8_async(session, url)
+            ts_url, found = await process_m3u8_async(session, url)
+            # 在这里可以使用 ts_url 和 found，但它们只在这个作用域内有效
 
             if found:
 
                 print(f"找到的TS文件: {ts_url}")
 
-                range_request_url = f"{ts_url}?start=0&end=524288"  # 1MB range
+                range_request_url = f"{ts_url}?start=0&end=524288"  # 1MB/2 range
 
                 try:
 
