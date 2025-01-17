@@ -9,6 +9,13 @@ import re
 import aiohttp
 import asyncio
 
+from aiohttp import ClientSession
+
+from aiohttp.client_exceptions import ClientError
+
+from functools import partial
+
+
 timestart = datetime.now()
 
 BlackHost=["127.0.0.1:8080","live3.lalifeier.eu.org","newcntv.qcloudcdn.com"]
