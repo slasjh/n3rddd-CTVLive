@@ -35,7 +35,7 @@ def read_txt_file(file_path):
 
 # 检测URL是否可访问并记录响应时间
 
-async def check_url(url, timeout=2, session: ClientSession = None):
+async def check_url(session: ClientSession = None, url, timeout=2):
 
     start_time = time.time()
 
@@ -181,7 +181,7 @@ async def measure_speed_async(url):
 
     async with aiohttp.ClientSession() as session:
 
-        elapsed_time, success = await check_url(url, session=session)
+        elapsed_time, success = await check_url(session=session, url)
 
         
         if success and elapsed_time is not None:
@@ -321,7 +321,7 @@ async def process_urls_and_print_results(lines):
 
     async with aiohttp.ClientSession() as session:
 
-        successlist, blacklist = await process_urls_multithreaded_async(lines, max_workers=10)
+        successlist, blacklist = await process_urls_multithreaded_async(lines)
 
         # 这里可以添加打印或其他处理 successlist 和 blacklist 的代码
 
