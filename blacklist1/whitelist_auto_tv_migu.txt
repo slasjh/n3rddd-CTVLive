@@ -1,5 +1,6 @@
 更新时间,#genre#
-20250117-08-06-32,url
+20250117-08-08-42,url
 
 
 whitelist,#genre#
+CHC家庭影院,http://148.135.93.213:81/live.php?id=CHC家庭影院
