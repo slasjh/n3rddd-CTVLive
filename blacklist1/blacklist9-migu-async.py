@@ -303,6 +303,19 @@ async def process_urls_multithreaded_async(lines, max_workers=30):
     print(f"所有检测完毕，成功和失败已写入列表")
 
     return successlist, blacklist
+# 假设 process_urls_multithreaded_async 是一个已定义的异步函数
+
+async def process_urls_and_print_results(lines):
+
+    async with aiohttp.ClientSession() as session:
+
+        successlist, blacklist = await process_urls_multithreaded_async(lines, session=session)
+
+        # 这里可以添加打印或其他处理 successlist 和 blacklist 的代码
+
+        print("Successlist:", successlist)
+
+        print("Blacklist:", blacklist)
 
 
 
@@ -539,11 +552,7 @@ if __name__ == "__main__":
 
     # 处理URL并生成成功清单和黑名单
     #successlist, blacklist = process_urls_multithreaded(lines)
-    async with aiohttp.ClientSession() as session:
-
-        successlist, blacklist = await process_urls_multithreaded_async(lines, session=session)
-
-        # 打印或处理结果
+    asyncio.run(process_urls_and_print_results(lines))
     
     # 给successlist, blacklist排序
     # 定义排序函数
