@@ -44,7 +44,7 @@ def check_url(url, timeout=2):
 
     try:
 
-        if url.startswith("http") and is_ipv4(url):
+        if url.startswith("http") and not is_ipv6(url):
 
             if "/udp/" not in url and "/rtp/" not in url:  # 使用 and 而不是 or，确保 URL 中不包含 /udp/ 和 /rtp/
 
@@ -62,7 +62,7 @@ def check_url(url, timeout=2):
                 #with urllib.request.urlopen(req, timeout=timeout) as response:
                     #if response.status == 200 or response.status == 206:
                         #success = True
-        elif url.startswith("p3p") or url.startswith("p2p") or url.startswith("rtmp") or url.startswith("rtsp") or url.startswith("rtp") or not is_ipv4(url) or "/udp/" in url or "/rtp/" in url:
+        elif url.startswith("p3p") or url.startswith("p2p") or url.startswith("rtmp") or url.startswith("rtsp") or url.startswith("rtp") or is_ipv6(url) or "/udp/" in url or "/rtp/" in url:
             success = False
             #print(f"{url}此链接为rtp/p2p/rtmp/rtsp等，舍弃不检测")
 
