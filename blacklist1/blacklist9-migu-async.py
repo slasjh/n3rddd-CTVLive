@@ -27,7 +27,8 @@ def read_txt_file(file_path):
     return lines
 
 # 检测URL是否可访问并记录响应时间
-def check_url(url, timeout=2):
+
+async def check_url(url, timeout=2, session: ClientSession = None):
 
     start_time = time.time()
 
@@ -41,203 +42,274 @@ def check_url(url, timeout=2):
 
         'Accept': '*/*',
 
-    }    
+    }
+
+    
+
+    async with (session or aiohttp.ClientSession()) as session:
+
+        try:
+
+            if url.startswith("http") and is_ipv4(url):
+
+                if "/udp/" not in url and "/rtp/" not in url:
+
+                    async with session.get(url, allow_redirects=True, headers=headers, timeout=aiohttp.ClientTimeout(total=timeout)) as response:
+
+                        response.raise_for_status()
+
+                        if response.status == 200 or response.status == 206:
+
+                            success = True
+
+            elif url.startswith("p3p") or url.startswith("p2p") or url.startswith("rtmp") or url.startswith("rtsp") or url.startswith("rtp") or not is_ipv4(url) or "/udp/" in url or "/rtp/" in url:
+
+                success = False     
+
+            elapsed_time = (time.time() - start_time) * 1000  # 转换为毫秒
+
+            print(f"{url} http速度为: {elapsed_time},{success}")
+
+        except Exception as e:
+
+            print(f"Error checking {url}: {e}")
+
+            # 假设 record_host 和 get_host_from_url 是已定义的函数
+
+            # record_host(get_host_from_url(url))
+
+            elapsed_time = None
+
+            success = False
+
+    
+
+    return elapsed_time, success  
+
+
+
+# 修正后的fetch_m3u8函数，确保处理重定向
+
+async def fetch_m3u8(session: aiohttp.ClientSession, url: str):
 
     try:
 
-        if url.startswith("http") and is_ipv4(url):
+        async with session.get(url, allow_redirects=True, timeout=aiohttp.ClientTimeout(total=1.5)) as response:
 
-            if "/udp/" not in url and "/rtp/" not in url:  # 使用 and 而不是 or，确保 URL 中不包含 /udp/ 和 /rtp/
+            response.raise_for_status()
 
-                response = requests.get(url, allow_redirects=True, headers=headers, timeout=timeout)
+            final_url = response.url  # 获取最终的URL
 
-                response.raise_for_status()  # 如果响应状态码不是 200 OK，将引发 HTTPError 异常
-                
-                # 注意：response 对象没有 status 属性，只有 status_code 属性
+            async with session.get(final_url, timeout=aiohttp.ClientTimeout(total=1.5)) as final_response:
 
-                if response.status_code == 200 or response.status_code == 206:  # 部分内容响应也是成功的
+                final_response.raise_for_status()
 
-                    success = True
-                #req = urllib.request.Request(encoded_url, headers=headers)
-                #req.allow_redirects = True  # 允许自动重定向（Python 3.4+）
-                #with urllib.request.urlopen(req, timeout=timeout) as response:
-                    #if response.status == 200 or response.status == 206:
-                        #success = True
-        elif url.startswith("p3p") or url.startswith("p2p") or url.startswith("rtmp") or url.startswith("rtsp") or url.startswith("rtp") or not is_ipv4(url) or "/udp/" in url or "/rtp/" in url:
-            success = False
-            #print(f"{url}此链接为rtp/p2p/rtmp/rtsp等，舍弃不检测")
+                return final_response.text
 
-        # 如果执行到这一步，没有异常，计算时间
-        elapsed_time = (time.time() - start_time) * 1000  # 转换为毫秒
-        print(f"{url} http速度为: {elapsed_time},{success}")
     except Exception as e:
-        print(f"Error checking {url}: {e}")
-        record_host(get_host_from_url(url))
-        # 在发生异常的情况下，将 elapsed_time 设置为 None
-        elapsed_time = None
-        success = False
 
-    return elapsed_time, success
+        print(f"Error fetching M3U8 {url}: {e}")
 
-def is_ipv6(url):
-    # 检查 URL 是否以 http://[IPv6 地址] 开头
-    return re.match(r'^http:\/\/\[[0-9a-fA-F:]+\]', url) is not None
+        return None
 
-def is_ipv4(url):
-    # 编译一个 IPv4 地址的正则表达式模式
-    ipv4_pattern = re.compile(r'\b(?:\d{1,3}\.){3}\d{1,3}\b')
+ 
+
+# 处理M3U8文件并查找TS文件URL
+
+async def process_m3u8_async(session: ClientSession, m3u8_url: str):
+
+    nonlocal ts_url, found
+
+    m3u8_content = await fetch_m3u8(session, m3u8_url)
+
+    if not m3u8_content:
+
+        return
+
     
-    # 使用 search 方法检查 URL 中是否包含 IPv4 地址
-    # 注意：这里我们假设 url 是一个字符串，而不是字符串列表
-    return ipv4_pattern.search(url) is not None
+
+    final_url = m3u8_url.rstrip(m3u8_url.split('/')[-1])
+
+    lines = m3u8_content.strip().split('\n')
+
+    for line in lines:
+
+        stripped_line = line.strip()
+
+        if not stripped_line.startswith('#') and '.ts' in stripped_line:
+
+            ts_url = final_url + stripped_line if not stripped_line.startswith('http') else stripped_line
+
+            found = True
+
+            break
+
+    if not found:
+
+        for line in lines:
+
+            stripped_line = line.strip()
+
+            if not stripped_line.startswith('#') and '.m3u8' in stripped_line:
+
+                await process_m3u8_async(session, final_url + stripped_line if not stripped_line.startswith('http') else stripped_line)
+
+                if found:
+
+                    break
 
 
-def device_headers(device_type):
-    headers = {
-        'tvbox': {
-            'User-Agent': 'com.github.tvbox.osc.base.App/1.1.1(Linux;Android 14) ExoplayerLib/2.18.7',
-            'Accept': '*/*'
-        },
-        'easybox': {
-            'User-Agent': 'Lavf/58.12.100',
-            'Accept': '*/*'
-        },
-        'pc': {
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.6429.15 Safari/537.36',
-            'Accept': '*/*'
-        },
-        'android': {
-            'User-Agent': 'Mozilla/5.0 (Linux;Android 14;22021211RC) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.6261.119 Safari/537.36 XiaoMi/MiuiBrowser/18.9.71225',
-            'Accept': '*/*',
-            'Accept-Language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7'
-        }
-    }
-    
-    if device_type in headers:
-        return headers[device_type]
-    else:
-        raise ValueError("Unknown device type")
+async def measure_speed_async(url):
 
-def measure_speed(url):
-    url_t = url.rstrip(url.split('/')[-1])  # 提取 m3u8 链接前缀
+    global ts_url, found
 
     ts_url = None
+
     found = False
-    headers = {
-        'User-Agent': 'Lavf/58.12.100',
-        #'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
-        'Accept': '*/*',
-        #'Connection': 'keep-alive',
-        'Accept-Language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
-    }
-    def process_m3u8(m3u8_url):
-        nonlocal found, ts_url
-        response = requests.get(m3u8_url, allow_redirects=True, headers=headers, timeout=1.5)
-        #response = requests.get(m3u8_url, allow_redirects=True, headers=headers, timeout=2)  # 发送请求并跟随重定向
-        response.raise_for_status()
-        # 获取最终的URL （这里假设重定向最终指向）
-        final_url = response.url
-        final_url_t = final_url.rstrip(final_url.split('/')[-1])  # 提取 重定向m3u8 链接前缀
-        response_f = requests.get(final_url, headers=headers, timeout=1.5)  # 发送请求
-        response_f.raise_for_status()       
-        lines = response_f.text.strip().split('\n')
-        for line in lines:
-            stripped_line = line.strip()
-            if not stripped_line.startswith('#') and '.ts' in stripped_line:
-                ts_url = final_url_t + stripped_line if not stripped_line.startswith('http') else stripped_line
-                found = True
-                break
-        if not found:
-            for line in lines:
-                stripped_line = line.strip()
-                if not stripped_line.startswith('#') and '.m3u8' in stripped_line:
-                    process_m3u8(final_url_t + stripped_line if not stripped_line.startswith('http') else stripped_line)
-                    if found:
-                        break
-    elapsed_time, success = check_url(url)
 
-    if success and elapsed_time is not None:
+    url_t = url.rstrip(url.split('/')[-1])
 
-        # 现在 process_m3u8(url) 在这里被正确调用，受 if 语句的控制
+    
 
-        process_m3u8(url)
+    async with aiohttp.ClientSession() as session:
+
+        elapsed_time, success = await check_url(url, session=session)
+
         
-        if found :
-            print(f"找到的TS文件: {ts_url}")
-            start_time = time.time()
-            range_request_url = f"{ts_url}?start=0&end=524288"  # 1MB /2 range  1048576"
-            try:
-                response = requests.get(range_request_url, headers=headers, stream=True, timeout=2.5)
-                response.raise_for_status()
-                total_length = int(response.headers.get('content-length', 0))
-                data = b''.join(chunk for chunk in response.iter_content(1024))  # 使用迭代来接收数据
 
-                if total_length == 0 or len(data) == 0:
-                    print(f"{ts_url} ts文件无法获取内容长度或数据为空，无法测量速度。")
+        if success and elapsed_time is not None:
+
+            await process_m3u8_async(session, url)
+
+            
+
+            if found:
+
+                print(f"找到的TS文件: {ts_url}")
+
+                range_request_url = f"{ts_url}?start=0&end=524288"  # 1MB range
+
+                try:
+
+                    async with session.get(range_request_url, timeout=aiohttp.ClientTimeout(total=2.5)) as response:
+
+                        response.raise_for_status()
+
+                        total_length = int(response.headers.get('content-length', 0))
+
+                        data = await response.read()
+
+                        
+
+                        if total_length == 0 or len(data) == 0:
+
+                            print(f"{ts_url} ts文件无法获取内容长度或数据为空，无法测量速度。")
+
+                            return None, elapsed_time
+
+                        
+
+                        end_time = time.time()
+
+                        download_speed = len(data) / (end_time - start_time_measure) / 1024  # in kB/s
+
+                        print(f"{url}的 ts文件下载速度为: {download_speed} kB/s ,{elapsed_time} ms")
+
+                        return download_speed, elapsed_time
+
+                except aiohttp.ClientError as e:
+
+                    print(f"下载 {ts_url} ts文件失败: {e}")
+
                     return None, elapsed_time
 
-                end_time = time.time()
-                download_speed = len(data) / (end_time - start_time) / 1024  # in kB/s
-                # 或者使用 MB/s: download_speed = len(data) / (end_time - start_time) / (1024 ** 2)
-                print(f"{url}的 ts文件下载速度为: {download_speed} kB/s ,{elapsed_time} ms")
-                return download_speed, elapsed_time
-
-            except requests.RequestException as e:
-                print(f"下载 {ts_url} ts文件失败: {e}")
-                return None, elapsed_time
         else:
+
             print(f"在{url}中没有找到有效的.ts文件条目。")
+
             return None, elapsed_time
 
-# 注意：在实际使用中，确保requests库已经被导入，并且提供的URL是有效的。
-
-
-
-    
 # 处理单行文本并检测URL
-def process_line(line):
+
+async def process_line_async(line):
+
     if "#genre#" in line or "://" not in line:
+
         return None, None, None  # 跳过包含“#genre#”的行或不含“://”的行
+
     
+
     try:
+
         parts = line.split(',')
+
         if len(parts) != 2:
+
             raise ValueError("Line does not contain exactly one comma.")
+
         
+
         name, url = parts
+
         url = url.strip()
+
         
-     
-        speed, elapsed_time = measure_speed(url)
+
+        speed, elapsed_time = await measure_speed_async(url)
+
         if speed and elapsed_time is not None:
+
             return speed, elapsed_time, line.strip()
-            
+
         else:
+
             logging.error(f"ts下载failed  for {url}")
+
             return None, elapsed_time, line.strip()
+
     
+
     except Exception as e:
-        # 捕获任何未处理的异常并记录错误
+
         logging.error(f"{url}处理行时发生意外错误 while processing line: {e}")
+
         return None, None, line.strip()
 
-# 多线程处理文本并检测m3u8 URL
-def process_urls_multithreaded(lines, max_workers=30):
-    blacklist =  [] 
+# 多线程处理文本并检测m3u8 URL（异步版）
+
+async def process_urls_multithreaded_async(lines, max_workers=30):
+
+    blacklist = []
+
     successlist = []
 
-    with ThreadPoolExecutor(max_workers=max_workers) as executor:
-        futures = {executor.submit(process_line, line): line for line in lines}
-        for future in as_completed(futures):
-            speed, elapsed_time, result = future.result()
-            if speed and elapsed_time is not None:
-                successlist.append(f"{speed:.1f}KB/S,{elapsed_time:.2f}ms,{result}")
-                print(f"{speed:.1f}KB/S,{elapsed_time:.2f}ms,{result}")
-            else:
-                blacklist.append(result)
-                logging.info(f"URL {result} 被添加到黑名单，因为速度或耗时信息缺失。")
+    tasks = [asyncio.create_task(process_line_async(line)) for line in lines]
+
+    
+
+    for task in asyncio.as_completed(tasks):
+
+        speed, elapsed_time, result = await task
+
+        if speed and elapsed_time is not None:
+
+            successlist.append(f"{speed:.1f}KB/S,{elapsed_time:.2f}ms,{result}")
+
+            print(f"{speed:.1f}KB/S,{elapsed_time:.2f}ms,{result}")
+
+        else:
+
+            blacklist.append(result)
+
+            logging.info(f"URL {result} 被添加到黑名单，因为速度或耗时信息缺失。")
+
+    
+
     print(f"所有检测完毕，成功和失败已写入列表")
+
     return successlist, blacklist
+
+
 
 # 写入文件
 def write_list(file_path, data_list):
@@ -311,6 +383,17 @@ def process_url(url):
     except Exception as e:
         print(f"处理URL时发生错误：{e}")
 
+def is_ipv6(url):
+    # 检查 URL 是否以 http://[IPv6 地址] 开头
+    return re.match(r'^http:\/\/\[[0-9a-fA-F:]+\]', url) is not None
+
+def is_ipv4(url):
+    # 编译一个 IPv4 地址的正则表达式模式
+    ipv4_pattern = re.compile(r'\b(?:\d{1,3}\.){3}\d{1,3}\b')
+    
+    # 使用 search 方法检查 URL 中是否包含 IPv4 地址
+    # 注意：这里我们假设 url 是一个字符串，而不是字符串列表
+    return ipv4_pattern.search(url) is not None
 
 # 去重复源 2024-08-06 (检测前剔除重复url，提高检测效率)
 def remove_duplicates_url(lines):
@@ -416,7 +499,7 @@ if __name__ == "__main__":
         #"https://gitlab.com/p2v5/wangtv/-/raw/main/lunbo.txt",
         #'https://gitlab.com/p2v5/wangtv/-/raw/main/wang-tvlive.txt'
         #'https://raw.githubusercontent.com/kimwang1978/collect-tv-txt/refs/heads/main/live.txt',
-        'https://raw.githubusercontent.com/slasjh/n3rddd-CTVLive/refs/heads/ipv4/special/migu.txt'
+        'https://raw.githubusercontent.com/slasjh/n3rddd-CTVLive/refs/heads/ipv4/special/migu-test.txt'
     ]
     for url in urls:
         print(f"处理URL: {url}")
@@ -460,7 +543,12 @@ if __name__ == "__main__":
     urls_hj = len(lines)
 
     # 处理URL并生成成功清单和黑名单
-    successlist, blacklist = process_urls_multithreaded(lines)
+    #successlist, blacklist = process_urls_multithreaded(lines)
+    async with aiohttp.ClientSession() as session:
+
+        successlist, blacklist = await process_urls_multithreaded_async(lines, session=session)
+
+        # 打印或处理结果
     
     # 给successlist, blacklist排序
     # 定义排序函数
