@@ -311,10 +311,10 @@ async def process_urls_multithreaded_async(lines, max_workers=10):
             logging.info(f"URL {result} 被添加到黑名单，因为速度或耗时信息缺失。")
 
     
+        # 如果没有返回任何值，则默认返回空列表
 
+    return successlist, blacklist if successlist or blacklist else ([], [])
     print(f"所有检测完毕，成功和失败已写入列表")
-
-    return successlist, blacklist
 # 假设 process_urls_multithreaded_async 是一个已定义的异步函数
 
 async def process_urls_and_print_results(lines):
