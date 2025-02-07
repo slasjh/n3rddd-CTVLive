@@ -184,6 +184,14 @@ output_file6 = "special/child.txt"
 feilei6 = "少儿分类"
 gjz6 = ["儿童", "少儿", "动漫","卡通","动画"]  # 使用列表来存储多个关键字
 
+output_file7 = "special/cctv.txt"
+feilei7 = "cctv分类"
+gjz7 = ["CCTV", "cctv", "中央电视","央视"]  # 使用列表来存储多个关键字
+
+output_file8 = "special/weishi.txt"
+feilei8 = "卫视分类"
+gjz8 = ["卫视", "衛視"]  # 使用列表来存储多个关键字
+
 # 调用函数示例，注意现在第三个参数对于第二个文件是一个列表
 tiqu_gjz(output_file1, feilei1, gjz1)
 tiqu_gjz(output_file2, feilei2, gjz2)
@@ -191,5 +199,7 @@ tiqu_gjz(output_file3, feilei3, gjz3)
 tiqu_gjz(output_file4, feilei4, gjz4)
 tiqu_gjz(output_file5, feilei4, gjz5)
 tiqu_gjz(output_file6, feilei6, gjz6)
+tiqu_gjz(output_file7, feilei7, gjz7)
+tiqu_gjz(output_file8, feilei8, gjz8)
 
  
