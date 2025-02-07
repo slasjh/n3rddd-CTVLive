@@ -1,6 +1,9 @@
 ip_version_priority = "ipv4"
 
 source_urls = [
+    "https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u",
+    "https://raw.githubusercontent.com/xmbjm/TV/master/output/user_result.txt",
+    "http://156.238.251.122:7000/txt",
     "http://156.238.251.122:35455/tv.m3u", #ADDED BY lee from sshh. ON 31/12/2024 
     "https://live.fanmingming.com/tv/m3u/ipv6.m3u", #ADDED BY lee from fanmingming. ON 31/12/2024 
     "https://raw.githubusercontent.com/YanG-1989/m3u/main/Gather.m3u", #ADDED BY lee from https://tv.iill.top/m3u/Gather" ON 31/12/2024 
