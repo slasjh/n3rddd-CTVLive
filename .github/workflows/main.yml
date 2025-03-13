@@ -2,7 +2,7 @@ name: ipv4 Daily Update
 ##
 on:
   schedule:
-    - cron: '30 9,21 * * *'
+    - cron: '0 21 * * *'
   push:
     branches:
       - ipv4
