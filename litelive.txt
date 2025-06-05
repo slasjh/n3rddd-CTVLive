@@ -2,7 +2,7 @@
 雷蒙影视直播,https://cors.isteed.cc/https://raw.githubusercontent.com/n3rddd/N3RD/master/JN/N3RD/W/CTVThemeSong1.mp4
 CrimeTV LIVE,https://cors.isteed.cc/https://raw.githubusercontent.com/n3rddd/N3RD/master/JN/N3RD/W/CTVThemeSong2.mp4
 更新日期,https://cors.isteed.cc/https://raw.githubusercontent.com/n3rddd/N3RD/master/JN/N3RD/W/CRIMETVPV1.mkv
-2025-06-05,https://cors.isteed.cc/https://raw.githubusercontent.com/n3rddd/N3RD/master/JN/N3RD/W/CRIMETVPV2.mkv
+2025-06-06,https://cors.isteed.cc/https://raw.githubusercontent.com/n3rddd/N3RD/master/JN/N3RD/W/CRIMETVPV2.mkv
 🇨🇳央视,#genre#
 CCTV1,http://8.138.7.223/tv/ptbtv.php?id=27$雷蒙影视•IPV4『线路1』
 CCTV1,http://8.138.7.223/tv/cctv7.m3u8$雷蒙影视•IPV4『线路2』
@@ -142,6 +142,7 @@ CCTV3,http://8.138.7.223/tv/dl/douyincdn.php?id=3$雷蒙影视•IPV4『线路38
 CCTV3,http://112.46.105.20:8009/hls/3/index.m3u8$雷蒙影视•IPV4『线路39』
 CCTV3,http://iptv.huuc.edu.cn/hls/cctv3hd.m3u8$雷蒙影视•IPV4『线路40』
 CCTV3,http://8.138.7.223/tv/dl/careryun.php?id=3$雷蒙影视•IPV4『线路41』
+CCTV3,http://36.40.236.27:9999/tsfile/live/0003_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路42』
 CCTV4,http://rrs01.hw.gmcc.net:8088/PLTV/81/224/3221226725/1.m3u8$雷蒙影视•IPV4『线路1』
 CCTV4,http://171.15.18.199:8180/TV00000000000000000004@HHZT$雷蒙影视•IPV4『线路2』
 CCTV4,http://8.138.7.223/tv/migu.php?id=cctv4$雷蒙影视•IPV4『线路3』
@@ -819,9 +820,9 @@ CCTV-4中文国际,http://123.101.98.163:2000/rtp/239.16.20.4:10040$雷蒙影视
 CCTV-4中文国际,http://123.101.98.163:2000/rtp/239.16.10.128:2000$雷蒙影视•IPV4『线路18』
 CCTV-4中文国际,http://e2.woc.iiiya.cn:8888/rtp/239.61.2.206:9224$雷蒙影视•IPV4『线路19』
 CCTV-4美洲,webview://https://tv.cctv.com/live/cctvamerica/$雷蒙影视•IPV4『线路1』
-CCTV-4美洲,https://json.doube.eu.org/live/migu/migu.php/index.m3u8?id=265667335&sign=00babe80f54873f425e5283814cc36f4$雷蒙影视•IPV4『线路2』
+CCTV-4美洲,https://json.doube.eu.org/live/migu/migu.php/index.m3u8?id=265667335&sign=33b872ddf9a8bbbcf72f42940a78f0b8$雷蒙影视•IPV4『线路2』
 CCTV-4欧洲,webview://https://tv.cctv.com/live/cctveurope/index.shtml$雷蒙影视•IPV4『线路1』
-CCTV-4欧洲,https://json.doube.eu.org/live/migu/migu.php/index.m3u8?id=265667313&sign=00babe80f54873f425e5283814cc36f4$雷蒙影视•IPV4『线路2』
+CCTV-4欧洲,https://json.doube.eu.org/live/migu/migu.php/index.m3u8?id=265667313&sign=33b872ddf9a8bbbcf72f42940a78f0b8$雷蒙影视•IPV4『线路2』
 CCTV-5体育,http://39.164.174.139:5000/nl.m3u8?id=CCTV-5HD$雷蒙影视•IPV4『线路1』
 CCTV-5体育,http://tvbox6.com/tv/bfgd.php?id=064$雷蒙影视•IPV4『线路2』
 CCTV-5体育,https://tv.iill.top/migu/cctv5$雷蒙影视•IPV4『线路3』
@@ -1112,7 +1113,7 @@ CCTV1综合高清,http://222.211.162.3:8888/udp/239.93.0.184:5140$雷蒙影视�
 CCTV1综合高清,http:///udp/239.76.245.51:1234$雷蒙影视•IPV4『线路21』
 CCTV1综合高清,http:///udp/239.76.246.151:1234$雷蒙影视•IPV4『线路22』
 CCTV1综合高清,http:///udp/239.76.253.151:9000$雷蒙影视•IPV4『线路23』
-CCTV1综合高清,https://json.doube.eu.org/live/migu/migu.php/index.m3u8?id=265183188&sign=00babe80f54873f425e5283814cc36f4$雷蒙影视•IPV4『线路24』
+CCTV1综合高清,https://json.doube.eu.org/live/migu/migu.php/index.m3u8?id=265183188&sign=33b872ddf9a8bbbcf72f42940a78f0b8$雷蒙影视•IPV4『线路24』
 CCTV2财经高清,http://39.134.67.148/ottrrs.hl.chinamobile.com/hlj/yd/0/3221225588/.m3u8$雷蒙影视•IPV4『线路1』
 CCTV2财经高清,http://120.76.248.139/live/bfgd/4200000061.m3u8$雷蒙影视•IPV4『线路2』
 CCTV2财经高清,http://223.10.115.195:8082/udp/239.1.1.8:8008$雷蒙影视•IPV4『线路3』
@@ -1129,7 +1130,7 @@ CCTV2财经高清,http://221.237.92.253:9999/udp/239.93.1.23:6000$雷蒙影视�
 CCTV2财经高清,http://222.211.162.3:8888/udp/239.93.1.23:6000$雷蒙影视•IPV4『线路14』
 CCTV2财经高清,http:///udp/239.76.246.152:1234$雷蒙影视•IPV4『线路15』
 CCTV2财经高清,http:///udp/239.76.253.152:9000$雷蒙影视•IPV4『线路16』
-CCTV2财经高清,https://json.doube.eu.org/live/migu/migu.php/index.m3u8?id=265667329&sign=00babe80f54873f425e5283814cc36f4$雷蒙影视•IPV4『线路17』
+CCTV2财经高清,https://json.doube.eu.org/live/migu/migu.php/index.m3u8?id=265667329&sign=33b872ddf9a8bbbcf72f42940a78f0b8$雷蒙影视•IPV4『线路17』
 CCTV3综艺高清,http://39.134.67.148/ottrrs.hl.chinamobile.com/hlj/yd/0/3221226021/.m3u8$雷蒙影视•IPV4『线路1』
 CCTV3综艺高清,http://120.76.248.139/live/bfgd/4200000062.m3u8$雷蒙影视•IPV4『线路2』
 CCTV3综艺高清,http://223.10.115.195:8082/udp/239.1.1.9:8009$雷蒙影视•IPV4『线路3』
@@ -1143,7 +1144,7 @@ CCTV3综艺高清,http://221.237.92.253:9999/udp/239.93.1.11:2223$雷蒙影视�
 CCTV3综艺高清,http://222.211.162.3:8888/udp/239.93.1.11:2223$雷蒙影视•IPV4『线路11』
 CCTV3综艺高清,http:///udp/239.76.246.153:1234$雷蒙影视•IPV4『线路12』
 CCTV3综艺高清,http:///udp/239.76.253.153:9000$雷蒙影视•IPV4『线路13』
-CCTV3综艺高清,https://json.doube.eu.org/live/migu/migu.php/index.m3u8?id=265667206&sign=00babe80f54873f425e5283814cc36f4$雷蒙影视•IPV4『线路14』
+CCTV3综艺高清,https://json.doube.eu.org/live/migu/migu.php/index.m3u8?id=265667206&sign=33b872ddf9a8bbbcf72f42940a78f0b8$雷蒙影视•IPV4『线路14』
 CCTV4中文国际高清,http://39.134.67.148/ottrrs.hl.chinamobile.com/hlj/yd/0/3221226007/.m3u8$雷蒙影视•IPV4『线路1』
 CCTV4中文国际高清,http://39.134.67.148/ottrrs.hl.chinamobile.com/hlj/yd/0/3221226428/.m3u8$雷蒙影视•IPV4『线路2』
 CCTV4中文国际高清,http://120.76.248.139/live/bfgd/4200000063.m3u8$雷蒙影视•IPV4『线路3』
@@ -1165,7 +1166,7 @@ CCTV4中文国际高清,http://222.211.162.3:8888/udp/239.93.1.105:5140$雷蒙�
 CCTV4中文国际高清,http:///udp/239.76.245.195:1234$雷蒙影视•IPV4『线路19』
 CCTV4中文国际高清,http:///udp/239.76.246.154:1234$雷蒙影视•IPV4『线路20』
 CCTV4中文国际高清,http:///udp/239.76.253.154:9000$雷蒙影视•IPV4『线路21』
-CCTV4中文国际高清,https://json.doube.eu.org/live/migu/migu.php/index.m3u8?id=265667639&sign=00babe80f54873f425e5283814cc36f4$雷蒙影视•IPV4『线路22』
+CCTV4中文国际高清,https://json.doube.eu.org/live/migu/migu.php/index.m3u8?id=265667639&sign=33b872ddf9a8bbbcf72f42940a78f0b8$雷蒙影视•IPV4『线路22』
 CCTV5体育高清,http://39.134.67.148/ottrrs.hl.chinamobile.com/hlj/yd/0/3221226019/.m3u8$雷蒙影视•IPV4『线路1』
 CCTV5体育高清,http://120.76.248.139/live/bfgd/4200000064.m3u8$雷蒙影视•IPV4『线路2』
 CCTV5体育高清,http://223.10.115.195:8082/udp/239.1.1.11:8011$雷蒙影视•IPV4『线路3』
@@ -1179,7 +1180,7 @@ CCTV5体育高清,http://221.237.92.253:9999/udp/239.93.42.37:5140$雷蒙影视�
 CCTV5体育高清,http://222.211.162.3:8888/udp/239.93.42.37:5140$雷蒙影视•IPV4『线路11』
 CCTV5体育高清,http:///udp/239.76.246.155:1234$雷蒙影视•IPV4『线路12』
 CCTV5体育高清,http:///udp/239.76.253.155:9000$雷蒙影视•IPV4『线路13』
-CCTV5体育高清,https://json.doube.eu.org/live/migu/migu.php/index.m3u8?id=265667565&sign=00babe80f54873f425e5283814cc36f4$雷蒙影视•IPV4『线路14』
+CCTV5体育高清,https://json.doube.eu.org/live/migu/migu.php/index.m3u8?id=265667565&sign=33b872ddf9a8bbbcf72f42940a78f0b8$雷蒙影视•IPV4『线路14』
 CCTV5+体育赛事高清,http://39.134.67.148/ottrrs.hl.chinamobile.com/hlj/yd/0/3221225603/.m3u8$雷蒙影视•IPV4『线路1』
 CCTV5+体育赛事高清,http://223.10.115.195:8082/udp/239.1.1.12:8012$雷蒙影视•IPV4『线路2』
 CCTV5+体育赛事高清,http://223.10.39.207:8083/udp/239.1.1.12:8012$雷蒙影视•IPV4『线路3』
@@ -1193,7 +1194,7 @@ CCTV5+体育赛事高清,http://116.21.87.83:8889/udp/239.77.1.147:5146$雷蒙�
 CCTV5+体育赛事高清,http://183.30.199.99:8886/udp/239.77.0.87:5146$雷蒙影视•IPV4『线路11』
 CCTV5+体育赛事高清,http://183.30.199.99:8886/udp/239.77.1.31:5146$雷蒙影视•IPV4『线路12』
 CCTV5+体育赛事高清,http://183.30.199.99:8886/udp/239.77.1.147:5146$雷蒙影视•IPV4『线路13』
-CCTV5+体育赛事高清,https://json.doube.eu.org/live/migu/migu.php/index.m3u8?id=265106763&sign=00babe80f54873f425e5283814cc36f4$雷蒙影视•IPV4『线路14』
+CCTV5+体育赛事高清,https://json.doube.eu.org/live/migu/migu.php/index.m3u8?id=265106763&sign=33b872ddf9a8bbbcf72f42940a78f0b8$雷蒙影视•IPV4『线路14』
 CCTV6电影高清,http://39.134.67.148/ottrrs.hl.chinamobile.com/hlj/yd/0/3221226010/.m3u8$雷蒙影视•IPV4『线路1』
 CCTV6电影高清,http://120.76.248.139/live/bfgd/4200000065.m3u8$雷蒙影视•IPV4『线路2』
 CCTV6电影高清,http://223.10.115.195:8082/udp/239.1.1.13:8013$雷蒙影视•IPV4『线路3』
@@ -1207,7 +1208,7 @@ CCTV6电影高清,http://221.237.92.253:9999/udp/239.93.1.13:2226$雷蒙影视�
 CCTV6电影高清,http://222.211.162.3:8888/udp/239.93.1.13:2226$雷蒙影视•IPV4『线路11』
 CCTV6电影高清,http:///udp/239.76.246.156:1234$雷蒙影视•IPV4『线路12』
 CCTV6电影高清,http:///udp/239.76.253.156:9000$雷蒙影视•IPV4『线路13』
-CCTV6电影高清,https://json.doube.eu.org/live/migu/migu.php/index.m3u8?id=265667482&sign=00babe80f54873f425e5283814cc36f4$雷蒙影视•IPV4『线路14』
+CCTV6电影高清,https://json.doube.eu.org/live/migu/migu.php/index.m3u8?id=265667482&sign=33b872ddf9a8bbbcf72f42940a78f0b8$雷蒙影视•IPV4『线路14』
 CCTV7国防军事高清,http://39.134.67.148/ottrrs.hl.chinamobile.com/hlj/yd/0/3221225733/.m3u8$雷蒙影视•IPV4『线路1』
 CCTV7国防军事高清,http://120.76.248.139/live/bfgd/4200000127.m3u8$雷蒙影视•IPV4『线路2』
 CCTV7国防军事高清,http://116.21.87.83:8888/udp/239.77.1.159:5146$雷蒙影视•IPV4『线路3』
@@ -1221,7 +1222,7 @@ CCTV7国防军事高清,http://221.237.92.253:9999/udp/239.93.1.67:5140$雷蒙�
 CCTV7国防军事高清,http://222.211.162.3:8888/udp/239.93.1.67:5140$雷蒙影视•IPV4『线路11』
 CCTV7国防军事高清,http:///udp/239.76.246.157:1234$雷蒙影视•IPV4『线路12』
 CCTV7国防军事高清,http:///udp/239.76.253.157:9000$雷蒙影视•IPV4『线路13』
-CCTV7国防军事高清,https://json.doube.eu.org/live/migu/migu.php/index.m3u8?id=265667268&sign=00babe80f54873f425e5283814cc36f4$雷蒙影视•IPV4『线路14』
+CCTV7国防军事高清,https://json.doube.eu.org/live/migu/migu.php/index.m3u8?id=265667268&sign=33b872ddf9a8bbbcf72f42940a78f0b8$雷蒙影视•IPV4『线路14』
 CCTV8电视剧高清,http://39.134.67.148/ottrrs.hl.chinamobile.com/hlj/yd/0/3221226008/.m3u8$雷蒙影视•IPV4『线路1』
 CCTV8电视剧高清,http://120.76.248.139/live/bfgd/4200000066.m3u8$雷蒙影视•IPV4『线路2』
 CCTV8电视剧高清,http://223.10.115.195:8082/udp/239.1.1.15:8015$雷蒙影视•IPV4『线路3』
@@ -1235,7 +1236,7 @@ CCTV8电视剧高清,http://221.237.92.253:9999/udp/239.93.42.39:5140$雷蒙影�
 CCTV8电视剧高清,http://222.211.162.3:8888/udp/239.93.42.39:5140$雷蒙影视•IPV4『线路11』
 CCTV8电视剧高清,http:///udp/239.76.246.158:1234$雷蒙影视•IPV4『线路12』
 CCTV8电视剧高清,http:///udp/239.76.253.158:9000$雷蒙影视•IPV4『线路13』
-CCTV8电视剧高清,https://json.doube.eu.org/live/migu/migu.php/index.m3u8?id=265667466&sign=00babe80f54873f425e5283814cc36f4$雷蒙影视•IPV4『线路14』
+CCTV8电视剧高清,https://json.doube.eu.org/live/migu/migu.php/index.m3u8?id=265667466&sign=33b872ddf9a8bbbcf72f42940a78f0b8$雷蒙影视•IPV4『线路14』
 CCTV9纪录高清,http://39.134.67.148/ottrrs.hl.chinamobile.com/hlj/yd/0/3221225734/.m3u8$雷蒙影视•IPV4『线路1』
 CCTV9纪录高清,http://120.76.248.139/live/bfgd/4200000128.m3u8$雷蒙影视•IPV4『线路2』
 CCTV9纪录高清,http://223.10.115.195:8082/udp/239.1.1.16:8016$雷蒙影视•IPV4『线路3』
@@ -1252,7 +1253,7 @@ CCTV9纪录高清,http://221.237.92.253:9999/udp/239.93.1.24:5140$雷蒙影视�
 CCTV9纪录高清,http://222.211.162.3:8888/udp/239.93.1.24:5140$雷蒙影视•IPV4『线路14』
 CCTV9纪录高清,http:///udp/239.76.246.159:1234$雷蒙影视•IPV4『线路15』
 CCTV9纪录高清,http:///udp/239.76.253.159:9000$雷蒙影视•IPV4『线路16』
-CCTV9纪录高清,https://json.doube.eu.org/live/migu/migu.php/index.m3u8?id=265667202&sign=00babe80f54873f425e5283814cc36f4$雷蒙影视•IPV4『线路17』
+CCTV9纪录高清,https://json.doube.eu.org/live/migu/migu.php/index.m3u8?id=265667202&sign=33b872ddf9a8bbbcf72f42940a78f0b8$雷蒙影视•IPV4『线路17』
 CCTV10科教高清,http://39.134.67.148/ottrrs.hl.chinamobile.com/hlj/yd/0/3221225730/.m3u8$雷蒙影视•IPV4『线路1』
 CCTV10科教高清,http://120.76.248.139/live/bfgd/4200000129.m3u8$雷蒙影视•IPV4『线路2』
 CCTV10科教高清,http://223.10.115.195:8082/udp/239.1.1.17:8017$雷蒙影视•IPV4『线路3』
@@ -1269,7 +1270,7 @@ CCTV10科教高清,http://221.237.92.253:9999/udp/239.93.1.28:5140$雷蒙影视�
 CCTV10科教高清,http://222.211.162.3:8888/udp/239.93.1.28:5140$雷蒙影视•IPV4『线路14』
 CCTV10科教高清,http:///udp/239.76.246.160:1234$雷蒙影视•IPV4『线路15』
 CCTV10科教高清,http:///udp/239.76.253.160:9000$雷蒙影视•IPV4『线路16』
-CCTV10科教高清,https://json.doube.eu.org/live/migu/migu.php/index.m3u8?id=265667631&sign=00babe80f54873f425e5283814cc36f4$雷蒙影视•IPV4『线路17』
+CCTV10科教高清,https://json.doube.eu.org/live/migu/migu.php/index.m3u8?id=265667631&sign=33b872ddf9a8bbbcf72f42940a78f0b8$雷蒙影视•IPV4『线路17』
 CCTV11戏曲高清,http://39.134.67.148/ottrrs.hl.chinamobile.com/hlj/yd/0/3221225597/.m3u8$雷蒙影视•IPV4『线路1』
 CCTV11戏曲高清,http://120.76.248.139/live/bfgd/4200000130.m3u8$雷蒙影视•IPV4『线路2』
 CCTV11戏曲高清,http://116.21.87.83:8888/udp/239.77.1.238:5146$雷蒙影视•IPV4『线路3』
@@ -1279,7 +1280,7 @@ CCTV11戏曲高清,http://171.213.130.23:8088/udp/239.93.0.102:5140$雷蒙影视
 CCTV11戏曲高清,http://221.237.92.253:9999/udp/239.93.0.102:5140$雷蒙影视•IPV4『线路7』
 CCTV11戏曲高清,http://222.211.162.3:8888/udp/239.93.0.102:5140$雷蒙影视•IPV4『线路8』
 CCTV11戏曲高清,http:///udp/239.76.245.251:1234$雷蒙影视•IPV4『线路9』
-CCTV11戏曲高清,https://json.doube.eu.org/live/migu/migu.php/index.m3u8?id=265667429&sign=00babe80f54873f425e5283814cc36f4$雷蒙影视•IPV4『线路10』
+CCTV11戏曲高清,https://json.doube.eu.org/live/migu/migu.php/index.m3u8?id=265667429&sign=33b872ddf9a8bbbcf72f42940a78f0b8$雷蒙影视•IPV4『线路10』
 CCTV12社会与法高清,http://39.134.67.148/ottrrs.hl.chinamobile.com/hlj/yd/0/3221225731/.m3u8$雷蒙影视•IPV4『线路1』
 CCTV12社会与法高清,http://120.76.248.139/live/bfgd/4200000131.m3u8$雷蒙影视•IPV4『线路2』
 CCTV12社会与法高清,http://223.10.115.195:8082/udp/239.1.1.19:8019$雷蒙影视•IPV4『线路3』
@@ -1296,7 +1297,7 @@ CCTV12社会与法高清,http://221.237.92.253:9999/udp/239.93.1.30:8124$雷蒙�
 CCTV12社会与法高清,http://222.211.162.3:8888/udp/239.93.1.30:8124$雷蒙影视•IPV4『线路14』
 CCTV12社会与法高清,http:///udp/239.76.246.162:1234$雷蒙影视•IPV4『线路15』
 CCTV12社会与法高清,http:///udp/239.76.253.162:9000$雷蒙影视•IPV4『线路16』
-CCTV12社会与法高清,https://json.doube.eu.org/live/migu/migu.php/index.m3u8?id=265667607&sign=00babe80f54873f425e5283814cc36f4$雷蒙影视•IPV4『线路17』
+CCTV12社会与法高清,https://json.doube.eu.org/live/migu/migu.php/index.m3u8?id=265667607&sign=33b872ddf9a8bbbcf72f42940a78f0b8$雷蒙影视•IPV4『线路17』
 CCTV13新闻高清,http://39.134.67.148/ottrrs.hl.chinamobile.com/hlj/yd/0/3221226537/.m3u8$雷蒙影视•IPV4『线路1』
 CCTV13新闻高清,http://39.134.67.148/ottrrs.hl.chinamobile.com/hlj/yd/0/3221226571/.m3u8$雷蒙影视•IPV4『线路2』
 CCTV13新闻高清,http://120.76.248.139/live/bfgd/4200000067.m3u8$雷蒙影视•IPV4『线路3』
@@ -1314,7 +1315,7 @@ CCTV13新闻高清,http://221.237.92.253:9999/udp/239.93.0.66:5140$雷蒙影视�
 CCTV13新闻高清,http://222.211.162.3:8888/udp/239.93.0.66:5140$雷蒙影视•IPV4『线路15』
 CCTV13新闻高清,http:///udp/239.76.246.93:1234$雷蒙影视•IPV4『线路16』
 CCTV13新闻高清,http:///udp/239.76.253.93:9000$雷蒙影视•IPV4『线路17』
-CCTV13新闻高清,https://json.doube.eu.org/live/migu/migu.php/index.m3u8?id=265667474&sign=00babe80f54873f425e5283814cc36f4$雷蒙影视•IPV4『线路18』
+CCTV13新闻高清,https://json.doube.eu.org/live/migu/migu.php/index.m3u8?id=265667474&sign=33b872ddf9a8bbbcf72f42940a78f0b8$雷蒙影视•IPV4『线路18』
 CCTV14少儿高清,http://39.134.67.148/ottrrs.hl.chinamobile.com/hlj/yd/0/3221225732/.m3u8$雷蒙影视•IPV4『线路1』
 CCTV14少儿高清,http://120.76.248.139/live/bfgd/4200000132.m3u8$雷蒙影视•IPV4『线路2』
 CCTV14少儿高清,http://223.10.115.195:8082/udp/239.1.1.21:8021$雷蒙影视•IPV4『线路3』
@@ -1328,7 +1329,7 @@ CCTV14少儿高清,http://183.30.199.99:8886/udp/239.77.1.161:5146$雷蒙影视�
 CCTV14少儿高清,http://183.30.199.99:8886/udp/239.77.1.171:5146$雷蒙影视•IPV4『线路11』
 CCTV14少儿高清,http:///udp/239.76.246.164:1234$雷蒙影视•IPV4『线路12』
 CCTV14少儿高清,http:///udp/239.76.253.164:9000$雷蒙影视•IPV4『线路13』
-CCTV14少儿高清,https://json.doube.eu.org/live/migu/migu.php/index.m3u8?id=265667325&sign=00babe80f54873f425e5283814cc36f4$雷蒙影视•IPV4『线路14』
+CCTV14少儿高清,https://json.doube.eu.org/live/migu/migu.php/index.m3u8?id=265667325&sign=33b872ddf9a8bbbcf72f42940a78f0b8$雷蒙影视•IPV4『线路14』
 CCTV15音乐高清,http://39.134.67.148/ottrrs.hl.chinamobile.com/hlj/yd/0/3221225601/.m3u8$雷蒙影视•IPV4『线路1』
 CCTV15音乐高清,http://120.76.248.139/live/bfgd/4200000133.m3u8$雷蒙影视•IPV4『线路2』
 CCTV15音乐高清,http://116.21.87.83:8888/udp/239.77.1.239:5146$雷蒙影视•IPV4『线路3』
@@ -1338,7 +1339,7 @@ CCTV15音乐高清,http://171.213.130.23:8088/udp/239.93.0.103:5140$雷蒙影视
 CCTV15音乐高清,http://221.237.92.253:9999/udp/239.93.0.103:5140$雷蒙影视•IPV4『线路7』
 CCTV15音乐高清,http://222.211.162.3:8888/udp/239.93.0.103:5140$雷蒙影视•IPV4『线路8』
 CCTV15音乐高清,http:///udp/239.76.245.252:1234$雷蒙影视•IPV4『线路9』
-CCTV15音乐高清,https://json.doube.eu.org/live/migu/migu.php/index.m3u8?id=265667535&sign=00babe80f54873f425e5283814cc36f4$雷蒙影视•IPV4『线路10』
+CCTV15音乐高清,https://json.doube.eu.org/live/migu/migu.php/index.m3u8?id=265667535&sign=33b872ddf9a8bbbcf72f42940a78f0b8$雷蒙影视•IPV4『线路10』
 CCTV16奥林匹克高清,http://39.134.67.148/ottrrs.hl.chinamobile.com/hlj/yd/0/3221226100/.m3u8$雷蒙影视•IPV4『线路1』
 CCTV16奥林匹克高清,http://223.10.115.195:8082/udp/239.1.1.122:8122$雷蒙影视•IPV4『线路2』
 CCTV16奥林匹克高清,http://223.10.39.207:8083/udp/239.1.1.122:8122$雷蒙影视•IPV4『线路3』
@@ -1362,7 +1363,7 @@ CCTV17农业农村高清,http://171.213.130.23:8088/udp/239.93.0.92:5140$雷蒙�
 CCTV17农业农村高清,http://221.237.92.253:9999/udp/239.93.0.92:5140$雷蒙影视•IPV4『线路9』
 CCTV17农业农村高清,http://222.211.162.3:8888/udp/239.93.0.92:5140$雷蒙影视•IPV4『线路10』
 CCTV17农业农村高清,http:///udp/239.76.245.238:1234$雷蒙影视•IPV4『线路11』
-CCTV17农业农村高清,https://json.doube.eu.org/live/migu/migu.php/index.m3u8?id=265667526&sign=00babe80f54873f425e5283814cc36f4$雷蒙影视•IPV4『线路12』
+CCTV17农业农村高清,https://json.doube.eu.org/live/migu/migu.php/index.m3u8?id=265667526&sign=33b872ddf9a8bbbcf72f42940a78f0b8$雷蒙影视•IPV4『线路12』
 📡卫视,#genre#
 湖南卫视,http://rrs01.hw.gmcc.net:8088/PLTV/81/224/3221226698/1.m3u8$雷蒙影视•IPV4『线路1』
 湖南卫视,http://171.15.18.199:8180/TV00000000000000000018@HHZT$雷蒙影视•IPV4『线路2』
@@ -1577,7 +1578,7 @@ CCTV17农业农村高清,https://json.doube.eu.org/live/migu/migu.php/index.m3u8
 东方卫视,http://218.3.138.25:1111/tsfile/live/1020_1.m3u8?key=txiptv&playlive=1&authid=0###HLS\\n$雷蒙影视•IPV4『线路45』
 东方卫视,http://goo.bkpcp.top/mg/dfws###HLS\\n$雷蒙影视•IPV4『线路46』
 东方卫视,https://www.yangshipin.cn/tv/home?pid=600002483###WEB\\n$雷蒙影视•IPV4『线路47』
-东方卫视,https://json.doube.eu.org/live/migu/migu.php/index.m3u8?id=264104266&sign=00babe80f54873f425e5283814cc36f4$雷蒙影视•IPV4『线路48』
+东方卫视,https://json.doube.eu.org/live/migu/migu.php/index.m3u8?id=264104266&sign=33b872ddf9a8bbbcf72f42940a78f0b8$雷蒙影视•IPV4『线路48』
 东方卫视,http://a21709.tv.netsite.cc/proxy/694881013/694881013.m3u8$雷蒙影视•IPV4『线路49』
 东方卫视,http:///udp/239.45.3.146:5140$雷蒙影视•IPV4『线路50』
 东方卫视,http://221.196.34.247:4022/udp/225.1.2.31:5002$雷蒙影视•IPV4『线路51』
@@ -1745,7 +1746,7 @@ CCTV17农业农村高清,https://json.doube.eu.org/live/migu/migu.php/index.m3u8
 江苏卫视,http://goo.bkpcp.top/mg/jsws###HLS\\n$雷蒙影视•IPV4『线路51』
 江苏卫视,https://www.yangshipin.cn/tv/home?pid=600002521###WEB\\n$雷蒙影视•IPV4『线路52』
 江苏卫视,https://live.jstv.com/###WEB\\n$雷蒙影视•IPV4『线路53』
-江苏卫视,https://json.doube.eu.org/live/migu/migu.php/index.m3u8?id=264104188&sign=00babe80f54873f425e5283814cc36f4$雷蒙影视•IPV4『线路54』
+江苏卫视,https://json.doube.eu.org/live/migu/migu.php/index.m3u8?id=264104188&sign=33b872ddf9a8bbbcf72f42940a78f0b8$雷蒙影视•IPV4『线路54』
 江苏卫视,http://a21709.tv.netsite.cc/proxy/256947203/256947203.m3u8$雷蒙影视•IPV4『线路55』
 江苏卫视,http:///udp/239.45.3.177:5140$雷蒙影视•IPV4『线路56』
 江苏卫视,http://221.196.34.247:4022/udp/225.1.1.126:5002$雷蒙影视•IPV4『线路57』
@@ -2174,7 +2175,7 @@ CCTV17农业农村高清,https://json.doube.eu.org/live/migu/migu.php/index.m3u8
 广东卫视,http://joyznm.i234.me:20000/udp/239.3.1.142:8048###des:1080P###HLS\\n$雷蒙影视•IPV4『线路49』
 广东卫视,http://z.b.bkpcp.top/m.php?id=gdws###HLS\\n$雷蒙影视•IPV4『线路50』
 广东卫视,https://www.yangshipin.cn/tv/home?pid=600002485###WEB\\n$雷蒙影视•IPV4『线路51』
-广东卫视,https://json.doube.eu.org/live/migu/migu.php/index.m3u8?id=263541274&sign=00babe80f54873f425e5283814cc36f4$雷蒙影视•IPV4『线路52』
+广东卫视,https://json.doube.eu.org/live/migu/migu.php/index.m3u8?id=263541274&sign=33b872ddf9a8bbbcf72f42940a78f0b8$雷蒙影视•IPV4『线路52』
 广东卫视,http://a21709.tv.netsite.cc/proxy/573869971/573869971.m3u8$雷蒙影视•IPV4『线路53』
 广东卫视,http:///udp/239.45.3.230:5140$雷蒙影视•IPV4『线路54』
 广东卫视,http://221.196.34.247:4022/udp/225.1.1.116:5002$雷蒙影视•IPV4『线路55』
@@ -2694,7 +2695,7 @@ CCTV17农业农村高清,https://json.doube.eu.org/live/migu/migu.php/index.m3u8
 湖北卫视,http://joyznm.i234.me:20000/udp/239.3.1.138:8044###des:1080P###HLS\\n$雷蒙影视•IPV4『线路44』
 湖北卫视,http://goo.bkpcp.top/mg/hubws###HLS\\n$雷蒙影视•IPV4『线路45』
 湖北卫视,https://www.yangshipin.cn/tv/home?pid=600002508###WEB\\n$雷蒙影视•IPV4『线路46』
-湖北卫视,https://json.doube.eu.org/live/migu/migu.php/index.m3u8?id=531261978&sign=00babe80f54873f425e5283814cc36f4$雷蒙影视•IPV4『线路47』
+湖北卫视,https://json.doube.eu.org/live/migu/migu.php/index.m3u8?id=531261978&sign=33b872ddf9a8bbbcf72f42940a78f0b8$雷蒙影视•IPV4『线路47』
 湖北卫视,http://a21709.tv.netsite.cc/proxy/209398845/209398845.m3u8$雷蒙影视•IPV4『线路48』
 湖北卫视,http:///udp/239.45.3.239:5140$雷蒙影视•IPV4『线路49』
 湖北卫视,http://221.196.34.247:4022/udp/225.1.1.147:5002$雷蒙影视•IPV4『线路50』
@@ -2772,7 +2773,7 @@ CCTV17农业农村高清,https://json.doube.eu.org/live/migu/migu.php/index.m3u8
 江西卫视,http://z.b.bkpcp.top/m.php?id=jxws###HLS\\n$雷蒙影视•IPV4『线路46』
 江西卫视,http://goo.bkpcp.top/mg/jxws###HLS\\n$雷蒙影视•IPV4『线路47』
 江西卫视,https://www.yangshipin.cn/tv/home?pid=600002503###WEB\\n$雷蒙影视•IPV4『线路48』
-江西卫视,https://json.doube.eu.org/live/migu/migu.php/index.m3u8?id=810783159&sign=00babe80f54873f425e5283814cc36f4$雷蒙影视•IPV4『线路49』
+江西卫视,https://json.doube.eu.org/live/migu/migu.php/index.m3u8?id=810783159&sign=33b872ddf9a8bbbcf72f42940a78f0b8$雷蒙影视•IPV4『线路49』
 江西卫视,http://a21709.tv.netsite.cc/proxy/203181175/203181175.m3u8$雷蒙影视•IPV4『线路50』
 江西卫视,http:///udp/239.45.1.122:5140$雷蒙影视•IPV4『线路51』
 江西卫视,http://221.196.34.247:4022/udp/225.1.2.29:5002$雷蒙影视•IPV4『线路52』
@@ -2837,7 +2838,7 @@ CCTV17农业农村高清,https://json.doube.eu.org/live/migu/migu.php/index.m3u8
 吉林卫视,http://joyznm.i234.me:20000/udp/239.3.1.40:8200##des:720P###HLS\\n$雷蒙影视•IPV4『线路36』
 吉林卫视,http://113.25.252.226:9901/tsfile/live/0116_1.m3u8?key=txiptv&playlive=1&authid=0###HLS\\n$雷蒙影视•IPV4『线路37』
 吉林卫视,http://59.173.243.210:9901/tsfile/live/0116_1.m3u8?key=txiptv&playlive=1&authid=0###HLS\\n$雷蒙影视•IPV4『线路38』
-吉林卫视,https://json.doube.eu.org/live/migu/migu.php/index.m3u8?id=531262154&sign=00babe80f54873f425e5283814cc36f4$雷蒙影视•IPV4『线路39』
+吉林卫视,https://json.doube.eu.org/live/migu/migu.php/index.m3u8?id=531262154&sign=33b872ddf9a8bbbcf72f42940a78f0b8$雷蒙影视•IPV4『线路39』
 吉林卫视,http://a21709.tv.netsite.cc/proxy/649197264/649197264.m3u8$雷蒙影视•IPV4『线路40』
 吉林卫视,http:///udp/239.45.0.6:5140$雷蒙影视•IPV4『线路41』
 吉林卫视,http://221.196.34.247:4022/udp/225.1.2.26:5002$雷蒙影视•IPV4『线路42』
@@ -3087,7 +3088,7 @@ CCTV17农业农村高清,https://json.doube.eu.org/live/migu/migu.php/index.m3u8
 青海卫视,http://joyznm.i234.me:20000/udp/239.3.1.44:8184##des:720P###HLS\\n$雷蒙影视•IPV4『线路33』
 青海卫视,http://113.25.252.226:9901/tsfile/live/0140_1.m3u8?key=txiptv&playlive=1&authid=0###HLS\\n$雷蒙影视•IPV4『线路34』
 青海卫视,http://110.53.52.63:8888/newlive/live/hls/38/live.m3u8###HLS\\n$雷蒙影视•IPV4『线路35』
-青海卫视,https://json.doube.eu.org/live/migu/migu.php/index.m3u8?id=531262027&sign=00babe80f54873f425e5283814cc36f4$雷蒙影视•IPV4『线路36』
+青海卫视,https://json.doube.eu.org/live/migu/migu.php/index.m3u8?id=531262027&sign=33b872ddf9a8bbbcf72f42940a78f0b8$雷蒙影视•IPV4『线路36』
 青海卫视,http://a21709.tv.netsite.cc/proxy/1164716104/1164716104.m3u8$雷蒙影视•IPV4『线路37』
 青海卫视,http://a21709.tv.netsite.cc/proxy/1152127449/1152127449.m3u8$雷蒙影视•IPV4『线路38』
 青海卫视,http:///udp/239.45.1.230:5140$雷蒙影视•IPV4『线路39』
@@ -3294,7 +3295,7 @@ CCTV17农业农村高清,https://json.doube.eu.org/live/migu/migu.php/index.m3u8
 海南卫视,http://joyznm.i234.me:20000/udp/239.3.1.45:8304##des:720P###HLS\\n$雷蒙影视•IPV4『线路29』
 海南卫视,http://goo.bkpcp.top/mg/hinws###HLS\\n$雷蒙影视•IPV4『线路30』
 海南卫视,https://www.yangshipin.cn/tv/home?pid=600002506###WEB\\n$雷蒙影视•IPV4『线路31』
-海南卫视,https://json.doube.eu.org/live/migu/migu.php/index.m3u8?id=531262161&sign=00babe80f54873f425e5283814cc36f4$雷蒙影视•IPV4『线路32』
+海南卫视,https://json.doube.eu.org/live/migu/migu.php/index.m3u8?id=531262161&sign=33b872ddf9a8bbbcf72f42940a78f0b8$雷蒙影视•IPV4『线路32』
 海南卫视,http://a21709.tv.netsite.cc/proxy/200969914/200969914.m3u8$雷蒙影视•IPV4『线路33』
 海南卫视,http://a21709.tv.netsite.cc/proxy/2019508840/2019508840.m3u8$雷蒙影视•IPV4『线路34』
 海南卫视,http:///udp/239.45.1.81:5140$雷蒙影视•IPV4『线路35』
@@ -3668,16 +3669,15 @@ TVBSNEWS,http://61.221.215.25:8800/hls/9/index.m3u8$雷蒙影视•IPV4
 中天新闻,http://aktv.top/AKTV/live/aktv/null-8/AKTV.m3u8$雷蒙影视•IPV4『线路4』
 中天新闻,http://220.133.220.232:8580/http/220.130.214.23:8088/hls/78/80/ch63max.m3u8$雷蒙影视•IPV4『线路5』
 中天新闻,http://cdn.iptv8k.top/dl/jspd.php?id=1$雷蒙影视•IPV4『线路6』
-中天新闻,https://smart.pendy.dpdns.org/Smart.php?id=ctinews$雷蒙影视•IPV4『线路7』
-中天新闻,http://kkk.jjjj.jiduo.me/api.php?n=tttt&id=0148&tk=97475bb89d45$雷蒙影视•IPV4『线路8』
-中天新闻,http://lzoq.serv00.net/daili/Smartv.php?id=ctinews$雷蒙影视•IPV4『线路9』
-中天新闻,http://kkk.jjjj.jiduo.me/api.php?n=tttt&id=0165&tk=7877e7cc41c7$雷蒙影视•IPV4『线路10』
+中天新闻,http://kkk.jjjj.jiduo.me/api.php?n=tttt&id=0148&tk=97475bb89d45$雷蒙影视•IPV4『线路7』
+中天新闻,http://kkk.jjjj.jiduo.me/api.php?n=tttt&id=0165&tk=7877e7cc41c7$雷蒙影视•IPV4『线路8』
+中天新闻,https://smart.pendy.dpdns.org/Smart.php?id=ctinews$雷蒙影视•IPV4『线路9』
 中天亚洲,http://m3u8ts.vip-tptv.xyz:50515/4gtv-4gtv109/index.m3u8?proxy=true$雷蒙影视•IPV4『线路1』
 中天亚洲,http://aktv.top/AKTV/live/aktv/null-12/AKTV.m3u8$雷蒙影视•IPV4『线路2』
-中天亚洲,http://185.243.7.13:80/play/live.php?mac=00:1A:79:45:5E:9A&stream=571212&extension=ts&play_token=yaoffzUbUJ$雷蒙影视•IPV4『线路3』
-中天亚洲,http://kkk.jjjj.jiduo.me/api.php?n=tttt&id=7137&tk=7877e7cc41c7$雷蒙影视•IPV4『线路4』
-中天亚洲,http://kkk.jjjj.jiduo.me/api.php?n=tttt&id=3681&tk=97475bb89d45$雷蒙影视•IPV4『线路5』
-中天亚洲,https://smart.pendy.dpdns.org/Smart.php?id=ctiasia_twn$雷蒙影视•IPV4『线路6』
+中天亚洲,https://smart.pendy.dpdns.org/Smart.php?id=ctiasia_twn$雷蒙影视•IPV4『线路3』
+中天亚洲,http://kkk.jjjj.jiduo.me/api.php?n=tttt&id=3681&tk=97475bb89d45$雷蒙影视•IPV4『线路4』
+中天亚洲,http://185.243.7.13:80/play/live.php?mac=00:1A:79:45:5E:9A&stream=571212&extension=ts&play_token=yaoffzUbUJ$雷蒙影视•IPV4『线路5』
+中天亚洲,http://kkk.jjjj.jiduo.me/api.php?n=tttt&id=7137&tk=7877e7cc41c7$雷蒙影视•IPV4『线路6』
 东森新闻,https://edge1.laotv.la/live/DongsenMovie/index.m3u8$雷蒙影视•IPV4『线路1』
 东森新闻,http://37.27.111.214:8080/live/20/hls.m3u8$雷蒙影视•IPV4『线路2』
 东森新闻,http://aktv.top/AKTV/live/aktv2/null/AKTV.m3u8$雷蒙影视•IPV4『线路3』
@@ -3696,9 +3696,9 @@ TVBSNEWS,http://61.221.215.25:8800/hls/9/index.m3u8$雷蒙影视•IPV4
 东森财经新闻,https://tv.iill.top/litv/4gtv-4gtv153$雷蒙影视•IPV4『线路1』
 东森财经新闻,http://litv.zapi.us.kg/?id=4gtv-4gtv153$雷蒙影视•IPV4『线路2』
 东森超视,rtmp://f13h.mine.nu/sat/tv331$雷蒙影视•IPV4『线路1』
-东森超视,https://cdn.iptv8k.top/dl/jrys.php?id=216&time=20240926215313&ip=111.229.253.40$雷蒙影视•IPV4『线路2』
-东森超视,http://kkk.jjjj.jiduo.me/api.php?n=tttt&id=9639&tk=e640d0a1bf70$雷蒙影视•IPV4『线路3』
-东森超视,https://cdn.iptv8k.top/dl/jrys.php?id=217&time=20240926215313&ip=111.229.253.40$雷蒙影视•IPV4『线路4』
+东森超视,https://cdn.iptv8k.top/dl/jrys.php?id=217&time=20240926215313&ip=111.229.253.40$雷蒙影视•IPV4『线路2』
+东森超视,https://cdn.iptv8k.top/dl/jrys.php?id=216&time=20240926215313&ip=111.229.253.40$雷蒙影视•IPV4『线路3』
+东森超视,http://kkk.jjjj.jiduo.me/api.php?n=tttt&id=9639&tk=e640d0a1bf70$雷蒙影视•IPV4『线路4』
 三立台湾台,http://tianhewan.top/ZIPP.php?url=http://211.72.65.236:8521/.m3u8$雷蒙影视•IPV4『线路1』
 三立台湾台,https://cdn.iptv8k.top/dl/jrys.php?id=269&time=20240926215313&ip=111.229.253.40$雷蒙影视•IPV4『线路2』
 三立台湾台,http://xn--94q.l5.ca/daili/Smartv.php?id=sanlitaiwan$雷蒙影视•IPV4『线路3』
@@ -3931,13 +3931,13 @@ AMC最爱电影,http://220.133.220.232:8561/http/220.130.214.23:8092/upload/115/
 凤凰卫视中文台,http://oopswx.serv00.net/fhws.php?id=cn$雷蒙影视•IPV4『线路29』
 凤凰卫视中文台,http://oopswx.serv00.net/fhxyh.php?from=web&id=fhzw$雷蒙影视•IPV4『线路30』
 凤凰卫视中文台,http://www.terrykang.cn:5678/sxg.php?id=test1_4000$雷蒙影视•IPV4『线路31』
-凤凰卫视中文台,https://cdn.iptv8k.top/dl/jrys.php?id=19&time=20240926215313&ip=111.229.253.40$雷蒙影视•IPV4『线路32』
-凤凰卫视中文台,http://kkk.jjjj.jiduo.me/api.php?n=tttt&id=8382&tk=e640d0a1bf70$雷蒙影视•IPV4『线路33』
-凤凰卫视中文台,http://b.tvbox6.icu/【公众号：榴芒电视】/fhzw.m3u8$雷蒙影视•IPV4『线路34』
-凤凰卫视中文台,https://live.tvfix.org/live/fhzw/1/v4000000/index.m3u8$雷蒙影视•IPV4『线路35』
-凤凰卫视中文台,https://piccpndks.v.kcdnvip.com/audio/xianggangweishi_2.m3u8$雷蒙影视•IPV4『线路36』
-凤凰卫视中文台,http://120.198.95.220:9901/tsfile/live/1036_1.m3u8?key=txiptv$雷蒙影视•IPV4『线路37』
-凤凰卫视中文台,http://kkk.jjjj.jiduo.me/api.php?n=tttt&id=8654&tk=e503191f8e20$雷蒙影视•IPV4『线路38』
+凤凰卫视中文台,https://piccpndks.v.kcdnvip.com/audio/xianggangweishi_2.m3u8$雷蒙影视•IPV4『线路32』
+凤凰卫视中文台,http://b.tvbox6.icu/【公众号：榴芒电视】/fhzw.m3u8$雷蒙影视•IPV4『线路33』
+凤凰卫视中文台,https://live.tvfix.org/live/fhzw/1/v4000000/index.m3u8$雷蒙影视•IPV4『线路34』
+凤凰卫视中文台,http://kkk.jjjj.jiduo.me/api.php?n=tttt&id=8382&tk=e640d0a1bf70$雷蒙影视•IPV4『线路35』
+凤凰卫视中文台,https://cdn.iptv8k.top/dl/jrys.php?id=19&time=20240926215313&ip=111.229.253.40$雷蒙影视•IPV4『线路36』
+凤凰卫视中文台,http://kkk.jjjj.jiduo.me/api.php?n=tttt&id=8654&tk=e503191f8e20$雷蒙影视•IPV4『线路37』
+凤凰卫视中文台,http://120.198.95.220:9901/tsfile/live/1036_1.m3u8?key=txiptv$雷蒙影视•IPV4『线路38』
 凤凰卫视中文台,http://ttkx.cc:1380/公开源/fh.php?id=fhzw###HLS\\n$雷蒙影视•IPV4『线路39』
 凤凰卫视中文台,https://345iptv.com/?act=play&token=1954169d1dfb9cbc12fd4f353d5d31b2&tid=gt&id=1&p=0###WEB\\n$雷蒙影视•IPV4『线路40』
 凤凰卫视中文台,https://ali.hlspull.yximgs.com/live/qq491695550-fh.flv###HLS\\n$雷蒙影视•IPV4『线路41』
@@ -3971,13 +3971,13 @@ AMC最爱电影,http://220.133.220.232:8561/http/220.130.214.23:8092/upload/115/
 凤凰卫视资讯台,http://aktv.top/AKTV/live/aktv/null-4/AKTV.m3u8$雷蒙影视•IPV4『线路25』
 凤凰卫视资讯台,http://oopswx.serv00.net/fhws.php?id=info$雷蒙影视•IPV4『线路26』
 凤凰卫视资讯台,http://oopswx.serv00.net/fhxyh.php?from=web&id=fhzx$雷蒙影视•IPV4『线路27』
-凤凰卫视资讯台,http://www.terrykang.cn:5678/sxg.php?id=test2_4000$雷蒙影视•IPV4『线路28』
+凤凰卫视资讯台,http://kkk.jjjj.jiduo.me/api.php?n=tttt&id=7059&tk=7877e7cc41c7$雷蒙影视•IPV4『线路28』
 凤凰卫视资讯台,http://kkk.jjjj.jiduo.me/api.php?n=tttt&id=5282&tk=2aca1ad9a849$雷蒙影视•IPV4『线路29』
-凤凰卫视资讯台,http://218.202.220.2:5000/nn_live.ts?id=FHZX$雷蒙影视•IPV4『线路30』
+凤凰卫视资讯台,http://50.7.234.10:8278/phoenixinfo_hd/playlist.m3u8?tid=MB5B7253262872532628&ct=19249&tsum=e2b2dcd00f39adb64b6c03601da1e0e0$雷蒙影视•IPV4『线路30』
 凤凰卫视资讯台,https://smart.pendy.dpdns.org/Smart.php?id=phoenixinfo_hd$雷蒙影视•IPV4『线路31』
-凤凰卫视资讯台,http://kkk.jjjj.jiduo.me/api.php?n=tttt&id=7059&tk=7877e7cc41c7$雷蒙影视•IPV4『线路32』
-凤凰卫视资讯台,https://k44991.kylintv.tv/live/pxinhd_iphone.m3u8$雷蒙影视•IPV4『线路33』
-凤凰卫视资讯台,http://50.7.234.10:8278/phoenixinfo_hd/playlist.m3u8?tid=MB5B7253262872532628&ct=19249&tsum=e2b2dcd00f39adb64b6c03601da1e0e0$雷蒙影视•IPV4『线路34』
+凤凰卫视资讯台,http://www.terrykang.cn:5678/sxg.php?id=test2_4000$雷蒙影视•IPV4『线路32』
+凤凰卫视资讯台,http://218.202.220.2:5000/nn_live.ts?id=FHZX$雷蒙影视•IPV4『线路33』
+凤凰卫视资讯台,https://k44991.kylintv.tv/live/pxinhd_iphone.m3u8$雷蒙影视•IPV4『线路34』
 凤凰卫视资讯台,http://ttkx.cc:1380/公开源/fh.php?id=fhzx###HLS\\n$雷蒙影视•IPV4『线路35』
 凤凰卫视资讯台,https://345iptv.com/?act=play&token=6bdefacb888922eba8683ba0d3ed2d0c&tid=gt&id=2&p=0###WEB\\n$雷蒙影视•IPV4『线路36』
 凤凰卫视资讯台,https://live.iill.top/youtube/@phoenixtvhk###HLS\\n$雷蒙影视•IPV4『线路37』
@@ -3996,10 +3996,10 @@ AMC最爱电影,http://220.133.220.232:8561/http/220.130.214.23:8092/upload/115/
 凤凰卫视香港台,http://aktv.top/AKTV/live/aktv/null-5/AKTV.m3u8$雷蒙影视•IPV4『线路11』
 凤凰卫视香港台,http://oopswx.serv00.net/fhws.php?id=hk$雷蒙影视•IPV4『线路12』
 凤凰卫视香港台,http://oopswx.serv00.net/fhxyh.php?from=web&id=fhhk$雷蒙影视•IPV4『线路13』
-凤凰卫视香港台,http://zhibo.hkstv.tv/livestream/mutfysrq/playlist.m3u8?wsSession=e5b4ef626c5980be2fbdf2e7-158332927312639&amp;wsIPSercert=6f8d45434604e7d22f5b0abbc0231d01&amp;wsMonitor=0$雷蒙影视•IPV4『线路14』
-凤凰卫视香港台,https://cdn.iptv8k.top/dl/jrys.php?id=18&time=20240926215313&ip=111.229.253.40$雷蒙影视•IPV4『线路15』
+凤凰卫视香港台,https://cdn.iptv8k.top/dl/jrys.php?id=18&time=20240926215313&ip=111.229.253.40$雷蒙影视•IPV4『线路14』
+凤凰卫视香港台,http://kkk.jjjj.jiduo.me/api.php?n=tttt&id=3523&tk=7877e7cc41c7$雷蒙影视•IPV4『线路15』
 凤凰卫视香港台,https://live.tvfix.org/live/fwxg/2/v4000000/index.m3u8$雷蒙影视•IPV4『线路16』
-凤凰卫视香港台,http://kkk.jjjj.jiduo.me/api.php?n=tttt&id=3523&tk=7877e7cc41c7$雷蒙影视•IPV4『线路17』
+凤凰卫视香港台,http://zhibo.hkstv.tv/livestream/mutfysrq/playlist.m3u8?wsSession=e5b4ef626c5980be2fbdf2e7-158332927312639&amp;wsIPSercert=6f8d45434604e7d22f5b0abbc0231d01&amp;wsMonitor=0$雷蒙影视•IPV4『线路17』
 凤凰卫视香港台,https://smart.pendy.dpdns.org/Smart.php?id=hkphoenix_twn$雷蒙影视•IPV4『线路18』
 凤凰卫视香港台,http://ttkx.cc:1380/公开源/fh.php?id=fhhk###HLS\\n$雷蒙影视•IPV4『线路19』
 凤凰卫视香港台,https://345iptv.com/?act=play&token=7010383a1fcd7e99526598c4ed672256&tid=gt&id=3&p=0###WEB\\n$雷蒙影视•IPV4『线路20』
