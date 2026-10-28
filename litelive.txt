@@ -2,7 +2,7 @@
 雷蒙影视直播,https://cors.isteed.cc/https://raw.githubusercontent.com/n3rddd/N3RD/master/JN/N3RD/W/CTVThemeSong1.mp4
 CrimeTV LIVE,https://cors.isteed.cc/https://raw.githubusercontent.com/n3rddd/N3RD/master/JN/N3RD/W/CTVThemeSong2.mp4
 更新日期,https://cors.isteed.cc/https://raw.githubusercontent.com/n3rddd/N3RD/master/JN/N3RD/W/CRIMETVPV1.mkv
-2026-10-27,https://cors.isteed.cc/https://raw.githubusercontent.com/n3rddd/N3RD/master/JN/N3RD/W/CRIMETVPV2.mkv
+2026-10-28,https://cors.isteed.cc/https://raw.githubusercontent.com/n3rddd/N3RD/master/JN/N3RD/W/CRIMETVPV2.mkv
 🇨🇳央视,#genre#
 CCTV1,http://106.53.99.30/tv/jzb.php?id=cctv1$雷蒙影视•IPV4『线路1』
 CCTV1,http://8.138.7.223/tv/migu3.php?id=cctv1$雷蒙影视•IPV4『线路2』
@@ -394,7 +394,6 @@ CCTV12,http://144.255.16.190:6688/udp/239.21.1.156:5002$雷蒙影视•IPV4『�
 CCTV12,http://115.171.216.32:4000/rtp/225.1.8.12:8124$雷蒙影视•IPV4『线路27』
 CCTV12,http://114.254.38.234:8888/rtp/239.3.1.64:8124$雷蒙影视•IPV4『线路28』
 CCTV12,http://111.196.128.44:20000/rtp/239.3.1.64:8124$雷蒙影视•IPV4『线路29』
-CCTV12,http://125.43.244.237:9901/tsfile/live/1015_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路30』
 CCTV13,http://106.53.99.30/tv/jzb.php?id=cctv13$雷蒙影视•IPV4『线路1』
 CCTV13,http://8.138.7.223/tv/migu3.php?id=cctv13$雷蒙影视•IPV4『线路2』
 CCTV13,http://106.53.99.30/公众号【榴芒电视】/proxy/bjyd.php?id=10$雷蒙影视•IPV4『线路3』
@@ -461,7 +460,6 @@ CCTV14,http://144.255.16.190:6688/udp/239.21.1.157:5002$雷蒙影视•IPV4『�
 CCTV14,http://115.171.216.32:4000/rtp/225.1.8.14:8132$雷蒙影视•IPV4『线路29』
 CCTV14,http://114.254.38.234:8888/rtp/239.3.1.65:8132$雷蒙影视•IPV4『线路30』
 CCTV14,http://111.196.128.44:20000/rtp/239.3.1.65:8132$雷蒙影视•IPV4『线路31』
-CCTV14,http://125.43.244.237:9901/tsfile/live/1017_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路32』
 CCTV15,http://106.53.99.30/tv/jzb.php?id=cctv15$雷蒙影视•IPV4『线路1』
 CCTV15,http://8.138.7.223/tv/migu3.php?id=cctv15$雷蒙影视•IPV4『线路2』
 CCTV15,http://106.53.99.30/公众号【榴芒电视】/proxy/bjyd.php?id=12$雷蒙影视•IPV4『线路3』
@@ -946,7 +944,6 @@ CCTV14少儿高清,http://120.76.248.139/live/bfgd/4200000132.m3u8$雷蒙影视�
 安徽卫视,http://115.171.216.32:4000/udp/225.1.8.52:8064$雷蒙影视•IPV4『线路42』
 安徽卫视,http://114.254.38.234:8888/rtp/239.3.1.211:8064$雷蒙影视•IPV4『线路43』
 安徽卫视,http://111.196.128.44:20000/rtp/239.3.1.211:8064$雷蒙影视•IPV4『线路44』
-安徽卫视,http://125.43.244.237:9901/tsfile/live/1037_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路45』
 重庆卫视,http://106.53.99.30/tv/20250803.php?id=重庆卫视$雷蒙影视•IPV4『线路1』
 重庆卫视,http://106.53.99.30/tv/jzb.php?id=cqws$雷蒙影视•IPV4『线路2』
 重庆卫视,http://39.164.174.139:5000/nl.m3u8?id=CQWS$雷蒙影视•IPV4『线路3』
@@ -1358,7 +1355,6 @@ CCTV14少儿高清,http://120.76.248.139/live/bfgd/4200000132.m3u8$雷蒙影视�
 河北卫视,http://115.171.216.32:4000/udp/225.1.8.76:8002$雷蒙影视•IPV4『线路42』
 河北卫视,http://114.254.38.234:8888/rtp/239.3.1.148:8072$雷蒙影视•IPV4『线路43』
 河北卫视,http://111.196.128.44:20000/rtp/239.3.1.148:8072$雷蒙影视•IPV4『线路44』
-河北卫视,http://125.43.244.237:9901/tsfile/live/1032_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路45』
 河南卫视,http://106.53.99.30/tv/20250803.php?id=河南卫视$雷蒙影视•IPV4『线路1』
 河南卫视,http://106.53.99.30/tv/jzb.php?id=henws$雷蒙影视•IPV4『线路2』
 河南卫视,http://39.164.174.139:5000/nl.m3u8?id=HENWSHD$雷蒙影视•IPV4『线路3』
@@ -2125,10 +2121,10 @@ TVBSNEWS,http://61.221.215.25:8800/hls/9/index.m3u8$雷蒙影视•IPV4
 东森新闻,http://aktv.top/AKTV/live/aktv2/null/AKTV.m3u8$雷蒙影视•IPV4『线路4』
 东森新闻,https://tv.iill.top/litv/4gtv-4gtv152$雷蒙影视•IPV4『线路5』
 东森新闻,https://smt.858.qzz.io/Smart.php?id=ettvnews$雷蒙影视•IPV4『线路6』
-东森新闻,http://stream-ali1.csslcloud.net/live/IfhEdN30gjBbSbfd2ySSKGFHHl6JFBwhgtYpQxoGIKytCfl1hl.flv$雷蒙影视•IPV4『线路7』
-东森新闻,http://xtvantsc.xyz/litv_ts.php?id=4gtv-4gtv152$雷蒙影视•IPV4『线路8』
+东森新闻,http://xtvantsc.xyz/litv_ts.php?id=4gtv-4gtv152$雷蒙影视•IPV4『线路7』
+东森新闻,http://xtvantsc.xyz/Smart.php?id=ettvnews$雷蒙影视•IPV4『线路8』
 东森新闻,http://breezy-audrie-zspace-7524863c.koyeb.app/vipsir?token=leifeng&id=4gtv-4gtv152$雷蒙影视•IPV4『线路9』
-东森新闻,http://xtvantsc.xyz/Smart.php?id=ettvnews$雷蒙影视•IPV4『线路10』
+东森新闻,http://stream-ali1.csslcloud.net/live/IfhEdN30gjBbSbfd2ySSKGFHHl6JFBwhgtYpQxoGIKytCfl1hl.flv$雷蒙影视•IPV4『线路10』
 东森新闻,https://345iptv.com/?act=play&token=e3528a3f9e489017678f0bedf02be03d&tid=gt&id=44&p=0###WEB\\n$雷蒙影视•IPV4『线路11』
 东森新闻,https://stream1.freetv.fun/dong-sen-xin-wen-3.ctv###HLS\\n$雷蒙影视•IPV4『线路12』
 东森新闻,https://stream1.freetv.fun/dong-sen-xin-wen-5.ctv###HLS\\n$雷蒙影视•IPV4『线路13』
@@ -2158,20 +2154,20 @@ TVBSNEWS,http://61.221.215.25:8800/hls/9/index.m3u8$雷蒙影视•IPV4
 台视新闻台,http://38.64.72.148:80/hls/modn/list/4013/chunklist1.m3u8$雷蒙影视•IPV4『线路2』
 台视新闻台,http://38.64.72.148:80/hls/modn/list/4013/playlist.m3u8$雷蒙影视•IPV4『线路3』
 台视新闻台,https://smt.858.qzz.io/Smart.php?id=ttvnews_twn$雷蒙影视•IPV4『线路4』
-台视新闻台,http://stream-ali1.csslcloud.net/live/ofFqVir8hEYxZDb6y677FJxn0xrbfd2yPfOT6XuHngNXajvBUY.flv$雷蒙影视•IPV4『线路5』
-台视新闻台,http://breezy-audrie-zspace-7524863c.koyeb.app/vipsir?token=leifeng&id=4gtv-4gtv051$雷蒙影视•IPV4『线路6』
-台视新闻台,http://xtvantsc.xyz/litv_ts.php?id=4gtv-4gtv051$雷蒙影视•IPV4『线路7』
+台视新闻台,http://xtvantsc.xyz/litv_ts.php?id=4gtv-4gtv051$雷蒙影视•IPV4『线路5』
+台视新闻台,http://stream-ali1.csslcloud.net/live/ofFqVir8hEYxZDb6y677FJxn0xrbfd2yPfOT6XuHngNXajvBUY.flv$雷蒙影视•IPV4『线路6』
+台视新闻台,http://breezy-audrie-zspace-7524863c.koyeb.app/vipsir?token=leifeng&id=4gtv-4gtv051$雷蒙影视•IPV4『线路7』
 台视新闻台,https://345iptv.com/?act=play&token=ec94e69e05b66e636c75093308239bd5&tid=gt&id=47&p=0###WEB\\n$雷蒙影视•IPV4『线路8』
 公视新闻网,https://tv.iill.top/litv/4gtv-4gtv051$雷蒙影视•IPV4
 公视台语台,https://smt.858.qzz.io/Smart.php?id=ctv2_twn$雷蒙影视•IPV4
 民视,rtmp://f13h.mine.nu/sat/tv051$雷蒙影视•IPV4『线路1』
 民视,http://37.27.111.214:8080/live/6/hls.m3u8$雷蒙影视•IPV4『线路2』
 民视,https://tv.iill.top/litv/4gtv-4gtv002$雷蒙影视•IPV4『线路3』
-民视,http://xtvantsc.xyz/litv_ts.php?id=4gtv-4gtv002$雷蒙影视•IPV4『线路4』
-民视,http://stream-ali1.csslcloud.net/live/ERadomiHh4srbiVLuQH0M1KoLqTYrGUZBRAAxPowEwb8JN2Yf0.flv$雷蒙影视•IPV4『线路5』
-民视,http://breezy-audrie-zspace-7524863c.koyeb.app/vipsir?token=leifeng&id=4gtv-4gtv002$雷蒙影视•IPV4『线路6』
-民视,http://breezy-audrie-zspace-7524863c.koyeb.app/vipsir?token=leifeng&id=4gtv-4gtv155$雷蒙影视•IPV4『线路7』
-民视,http://xtvantsc.xyz/litv_ts.php?id=4gtv-4gtv155$雷蒙影视•IPV4『线路8』
+民视,http://breezy-audrie-zspace-7524863c.koyeb.app/vipsir?token=leifeng&id=4gtv-4gtv002$雷蒙影视•IPV4『线路4』
+民视,http://breezy-audrie-zspace-7524863c.koyeb.app/vipsir?token=leifeng&id=4gtv-4gtv155$雷蒙影视•IPV4『线路5』
+民视,http://xtvantsc.xyz/litv_ts.php?id=4gtv-4gtv155$雷蒙影视•IPV4『线路6』
+民视,http://stream-ali1.csslcloud.net/live/ERadomiHh4srbiVLuQH0M1KoLqTYrGUZBRAAxPowEwb8JN2Yf0.flv$雷蒙影视•IPV4『线路7』
+民视,http://xtvantsc.xyz/litv_ts.php?id=4gtv-4gtv002$雷蒙影视•IPV4『线路8』
 民视,https://345iptv.com/?act=play&token=540055f7f58239df454d17233e44030a&tid=gt&id=62&p=0###WEB\\n$雷蒙影视•IPV4『线路9』
 民视第一台,http://push-rtmp-hs-spe-f5.douyincdn.com/live/awei_msdy.flv$雷蒙影视•IPV4『线路1』
 民视第一台,https://smt.858.qzz.io/Smart.php?id=lunghuajingdian_twn$雷蒙影视•IPV4『线路2』
@@ -2179,8 +2175,8 @@ TVBSNEWS,http://61.221.215.25:8800/hls/9/index.m3u8$雷蒙影视•IPV4
 民视新闻台,http://38.64.72.148:80/hls/modn/list/4012/chunklist1.m3u8$雷蒙影视•IPV4『线路1』
 民视新闻台,http://38.64.72.148:80/hls/modn/list/4012/playlist.m3u8$雷蒙影视•IPV4『线路2』
 民视新闻台,https://smt.858.qzz.io/Smart.php?id=ftvnew_taiwan$雷蒙影视•IPV4『线路3』
-民视新闻台,http://stream-ali1.csslcloud.net/live/5CkUiYhpTaUWibfd2yVPulg2rBioJ6XgbbmxF2hWNQyygV2U12.flv$雷蒙影视•IPV4『线路4』
-民视新闻台,http://xtvantsc.xyz/litv_ts.php?id=litv-ftv13$雷蒙影视•IPV4『线路5』
+民视新闻台,http://xtvantsc.xyz/litv_ts.php?id=litv-ftv13$雷蒙影视•IPV4『线路4』
+民视新闻台,http://stream-ali1.csslcloud.net/live/5CkUiYhpTaUWibfd2yVPulg2rBioJ6XgbbmxF2hWNQyygV2U12.flv$雷蒙影视•IPV4『线路5』
 民视新闻台,https://345iptv.com/?act=play&token=b08f4da6f9f4b334b3e11a97ed6bd58b&tid=gt&id=50&p=0###WEB\\n$雷蒙影视•IPV4『线路6』
 民视台湾台,http://push-rtmp-hs-spe-f5.douyincdn.com/live/awei_mstw.flv$雷蒙影视•IPV4『线路1』
 民视台湾台,http://breezy-audrie-zspace-7524863c.koyeb.app/vipsir?token=leifeng&id=4gtv-4gtv001$雷蒙影视•IPV4『线路2』
@@ -2216,9 +2212,9 @@ TVBSNEWS,http://61.221.215.25:8800/hls/9/index.m3u8$雷蒙影视•IPV4
 寰宇新闻,https://gdfire2.67890123.cn:8088/live/hyxw01.m3u8$雷蒙影视•IPV4『线路1』
 寰宇新闻,http://aktv.top/AKTV/live/aktv/null-9/AKTV.m3u8$雷蒙影视•IPV4『线路2』
 寰宇新闻,https://smt.858.qzz.io/Smart.php?id=huanyuxinwen_twn$雷蒙影视•IPV4『线路3』
-寰宇新闻,http://222.128.55.152:9080/live/hy.m3u8$雷蒙影视•IPV4『线路4』
+寰宇新闻,http://stream-ali1.csslcloud.net/live/3cDvCNnbfd2yBiEhqihpaWdiHXNv7HnTEMRGcac8hxFeC1F9j6.flv$雷蒙影视•IPV4『线路4』
 寰宇新闻,http://breezy-audrie-zspace-7524863c.koyeb.app/vipsir?token=leifeng&id=litv-longturn14$雷蒙影视•IPV4『线路5』
-寰宇新闻,http://stream-ali1.csslcloud.net/live/3cDvCNnbfd2yBiEhqihpaWdiHXNv7HnTEMRGcac8hxFeC1F9j6.flv$雷蒙影视•IPV4『线路6』
+寰宇新闻,http://222.128.55.152:9080/live/hy.m3u8$雷蒙影视•IPV4『线路6』
 寰宇新闻,https://live.iill.top/youtube/@globalnewstw###HLS\\n$雷蒙影视•IPV4『线路7』
 寰宇财经,https://smt.858.qzz.io/Smart.php?id=huanyutaiwan_twn$雷蒙影视•IPV4
 华视,rtmp://f13h.mine.nu/sat/tv111$雷蒙影视•IPV4『线路1』
@@ -2231,8 +2227,8 @@ TVBSNEWS,http://61.221.215.25:8800/hls/9/index.m3u8$雷蒙影视•IPV4
 镜新闻,http://37.27.111.214:8080/live/62/hls.m3u8$雷蒙影视•IPV4『线路1』
 镜新闻,https://345iptv.com/?act=play&token=a16fb94449c5f4c524ea5c97825e5be0&tid=gt&id=52&p=0###WEB\\n$雷蒙影视•IPV4『线路2』
 非凡新闻,https://smt.858.qzz.io/Smart.php?id=feifannews_twn$雷蒙影视•IPV4『线路1』
-非凡新闻,http://breezy-audrie-zspace-7524863c.koyeb.app/vipsir?token=leifeng&id=4gtv-4gtv010$雷蒙影视•IPV4『线路2』
-非凡新闻,http://xtvantsc.xyz/litv_ts.php?id=4gtv-4gtv010$雷蒙影视•IPV4『线路3』
+非凡新闻,http://xtvantsc.xyz/litv_ts.php?id=4gtv-4gtv010$雷蒙影视•IPV4『线路2』
+非凡新闻,http://breezy-audrie-zspace-7524863c.koyeb.app/vipsir?token=leifeng&id=4gtv-4gtv010$雷蒙影视•IPV4『线路3』
 非凡新闻,http://stream-ali1.csslcloud.net/live/7J22AJV6h8f24jkmoa5ahSzuCYjE5fVpCYYMEt9bfd2yHn4XG7.flv$雷蒙影视•IPV4『线路4』
 大爱电视,https://tv.iill.top/4gtv/209$雷蒙影视•IPV4
 大爱一台,https://pulltv1.wanfudaluye.com/live/tv1.m3u8$雷蒙影视•IPV4『线路1』
