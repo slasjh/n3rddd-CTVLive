@@ -42,6 +42,8 @@ CCTV1,http://115.171.216.32:4000/rtp/225.1.8.126:8002$雷蒙影视•IPV4『线�
 CCTV1,http://115.171.216.32:4000/rtp/225.1.8.194:4120$雷蒙影视•IPV4『线路36』
 CCTV1,http://115.171.216.32:4000/rtp/225.1.8.210:8068$雷蒙影视•IPV4『线路37』
 CCTV1,http://111.196.128.44:20000/rtp/239.3.1.129:8008$雷蒙影视•IPV4『线路38』
+CCTV1,http://218.13.170.98:9901/tsfile/live/0001_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路39』
+CCTV1,http://125.93.74.27:9002/tsfile/live/0001_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路40』
 CCTV2,http://106.53.99.30/tv/jzb.php?id=cctv2$雷蒙影视•IPV4『线路1』
 CCTV2,http://8.138.7.223/tv/migu3.php?id=cctv2$雷蒙影视•IPV4『线路2』
 CCTV2,http://106.53.99.30/公众号【榴芒电视】/proxy/bjyd.php?id=2$雷蒙影视•IPV4『线路3』
@@ -72,6 +74,7 @@ CCTV2,http://144.255.16.190:6688/udp/239.21.1.151:5002$雷蒙影视•IPV4『线
 CCTV2,http://115.171.216.32:4000/rtp/225.1.8.2:8084$雷蒙影视•IPV4『线路28』
 CCTV2,http://114.254.38.234:8888/rtp/239.3.1.60:8084$雷蒙影视•IPV4『线路29』
 CCTV2,http://111.196.128.44:20000/rtp/239.3.1.60:8084$雷蒙影视•IPV4『线路30』
+CCTV2,http://182.114.50.213:9901/tsfile/live/0002_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路31』
 CCTV3,http://106.53.99.30/tv/jzb.php?id=cctv3$雷蒙影视•IPV4『线路1』
 CCTV3,http://8.138.7.223/tv/migu3.php?id=cctv3$雷蒙影视•IPV4『线路2』
 CCTV3,http://106.53.99.30/公众号【榴芒电视】/proxy/bjyd.php?id=100$雷蒙影视•IPV4『线路3』
@@ -102,6 +105,9 @@ CCTV3,http://144.255.16.190:6688/udp/239.21.2.45:5002$雷蒙影视•IPV4『线�
 CCTV3,http://115.171.216.32:4000/rtp/225.1.8.88:8000$雷蒙影视•IPV4『线路28』
 CCTV3,http://114.254.38.234:8888/rtp/239.3.1.172:8001$雷蒙影视•IPV4『线路29』
 CCTV3,http://111.196.128.44:20000/rtp/239.3.1.172:8001$雷蒙影视•IPV4『线路30』
+CCTV3,http://125.93.74.27:9002/tsfile/live/0003_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路31』
+CCTV3,http://182.114.50.213:9901/tsfile/live/0003_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路32』
+CCTV3,http://218.13.170.98:9901/tsfile/live/0003_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路33』
 CCTV4,http://106.53.99.30/tv/jzb.php?id=cctv4$雷蒙影视•IPV4『线路1』
 CCTV4,http://8.138.7.223/tv/migu3.php?id=cctv4$雷蒙影视•IPV4『线路2』
 CCTV4,http://8.138.7.223/tv/migu3.php?id=cctv4a$雷蒙影视•IPV4『线路3』
@@ -136,6 +142,9 @@ CCTV4,http://115.171.216.32:4000/rtp/225.1.8.4:8092$雷蒙影视•IPV4『线路
 CCTV4,http://114.254.38.234:8888/rtp/239.3.1.105:8092$雷蒙影视•IPV4『线路32』
 CCTV4,http://144.255.16.190:6688/udp/239.21.2.29:5002$雷蒙影视•IPV4『线路33』
 CCTV4,http://111.196.128.44:20000/rtp/239.3.1.105:8092$雷蒙影视•IPV4『线路34』
+CCTV4,http://125.93.74.27:9002/tsfile/live/0004_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路35』
+CCTV4,http://182.114.50.213:9901/tsfile/live/0004_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路36』
+CCTV4,http://218.13.170.98:9901/tsfile/live/0004_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路37』
 CCTV5,http://106.53.99.30/tv/jzb.php?id=cctv5$雷蒙影视•IPV4『线路1』
 CCTV5,http://8.138.7.223/tv/migu3.php?id=cctv5$雷蒙影视•IPV4『线路2』
 CCTV5,http://106.53.99.30/公众号【榴芒电视】/proxy/bjyd.php?id=101$雷蒙影视•IPV4『线路3』
@@ -167,6 +176,9 @@ CCTV5,http://144.255.16.190:6688/udp/239.21.2.46:5002$雷蒙影视•IPV4『线�
 CCTV5,http://115.171.216.32:4000/rtp/225.1.8.89:8000$雷蒙影视•IPV4『线路29』
 CCTV5,http://114.254.38.234:8888/rtp/239.3.1.173:8001$雷蒙影视•IPV4『线路30』
 CCTV5,http://111.196.128.44:20000/rtp/239.3.1.173:8001$雷蒙影视•IPV4『线路31』
+CCTV5,http://125.93.74.27:9002/tsfile/live/0005_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路32』
+CCTV5,http://182.114.50.213:9901/tsfile/live/0005_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路33』
+CCTV5,http://218.13.170.98:9901/tsfile/live/0005_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路34』
 CCTV5+,http://106.53.99.30/tv/jzb.php?id=cctv5plus$雷蒙影视•IPV4『线路1』
 CCTV5+,http://8.138.7.223/tv/migu3.php?id=cctv5p$雷蒙影视•IPV4『线路2』
 CCTV5+,http://106.53.99.30/公众号【榴芒电视】/proxy/bjyd.php?id=4$雷蒙影视•IPV4『线路3』
@@ -221,6 +233,9 @@ CCTV6,http://144.255.16.190:6688/udp/239.21.2.47:5002$雷蒙影视•IPV4『线�
 CCTV6,http://115.171.216.32:4000/rtp/225.1.8.84:8000$雷蒙影视•IPV4『线路28』
 CCTV6,http://114.254.38.234:8888/rtp/239.3.1.174:8001$雷蒙影视•IPV4『线路29』
 CCTV6,http://111.196.128.44:20000/rtp/239.3.1.174:8001$雷蒙影视•IPV4『线路30』
+CCTV6,http://125.93.74.27:9002/tsfile/live/0006_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路31』
+CCTV6,http://182.114.50.213:9901/tsfile/live/0006_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路32』
+CCTV6,http://218.13.170.98:9901/tsfile/live/0006_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路33』
 CCTV7,http://106.53.99.30/tv/jzb.php?id=cctv7$雷蒙影视•IPV4『线路1』
 CCTV7,http://8.138.7.223/tv/migu3.php?id=cctv7$雷蒙影视•IPV4『线路2』
 CCTV7,http://106.53.99.30/公众号【榴芒电视】/proxy/bjyd.php?id=5$雷蒙影视•IPV4『线路3』
@@ -249,6 +264,9 @@ CCTV7,http://144.255.16.190:6688/udp/239.21.1.152:5002$雷蒙影视•IPV4『线
 CCTV7,http://115.171.216.32:4000/rtp/225.1.8.7:8104$雷蒙影视•IPV4『线路26』
 CCTV7,http://114.254.38.234:8888/rtp/239.3.1.61:8104$雷蒙影视•IPV4『线路27』
 CCTV7,http://111.196.128.44:20000/rtp/239.3.1.61:8104$雷蒙影视•IPV4『线路28』
+CCTV7,http://125.93.74.27:9002/tsfile/live/0007_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路29』
+CCTV7,http://182.114.50.213:9901/tsfile/live/0007_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路30』
+CCTV7,http://218.13.170.98:9901/tsfile/live/0007_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路31』
 CCTV8,http://106.53.99.30/tv/jzb.php?id=cctv8$雷蒙影视•IPV4『线路1』
 CCTV8,http://8.138.7.223/tv/migu3.php?id=cctv8$雷蒙影视•IPV4『线路2』
 CCTV8,http://106.53.99.30/公众号【榴芒电视】/proxy/bjyd.php?id=103$雷蒙影视•IPV4『线路3』
@@ -279,6 +297,8 @@ CCTV8,http://144.255.16.190:6688/udp/239.21.2.48:5002$雷蒙影视•IPV4『线�
 CCTV8,http://115.171.216.32:4000/rtp/225.1.8.85:8000$雷蒙影视•IPV4『线路28』
 CCTV8,http://114.254.38.234:8888/rtp/239.3.1.175:8001$雷蒙影视•IPV4『线路29』
 CCTV8,http://111.196.128.44:20000/rtp/239.3.1.175:8001$雷蒙影视•IPV4『线路30』
+CCTV8,http://182.114.50.213:9901/tsfile/live/0008_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路31』
+CCTV8,http://218.13.170.98:9901/tsfile/live/0008_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路32』
 CCTV9,http://106.53.99.30/tv/jzb.php?id=cctv9$雷蒙影视•IPV4『线路1』
 CCTV9,http://8.138.7.223/tv/migu3.php?id=cctv9$雷蒙影视•IPV4『线路2』
 CCTV9,http://106.53.99.30/公众号【榴芒电视】/proxy/bjyd.php?id=6$雷蒙影视•IPV4『线路3』
@@ -307,6 +327,8 @@ CCTV9,http://144.255.16.190:6688/udp/239.21.1.153:5002$雷蒙影视•IPV4『线
 CCTV9,http://115.171.216.32:4000/rtp/225.1.8.9:8112$雷蒙影视•IPV4『线路26』
 CCTV9,http://114.254.38.234:8888/rtp/239.3.1.62:8112$雷蒙影视•IPV4『线路27』
 CCTV9,http://111.196.128.44:20000/rtp/239.3.1.62:8112$雷蒙影视•IPV4『线路28』
+CCTV9,http://125.93.74.27:9002/tsfile/live/0009_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路29』
+CCTV9,http://218.13.170.98:9901/tsfile/live/0009_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路30』
 CCTV10,http://106.53.99.30/tv/jzb.php?id=cctv10$雷蒙影视•IPV4『线路1』
 CCTV10,http://8.138.7.223/tv/migu3.php?id=cctv10$雷蒙影视•IPV4『线路2』
 CCTV10,http://106.53.99.30/公众号【榴芒电视】/proxy/bjyd.php?id=7$雷蒙影视•IPV4『线路3』
@@ -337,6 +359,9 @@ CCTV10,http://144.255.16.190:6688/udp/239.21.1.155:5002$雷蒙影视•IPV4『�
 CCTV10,http://115.171.216.32:4000/rtp/225.1.8.10:8116$雷蒙影视•IPV4『线路28』
 CCTV10,http://114.254.38.234:8888/rtp/239.3.1.63:8116$雷蒙影视•IPV4『线路29』
 CCTV10,http://111.196.128.44:20000/rtp/239.3.1.63:8116$雷蒙影视•IPV4『线路30』
+CCTV10,http://125.93.74.27:9002/tsfile/live/0010_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路31』
+CCTV10,http://182.114.50.213:9901/tsfile/live/0010_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路32』
+CCTV10,http://218.13.170.98:9901/tsfile/live/0010_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路33』
 CCTV11,http://106.53.99.30/tv/jzb.php?id=cctv11$雷蒙影视•IPV4『线路1』
 CCTV11,http://8.138.7.223/tv/migu3.php?id=cctv11$雷蒙影视•IPV4『线路2』
 CCTV11,http://106.53.99.30/公众号【榴芒电视】/proxy/bjyd.php?id=8$雷蒙影视•IPV4『线路3』
@@ -365,6 +390,9 @@ CCTV11,http://144.255.16.190:6688/udp/239.21.2.2:5002$雷蒙影视•IPV4『线�
 CCTV11,http://115.171.216.32:4000/rtp/225.1.8.73:8120$雷蒙影视•IPV4『线路26』
 CCTV11,http://114.254.38.234:8888/rtp/239.3.1.152:8120$雷蒙影视•IPV4『线路27』
 CCTV11,http://111.196.128.44:20000/rtp/239.3.1.152:8120$雷蒙影视•IPV4『线路28』
+CCTV11,http://218.13.170.98:9901/tsfile/live/0011_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路29』
+CCTV11,http://125.93.74.27:9002/tsfile/live/0011_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路30』
+CCTV11,http://182.114.50.213:9901/tsfile/live/0011_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路31』
 CCTV12,http://106.53.99.30/tv/jzb.php?id=cctv12$雷蒙影视•IPV4『线路1』
 CCTV12,http://8.138.7.223/tv/migu3.php?id=cctv12$雷蒙影视•IPV4『线路2』
 CCTV12,http://106.53.99.30/公众号【榴芒电视】/proxy/bjyd.php?id=9$雷蒙影视•IPV4『线路3』
@@ -394,6 +422,9 @@ CCTV12,http://144.255.16.190:6688/udp/239.21.1.156:5002$雷蒙影视•IPV4『�
 CCTV12,http://115.171.216.32:4000/rtp/225.1.8.12:8124$雷蒙影视•IPV4『线路27』
 CCTV12,http://114.254.38.234:8888/rtp/239.3.1.64:8124$雷蒙影视•IPV4『线路28』
 CCTV12,http://111.196.128.44:20000/rtp/239.3.1.64:8124$雷蒙影视•IPV4『线路29』
+CCTV12,http://125.93.74.27:9002/tsfile/live/0012_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路30』
+CCTV12,http://182.114.50.213:9901/tsfile/live/0012_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路31』
+CCTV12,http://218.13.170.98:9901/tsfile/live/0012_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路32』
 CCTV13,http://106.53.99.30/tv/jzb.php?id=cctv13$雷蒙影视•IPV4『线路1』
 CCTV13,http://8.138.7.223/tv/migu3.php?id=cctv13$雷蒙影视•IPV4『线路2』
 CCTV13,http://106.53.99.30/公众号【榴芒电视】/proxy/bjyd.php?id=10$雷蒙影视•IPV4『线路3』
@@ -429,6 +460,8 @@ CCTV13,http://144.255.16.190:6688/udp/239.21.2.3:5002$雷蒙影视•IPV4『线�
 CCTV13,http://115.171.216.32:4000/rtp/225.1.8.168:8130$雷蒙影视•IPV4『线路33』
 CCTV13,http://114.254.38.234:8888/rtp/239.3.1.124:8128$雷蒙影视•IPV4『线路34』
 CCTV13,http://111.196.128.44:20000/rtp/239.3.1.124:8128$雷蒙影视•IPV4『线路35』
+CCTV13,http://125.93.74.27:9002/tsfile/live/0013_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路36』
+CCTV13,http://218.13.170.98:9901/tsfile/live/0013_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路37』
 CCTV14,http://106.53.99.30/tv/jzb.php?id=cctv14$雷蒙影视•IPV4『线路1』
 CCTV14,http://8.138.7.223/tv/migu3.php?id=cctv14$雷蒙影视•IPV4『线路2』
 CCTV14,http://106.53.99.30/公众号【榴芒电视】/proxy/bjyd.php?id=11$雷蒙影视•IPV4『线路3』
@@ -460,6 +493,8 @@ CCTV14,http://144.255.16.190:6688/udp/239.21.1.157:5002$雷蒙影视•IPV4『�
 CCTV14,http://115.171.216.32:4000/rtp/225.1.8.14:8132$雷蒙影视•IPV4『线路29』
 CCTV14,http://114.254.38.234:8888/rtp/239.3.1.65:8132$雷蒙影视•IPV4『线路30』
 CCTV14,http://111.196.128.44:20000/rtp/239.3.1.65:8132$雷蒙影视•IPV4『线路31』
+CCTV14,http://125.93.74.27:9002/tsfile/live/0014_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路32』
+CCTV14,http://218.13.170.98:9901/tsfile/live/0014_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路33』
 CCTV15,http://106.53.99.30/tv/jzb.php?id=cctv15$雷蒙影视•IPV4『线路1』
 CCTV15,http://8.138.7.223/tv/migu3.php?id=cctv15$雷蒙影视•IPV4『线路2』
 CCTV15,http://106.53.99.30/公众号【榴芒电视】/proxy/bjyd.php?id=12$雷蒙影视•IPV4『线路3』
@@ -488,6 +523,8 @@ CCTV15,http://144.255.16.190:6688/udp/239.21.2.4:5002$雷蒙影视•IPV4『线�
 CCTV15,http://115.171.216.32:4000/rtp/225.1.8.74:8136$雷蒙影视•IPV4『线路26』
 CCTV15,http://114.254.38.234:8888/rtp/239.3.1.153:8136$雷蒙影视•IPV4『线路27』
 CCTV15,http://111.196.128.44:20000/rtp/239.3.1.153:8136$雷蒙影视•IPV4『线路28』
+CCTV15,http://125.93.74.27:9002/tsfile/live/0015_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路29』
+CCTV15,http://218.13.170.98:9901/tsfile/live/0015_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路30』
 CCTV16,http://106.53.99.30/公众号【榴芒电视】/proxy/bjyd.php?id=13$雷蒙影视•IPV4『线路1』
 CCTV16,http://39.134.67.108/PLTV/88888888/224/3221225893/1.m3u8$雷蒙影视•IPV4『线路2』
 CCTV16,http://39.134.67.148/ottrrs.hl.chinamobile.com/hlj/yd/0/3221226100/.m3u8$雷蒙影视•IPV4『线路3』
@@ -522,6 +559,7 @@ CCTV17,http://144.255.16.190:6688/udp/239.21.1.186:5002$雷蒙影视•IPV4『�
 CCTV17,http://115.171.216.32:4000/rtp/225.1.8.17:8144$雷蒙影视•IPV4『线路20』
 CCTV17,http://114.254.38.234:8888/rtp/239.3.1.151:8144$雷蒙影视•IPV4『线路21』
 CCTV17,http://111.196.128.44:20000/rtp/239.3.1.151:8144$雷蒙影视•IPV4『线路22』
+CCTV17,http://218.13.170.98:9901/tsfile/live/0016_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路23』
 CCTV-1综合,http://39.164.174.139:5000/nl.m3u8?id=CCTV-1HD$雷蒙影视•IPV4『线路1』
 CCTV-1综合,http://jiangling-live21.cjyun.org/10090/s10090-jltv02.m3u8?auth_key=1735660799-0-0-cca9709aa95c0c612033418412e9ee26$雷蒙影视•IPV4『线路2』
 CCTV-1综合,http://113.64.146.99:9901/hls/18/index.m3u8$雷蒙影视•IPV4『线路3』
@@ -675,6 +713,9 @@ CCTV14少儿高清,http://120.76.248.139/live/bfgd/4200000132.m3u8$雷蒙影视�
 湖南卫视,http://115.171.216.32:4000/udp/225.1.8.41:8012$雷蒙影视•IPV4『线路54』
 湖南卫视,http://114.254.38.234:8888/rtp/239.3.1.132:8012$雷蒙影视•IPV4『线路55』
 湖南卫视,http://111.196.128.44:20000/rtp/239.3.1.132:8012$雷蒙影视•IPV4『线路56』
+湖南卫视,http://218.13.170.98:9901/tsfile/live/1001_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路57』
+湖南卫视,http://125.93.74.27:9002/tsfile/live/0128_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路58』
+湖南卫视,http://182.114.50.213:9901/tsfile/live/0128_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路59』
 浙江卫视,http://106.53.99.30/tv/20250803.php?id=浙江卫视$雷蒙影视•IPV4『线路1』
 浙江卫视,http://106.53.99.30/tv/jzb.php?id=zjws$雷蒙影视•IPV4『线路2』
 浙江卫视,http://39.164.174.139:5000/nl.m3u8?id=ZJWSHD$雷蒙影视•IPV4『线路3』
@@ -731,6 +772,9 @@ CCTV14少儿高清,http://120.76.248.139/live/bfgd/4200000132.m3u8$雷蒙影视�
 浙江卫视,http://115.171.216.32:4000/udp/225.1.8.46:8036$雷蒙影视•IPV4『线路54』
 浙江卫视,http://114.254.38.234:8888/rtp/239.3.1.137:8036$雷蒙影视•IPV4『线路55』
 浙江卫视,http://111.196.128.44:20000/rtp/239.3.1.137:8036$雷蒙影视•IPV4『线路56』
+浙江卫视,http://125.93.74.27:9002/tsfile/live/0124_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路57』
+浙江卫视,http://182.114.50.213:9901/tsfile/live/0124_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路58』
+浙江卫视,http://218.13.170.98:9901/tsfile/live/1002_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路59』
 东方卫视,http://106.53.99.30/tv/20250803.php?id=东方卫视$雷蒙影视•IPV4『线路1』
 东方卫视,http://106.53.99.30/tv/jzb.php?id=dfws$雷蒙影视•IPV4『线路2』
 东方卫视,http://39.164.174.139:5000/nl.m3u8?id=DFWSHD$雷蒙影视•IPV4『线路3』
@@ -788,6 +832,9 @@ CCTV14少儿高清,http://120.76.248.139/live/bfgd/4200000132.m3u8$雷蒙影视�
 东方卫视,http://115.171.216.32:4000/udp/225.1.8.45:8032$雷蒙影视•IPV4『线路55』
 东方卫视,http://114.254.38.234:8888/rtp/239.3.1.136:8032$雷蒙影视•IPV4『线路56』
 东方卫视,http://111.196.128.44:20000/rtp/239.3.1.136:8032$雷蒙影视•IPV4『线路57』
+东方卫视,http://125.93.74.27:9002/tsfile/live/0107_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路58』
+东方卫视,http://182.114.50.213:9901/tsfile/live/0107_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路59』
+东方卫视,http://218.13.170.98:9901/tsfile/live/1010_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路60』
 北京卫视,http://106.53.99.30/tv/20250803.php?id=北京卫视$雷蒙影视•IPV4『线路1』
 北京卫视,http://106.53.99.30/tv/jzb.php?id=bjws$雷蒙影视•IPV4『线路2』
 北京卫视,http://39.164.174.139:5000/nl.m3u8?id=BJWSHD$雷蒙影视•IPV4『线路3』
@@ -840,7 +887,9 @@ CCTV14少儿高清,http://120.76.248.139/live/bfgd/4200000132.m3u8$雷蒙影视�
 北京卫视,http://115.171.216.32:4000/rtp/225.1.8.21:8002$雷蒙影视•IPV4『线路50』
 北京卫视,http://114.254.38.234:8888/rtp/239.3.1.241:8000$雷蒙影视•IPV4『线路51』
 北京卫视,http://111.196.128.44:20000/rtp/239.3.1.241:8000$雷蒙影视•IPV4『线路52』
-北京卫视,https://www.brtn.cn/btv/btvsy_index###WEB\\n$雷蒙影视•IPV4『线路53』
+北京卫视,http://125.93.74.27:9002/tsfile/live/0122_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路53』
+北京卫视,http://218.13.170.98:9901/tsfile/live/1004_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路54』
+北京卫视,https://www.brtn.cn/btv/btvsy_index###WEB\\n$雷蒙影视•IPV4『线路55』
 江苏卫视,http://106.53.99.30/tv/20250803.php?id=江苏卫视$雷蒙影视•IPV4『线路1』
 江苏卫视,http://106.53.99.30/tv/jzb.php?id=jsws$雷蒙影视•IPV4『线路2』
 江苏卫视,http://39.164.174.139:5000/nl.m3u8?id=JSWSHD$雷蒙影视•IPV4『线路3』
@@ -900,6 +949,8 @@ CCTV14少儿高清,http://120.76.248.139/live/bfgd/4200000132.m3u8$雷蒙影视�
 江苏卫视,http://115.171.216.32:4000/udp/225.1.8.44:8028$雷蒙影视•IPV4『线路57』
 江苏卫视,http://114.254.38.234:8888/rtp/239.3.1.135:8028$雷蒙影视•IPV4『线路58』
 江苏卫视,http://111.196.128.44:20000/rtp/239.3.1.135:8028$雷蒙影视•IPV4『线路59』
+江苏卫视,http://125.93.74.27:9002/tsfile/live/0127_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路60』
+江苏卫视,http://218.13.170.98:9901/tsfile/live/1003_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路61』
 安徽卫视,http://106.53.99.30/tv/20250803.php?id=安徽卫视$雷蒙影视•IPV4『线路1』
 安徽卫视,http://106.53.99.30/tv/jzb.php?id=ahws$雷蒙影视•IPV4『线路2』
 安徽卫视,http://39.164.174.139:5000/nl.m3u8?id=AHWSHD$雷蒙影视•IPV4『线路3』
@@ -944,6 +995,8 @@ CCTV14少儿高清,http://120.76.248.139/live/bfgd/4200000132.m3u8$雷蒙影视�
 安徽卫视,http://115.171.216.32:4000/udp/225.1.8.52:8064$雷蒙影视•IPV4『线路42』
 安徽卫视,http://114.254.38.234:8888/rtp/239.3.1.211:8064$雷蒙影视•IPV4『线路43』
 安徽卫视,http://111.196.128.44:20000/rtp/239.3.1.211:8064$雷蒙影视•IPV4『线路44』
+安徽卫视,http://125.93.74.27:9002/tsfile/live/0130_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路45』
+安徽卫视,http://182.114.50.213:9901/tsfile/live/0130_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路46』
 重庆卫视,http://106.53.99.30/tv/20250803.php?id=重庆卫视$雷蒙影视•IPV4『线路1』
 重庆卫视,http://106.53.99.30/tv/jzb.php?id=cqws$雷蒙影视•IPV4『线路2』
 重庆卫视,http://39.164.174.139:5000/nl.m3u8?id=CQWS$雷蒙影视•IPV4『线路3』
@@ -994,6 +1047,8 @@ CCTV14少儿高清,http://120.76.248.139/live/bfgd/4200000132.m3u8$雷蒙影视�
 重庆卫视,http://115.171.216.32:4000/udp/225.1.8.172:8162$雷蒙影视•IPV4『线路48』
 重庆卫视,http://114.254.38.234:8888/rtp/239.3.1.122:8160$雷蒙影视•IPV4『线路49』
 重庆卫视,http://111.196.128.44:20000/rtp/239.3.1.122:8160$雷蒙影视•IPV4『线路50』
+重庆卫视,http://125.93.74.27:9002/tsfile/live/0142_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路51』
+重庆卫视,http://218.13.170.98:9901/tsfile/live/1012_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路52』
 四川卫视,http://106.53.99.30/tv/20250803.php?id=四川卫视$雷蒙影视•IPV4『线路1』
 四川卫视,http://106.53.99.30/tv/jzb.php?id=scws$雷蒙影视•IPV4『线路2』
 四川卫视,http://39.164.174.139:5000/nl.m3u8?id=SCWSHD$雷蒙影视•IPV4『线路3』
@@ -1032,6 +1087,8 @@ CCTV14少儿高清,http://120.76.248.139/live/bfgd/4200000132.m3u8$雷蒙影视�
 四川卫视,http://115.171.216.32:4000/rtp/225.1.8.142:8288$雷蒙影视•IPV4『线路36』
 四川卫视,http://114.254.38.234:8888/rtp/239.3.1.29:8288$雷蒙影视•IPV4『线路37』
 四川卫视,http://111.196.128.44:20000/rtp/239.3.1.29:8288$雷蒙影视•IPV4『线路38』
+四川卫视,http://125.93.74.27:9002/tsfile/live/0123_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路39』
+四川卫视,http://218.13.170.98:9901/tsfile/live/1011_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路40』
 东南卫视,http://106.53.99.30/tv/20250803.php?id=东南卫视$雷蒙影视•IPV4『线路1』
 东南卫视,http://106.53.99.30/tv/jzb.php?id=dnws$雷蒙影视•IPV4『线路2』
 东南卫视,http://39.164.174.139:5000/nl.m3u8?id=DNWS$雷蒙影视•IPV4『线路3』
@@ -1116,6 +1173,8 @@ CCTV14少儿高清,http://120.76.248.139/live/bfgd/4200000132.m3u8$雷蒙影视�
 深圳卫视,http://115.171.216.32:4000/udp/225.1.8.43:8020$雷蒙影视•IPV4『线路44』
 深圳卫视,http://114.254.38.234:8888/rtp/239.3.1.134:8020$雷蒙影视•IPV4『线路45』
 深圳卫视,http://111.196.128.44:20000/rtp/239.3.1.134:8020$雷蒙影视•IPV4『线路46』
+深圳卫视,http://125.93.74.27:9002/tsfile/live/0126_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路47』
+深圳卫视,http://218.13.170.98:9901/tsfile/live/1005_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路48』
 广东卫视,http://106.53.99.30/tv/20250803.php?id=广东卫视$雷蒙影视•IPV4『线路1』
 广东卫视,http://106.53.99.30/tv/jzb.php?id=gdws$雷蒙影视•IPV4『线路2』
 广东卫视,http://39.164.174.139:5000/nl.m3u8?id=GDWSHD$雷蒙影视•IPV4『线路3』
@@ -1176,6 +1235,8 @@ CCTV14少儿高清,http://120.76.248.139/live/bfgd/4200000132.m3u8$雷蒙影视�
 广东卫视,http://115.171.216.32:4000/udp/225.1.8.49:8048$雷蒙影视•IPV4『线路58』
 广东卫视,http://114.254.38.234:8888/rtp/239.3.1.142:8048$雷蒙影视•IPV4『线路59』
 广东卫视,http://111.196.128.44:20000/rtp/239.3.1.142:8048$雷蒙影视•IPV4『线路60』
+广东卫视,http://125.93.74.27:9002/tsfile/live/0136_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路61』
+广东卫视,http://218.13.170.98:9901/tsfile/live/0017_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路62』
 广西卫视,http://106.53.99.30/tv/20250803.php?id=广西卫视$雷蒙影视•IPV4『线路1』
 广西卫视,http://106.53.99.30/tv/jzb.php?id=gxws$雷蒙影视•IPV4『线路2』
 广西卫视,http://39.164.174.139:5000/nl.m3u8?id=GXWS$雷蒙影视•IPV4『线路3』
@@ -1222,6 +1283,8 @@ CCTV14少儿高清,http://120.76.248.139/live/bfgd/4200000132.m3u8$雷蒙影视�
 广西卫视,http://115.171.216.32:4000/rtp/225.1.8.152:8300$雷蒙影视•IPV4『线路44』
 广西卫视,http://114.254.38.234:8888/rtp/239.3.1.39:8300$雷蒙影视•IPV4『线路45』
 广西卫视,http://111.196.128.44:20000/rtp/239.3.1.39:8300$雷蒙影视•IPV4『线路46』
+广西卫视,http://125.93.74.27:9002/tsfile/live/0113_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路47』
+广西卫视,http://218.13.170.98:9901/tsfile/live/1019_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路48』
 厦门卫视,http://183.11.239.36:808/hls/17/index.m3u8$雷蒙影视•IPV4『线路1』
 厦门卫视,http://124.128.73.58:9901/tsfile/live/0129_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路2』
 厦门卫视,http://8.138.7.223/tv/fjtv1.php?id=xmws$雷蒙影视•IPV4『线路3』
@@ -1237,6 +1300,7 @@ CCTV14少儿高清,http://120.76.248.139/live/bfgd/4200000132.m3u8$雷蒙影视�
 厦门卫视,http://110.42.96.4:44801/1000000005000266006/ystenlive/index.m3u8###HLS\\n$雷蒙影视•IPV4『线路13』
 厦门卫视,http://joyznm.i234.me:20000/udp/239.3.1.143:4120##des:720P###HLS\\n$雷蒙影视•IPV4『线路14』
 厦门卫视,http://124.128.73.58:9901/tsfile/live/0129_1.m3u8###HLS\\n$雷蒙影视•IPV4『线路15』
+厦门卫视,http://125.93.74.27:9002/tsfile/live/0129_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路16』
 甘肃卫视,http://106.53.99.30/tv/20250803.php?id=甘肃卫视$雷蒙影视•IPV4『线路1』
 甘肃卫视,http://106.53.99.30/tv/jzb.php?id=gsws$雷蒙影视•IPV4『线路2』
 甘肃卫视,http://39.164.174.139:5000/nl.m3u8?id=GSWS$雷蒙影视•IPV4『线路3』
@@ -1271,6 +1335,8 @@ CCTV14少儿高清,http://120.76.248.139/live/bfgd/4200000132.m3u8$雷蒙影视�
 甘肃卫视,http://115.171.216.32:4000/rtp/225.1.8.162:8188$雷蒙影视•IPV4『线路32』
 甘肃卫视,http://114.254.38.234:8888/rtp/239.3.1.49:8188$雷蒙影视•IPV4『线路33』
 甘肃卫视,http://111.196.128.44:20000/rtp/239.3.1.49:8188$雷蒙影视•IPV4『线路34』
+甘肃卫视,http://125.93.74.27:9002/tsfile/live/0118_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路35』
+甘肃卫视,http://218.13.170.98:9901/tsfile/live/0141_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路36』
 贵州卫视,http://106.53.99.30/tv/20250803.php?id=贵州卫视$雷蒙影视•IPV4『线路1』
 贵州卫视,http://106.53.99.30/tv/jzb.php?id=gzws$雷蒙影视•IPV4『线路2』
 贵州卫视,http://8.138.7.223/tv/migu3.php?id=gzws$雷蒙影视•IPV4『线路3』
@@ -1311,6 +1377,7 @@ CCTV14少儿高清,http://120.76.248.139/live/bfgd/4200000132.m3u8$雷蒙影视�
 贵州卫视,http://115.171.216.32:4000/udp/225.1.8.77:8076$雷蒙影视•IPV4『线路38』
 贵州卫视,http://114.254.38.234:8888/rtp/239.3.1.149:8076$雷蒙影视•IPV4『线路39』
 贵州卫视,http://111.196.128.44:20000/rtp/239.3.1.149:8076$雷蒙影视•IPV4『线路40』
+贵州卫视,http://125.93.74.27:9002/tsfile/live/0120_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路41』
 河北卫视,http://106.53.99.30/tv/20250803.php?id=河北卫视$雷蒙影视•IPV4『线路1』
 河北卫视,http://106.53.99.30/tv/api.php?id=hebws$雷蒙影视•IPV4『线路2』
 河北卫视,http://106.53.99.30/tv/jzb.php?id=hebiws$雷蒙影视•IPV4『线路3』
@@ -1355,6 +1422,8 @@ CCTV14少儿高清,http://120.76.248.139/live/bfgd/4200000132.m3u8$雷蒙影视�
 河北卫视,http://115.171.216.32:4000/udp/225.1.8.76:8002$雷蒙影视•IPV4『线路42』
 河北卫视,http://114.254.38.234:8888/rtp/239.3.1.148:8072$雷蒙影视•IPV4『线路43』
 河北卫视,http://111.196.128.44:20000/rtp/239.3.1.148:8072$雷蒙影视•IPV4『线路44』
+河北卫视,http://125.93.74.27:9002/tsfile/live/0117_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路45』
+河北卫视,http://218.13.170.98:9901/tsfile/live/1016_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路46』
 河南卫视,http://106.53.99.30/tv/20250803.php?id=河南卫视$雷蒙影视•IPV4『线路1』
 河南卫视,http://106.53.99.30/tv/jzb.php?id=henws$雷蒙影视•IPV4『线路2』
 河南卫视,http://39.164.174.139:5000/nl.m3u8?id=HENWSHD$雷蒙影视•IPV4『线路3』
@@ -1453,6 +1522,8 @@ CCTV14少儿高清,http://120.76.248.139/live/bfgd/4200000132.m3u8$雷蒙影视�
 黑龙江卫视,http://115.171.216.32:4000/udp/225.1.8.42:8016$雷蒙影视•IPV4『线路43』
 黑龙江卫视,http://114.254.38.234:8888/rtp/239.3.1.133:8016$雷蒙影视•IPV4『线路44』
 黑龙江卫视,http://111.196.128.44:20000/rtp/239.3.1.133:8016$雷蒙影视•IPV4『线路45』
+黑龙江卫视,http://125.93.74.27:9002/tsfile/live/0143_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路46』
+黑龙江卫视,http://218.13.170.98:9901/tsfile/live/1006_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路47』
 湖北卫视,http://106.53.99.30/tv/20250803.php?id=湖北卫视$雷蒙影视•IPV4『线路1』
 湖北卫视,http://106.53.99.30/tv/jzb.php?id=hbws$雷蒙影视•IPV4『线路2』
 湖北卫视,http://39.164.174.139:5000/nl.m3u8?id=HBWSHD$雷蒙影视•IPV4『线路3』
@@ -1505,6 +1576,9 @@ CCTV14少儿高清,http://120.76.248.139/live/bfgd/4200000132.m3u8$雷蒙影视�
 湖北卫视,http://115.171.216.32:4000/udp/225.1.8.47:8044$雷蒙影视•IPV4『线路50』
 湖北卫视,http://114.254.38.234:8888/rtp/239.3.1.138:8044$雷蒙影视•IPV4『线路51』
 湖北卫视,http://111.196.128.44:20000/rtp/239.3.1.138:8044$雷蒙影视•IPV4『线路52』
+湖北卫视,http://125.93.74.27:9002/tsfile/live/0132_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路53』
+湖北卫视,http://182.114.50.213:9901/tsfile/live/0132_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路54』
+湖北卫视,http://218.13.170.98:9901/tsfile/live/1007_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路55』
 江西卫视,http://106.53.99.30/tv/20250803.php?id=江西卫视$雷蒙影视•IPV4『线路1』
 江西卫视,http://106.53.99.30/tv/jzb.php?id=jxws$雷蒙影视•IPV4『线路2』
 江西卫视,http://39.164.174.139:5000/nl.m3u8?id=JXWSHD$雷蒙影视•IPV4『线路3』
@@ -1558,7 +1632,9 @@ CCTV14少儿高清,http://120.76.248.139/live/bfgd/4200000132.m3u8$雷蒙影视�
 江西卫视,http://114.254.38.234:8888/rtp/239.3.1.123:8164$雷蒙影视•IPV4『线路51』
 江西卫视,http://115.171.216.32:4000/rtp/225.1.1.9:8164$雷蒙影视•IPV4『线路52』
 江西卫视,http://111.196.128.44:20000/rtp/239.3.1.123:8164$雷蒙影视•IPV4『线路53』
-江西卫视,http://jxcbn.ws-cdn.gitv.tv/hls/JXWSHD/index.m3u8?gMac=unknown&livodToken=0e0d161b408da1b1e56d6b4aa399badec2cd44497aa5026f96c4807e820f84ca_1738684174_604800###HLS\\n$雷蒙影视•IPV4『线路54』
+江西卫视,http://125.93.74.27:9002/tsfile/live/0138_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路54』
+江西卫视,http://218.13.170.98:9901/tsfile/live/1017_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路55』
+江西卫视,http://jxcbn.ws-cdn.gitv.tv/hls/JXWSHD/index.m3u8?gMac=unknown&livodToken=0e0d161b408da1b1e56d6b4aa399badec2cd44497aa5026f96c4807e820f84ca_1738684174_604800###HLS\\n$雷蒙影视•IPV4『线路56』
 吉林卫视,http://106.53.99.30/tv/20250803.php?id=吉林卫视$雷蒙影视•IPV4『线路1』
 吉林卫视,http://106.53.99.30/tv/jzb.php?id=jlws$雷蒙影视•IPV4『线路2』
 吉林卫视,http://39.164.174.139:5000/nl.m3u8?id=JLWSHD$雷蒙影视•IPV4『线路3』
@@ -1601,6 +1677,8 @@ CCTV14少儿高清,http://120.76.248.139/live/bfgd/4200000132.m3u8$雷蒙影视�
 吉林卫视,http://115.171.216.32:4000/rtp/225.1.8.153:8200$雷蒙影视•IPV4『线路40』
 吉林卫视,http://114.254.38.234:8888/rtp/239.3.1.240:8172$雷蒙影视•IPV4『线路41』
 吉林卫视,http://111.196.128.44:20000/rtp/239.3.1.240:8172$雷蒙影视•IPV4『线路42』
+吉林卫视,http://125.93.74.27:9002/tsfile/live/0116_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路43』
+吉林卫视,http://218.13.170.98:9901/tsfile/live/1018_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路44』
 内蒙古卫视,http://106.53.99.30/tv/20250803.php?id=蒙古卫视$雷蒙影视•IPV4『线路1』
 内蒙古卫视,http://39.164.174.139:5000/nl.m3u8?id=NMGWS$雷蒙影视•IPV4『线路2』
 内蒙古卫视,http://8.138.7.223/tv/migu3.php?id=nmws$雷蒙影视•IPV4『线路3』
@@ -1638,6 +1716,7 @@ CCTV14少儿高清,http://120.76.248.139/live/bfgd/4200000132.m3u8$雷蒙影视�
 内蒙古卫视,http://115.171.216.32:4000/rtp/225.1.8.156:8176$雷蒙影视•IPV4『线路35』
 内蒙古卫视,http://114.254.38.234:8888/rtp/239.3.1.43:8176$雷蒙影视•IPV4『线路36』
 内蒙古卫视,http://111.196.128.44:20000/rtp/239.3.1.43:8176$雷蒙影视•IPV4『线路37』
+内蒙古卫视,http://218.13.170.98:9901/tsfile/live/0109_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路38』
 辽宁卫视,http://106.53.99.30/tv/20250803.php?id=辽宁卫视$雷蒙影视•IPV4『线路1』
 辽宁卫视,http://106.53.99.30/tv/jzb.php?id=lnws$雷蒙影视•IPV4『线路2』
 辽宁卫视,http://39.164.174.139:5000/nl.m3u8?id=LNWSHD$雷蒙影视•IPV4『线路3』
@@ -1689,6 +1768,9 @@ CCTV14少儿高清,http://120.76.248.139/live/bfgd/4200000132.m3u8$雷蒙影视�
 辽宁卫视,http://115.171.216.32:4000/udp/225.1.8.51:8056$雷蒙影视•IPV4『线路49』
 辽宁卫视,http://114.254.38.234:8888/rtp/239.3.1.210:8056$雷蒙影视•IPV4『线路50』
 辽宁卫视,http://111.196.128.44:20000/rtp/239.3.1.210:8056$雷蒙影视•IPV4『线路51』
+辽宁卫视,http://218.13.170.98:9901/tsfile/live/0121_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路52』
+辽宁卫视,http://125.93.74.27:9002/tsfile/live/0121_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路53』
+辽宁卫视,http://182.114.50.213:9901/tsfile/live/0121_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路54』
 宁夏卫视,http://106.53.99.30/tv/20250803.php?id=宁夏卫视$雷蒙影视•IPV4『线路1』
 宁夏卫视,http://39.164.174.139:5000/nl.m3u8?id=NXWS$雷蒙影视•IPV4『线路2』
 宁夏卫视,http://8.138.7.223/tv/migu3.php?id=nxws$雷蒙影视•IPV4『线路3』
@@ -1724,6 +1806,8 @@ CCTV14少儿高清,http://120.76.248.139/live/bfgd/4200000132.m3u8$雷蒙影视�
 宁夏卫视,http://115.171.216.32:4000/rtp/225.1.8.159:8124$雷蒙影视•IPV4『线路33』
 宁夏卫视,http://114.254.38.234:8888/rtp/239.3.1.46:8124$雷蒙影视•IPV4『线路34』
 宁夏卫视,http://111.196.128.44:20000/rtp/239.3.1.46:8124$雷蒙影视•IPV4『线路35』
+宁夏卫视,http://125.93.74.27:9002/tsfile/live/0112_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路36』
+宁夏卫视,http://218.13.170.98:9901/tsfile/live/0112_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路37』
 青海卫视,http://106.53.99.30/tv/20250803.php?id=青海卫视$雷蒙影视•IPV4『线路1』
 青海卫视,http://106.53.99.30/tv/jzb.php?id=qhws$雷蒙影视•IPV4『线路2』
 青海卫视,http://39.164.174.139:5000/nl.m3u8?id=QHWS$雷蒙影视•IPV4『线路3』
@@ -1761,6 +1845,7 @@ CCTV14少儿高清,http://120.76.248.139/live/bfgd/4200000132.m3u8$雷蒙影视�
 青海卫视,http://115.171.216.32:4000/rtp/225.1.8.157:8184$雷蒙影视•IPV4『线路35』
 青海卫视,http://114.254.38.234:8888/rtp/239.3.1.44:8184$雷蒙影视•IPV4『线路36』
 青海卫视,http://111.196.128.44:20000/rtp/239.3.1.44:8184$雷蒙影视•IPV4『线路37』
+青海卫视,http://125.93.74.27:9002/tsfile/live/0140_2.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路38』
 山东卫视,http://106.53.99.30/tv/20250803.php?id=山东卫视$雷蒙影视•IPV4『线路1』
 山东卫视,http://106.53.99.30/tv/jzb.php?id=sdws$雷蒙影视•IPV4『线路2』
 山东卫视,http://39.164.174.139:5000/nl.m3u8?id=SDWSHD$雷蒙影视•IPV4『线路3』
@@ -1811,6 +1896,8 @@ CCTV14少儿高清,http://120.76.248.139/live/bfgd/4200000132.m3u8$雷蒙影视�
 山东卫视,http://115.171.216.32:4000/udp/225.1.8.50:8052$雷蒙影视•IPV4『线路48』
 山东卫视,http://114.254.38.234:8888/rtp/239.3.1.209:8052$雷蒙影视•IPV4『线路49』
 山东卫视,http://111.196.128.44:20000/rtp/239.3.1.209:8052$雷蒙影视•IPV4『线路50』
+山东卫视,http://125.93.74.27:9002/tsfile/live/0131_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路51』
+山东卫视,http://218.13.170.98:9901/tsfile/live/1009_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路52』
 天津卫视,http://106.53.99.30/tv/20250803.php?id=天津卫视$雷蒙影视•IPV4『线路1』
 天津卫视,http://106.53.99.30/tv/jzb.php?id=tjws$雷蒙影视•IPV4『线路2』
 天津卫视,http://39.164.174.139:5000/nl.m3u8?id=TJWSHD$雷蒙影视•IPV4『线路3』
@@ -1857,6 +1944,8 @@ CCTV14少儿高清,http://120.76.248.139/live/bfgd/4200000132.m3u8$雷蒙影视�
 天津卫视,http://115.171.216.32:4000/udp/225.1.8.48:8044$雷蒙影视•IPV4『线路44』
 天津卫视,http://114.254.38.234:8888/rtp/239.3.1.141:1234$雷蒙影视•IPV4『线路45』
 天津卫视,http://111.196.128.44:20000/rtp/239.3.1.141:1234$雷蒙影视•IPV4『线路46』
+天津卫视,http://125.93.74.27:9002/tsfile/live/0135_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路47』
+天津卫视,http://218.13.170.98:9901/tsfile/live/1008_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路48』
 海南卫视,http://106.53.99.30/tv/20250803.php?id=海南卫视$雷蒙影视•IPV4『线路1』
 海南卫视,http://106.53.99.30/tv/jzb.php?id=hainws$雷蒙影视•IPV4『线路2』
 海南卫视,http://8.138.7.223/tv/migu3.php?id=hinws$雷蒙影视•IPV4『线路3』
@@ -1899,6 +1988,8 @@ CCTV14少儿高清,http://120.76.248.139/live/bfgd/4200000132.m3u8$雷蒙影视�
 海南卫视,http://115.171.216.32:4000/rtp/225.1.8.158:8304$雷蒙影视•IPV4『线路40』
 海南卫视,http://114.254.38.234:8888/rtp/239.3.1.45:8304$雷蒙影视•IPV4『线路41』
 海南卫视,http://111.196.128.44:20000/rtp/239.3.1.45:8304$雷蒙影视•IPV4『线路42』
+海南卫视,http://125.93.74.27:9002/tsfile/live/0109_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路43』
+海南卫视,http://218.13.170.98:9901/tsfile/live/1020_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路44』
 新疆卫视,http://106.53.99.30/tv/20250803.php?id=新疆卫视$雷蒙影视•IPV4『线路1』
 新疆卫视,http://106.53.99.30/tv/jzb.php?id=xjws$雷蒙影视•IPV4『线路2』
 新疆卫视,http://39.164.174.139:5000/nl.m3u8?id=XJWS$雷蒙影视•IPV4『线路3』
@@ -1932,6 +2023,7 @@ CCTV14少儿高清,http://120.76.248.139/live/bfgd/4200000132.m3u8$雷蒙影视�
 新疆卫视,http://115.171.216.32:4000/rtp/225.1.8.161:8160$雷蒙影视•IPV4『线路31』
 新疆卫视,http://114.254.38.234:8888/rtp/239.3.1.48:8160$雷蒙影视•IPV4『线路32』
 新疆卫视,http://111.196.128.44:20000/rtp/239.3.1.48:8160$雷蒙影视•IPV4『线路33』
+新疆卫视,http://218.13.170.98:9901/tsfile/live/0110_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路34』
 云南卫视,http://106.53.99.30/tv/20250803.php?id=云南卫视$雷蒙影视•IPV4『线路1』
 云南卫视,http://39.164.174.139:5000/nl.m3u8?id=YNWS$雷蒙影视•IPV4『线路2』
 云南卫视,http://8.138.7.223/tv/migu3.php?id=ynws$雷蒙影视•IPV4『线路3』
@@ -1968,6 +2060,7 @@ CCTV14少儿高清,http://120.76.248.139/live/bfgd/4200000132.m3u8$雷蒙影视�
 云南卫视,http://115.171.216.32:4000/rtp/225.1.8.139:8108$雷蒙影视•IPV4『线路34』
 云南卫视,http://114.254.38.234:8888/rtp/239.3.1.26:8108$雷蒙影视•IPV4『线路35』
 云南卫视,http://111.196.128.44:20000/rtp/239.3.1.26:8108$雷蒙影视•IPV4『线路36』
+云南卫视,http://125.93.74.27:9002/tsfile/live/0119_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路37』
 西藏卫视,http://106.53.99.30/tv/20250803.php?id=西藏卫视$雷蒙影视•IPV4『线路1』
 西藏卫视,http://39.164.174.139:5000/nl.m3u8?id=XZWS$雷蒙影视•IPV4『线路2』
 西藏卫视,http://8.138.7.223/tv/migu3.php?id=xzws$雷蒙影视•IPV4『线路3』
@@ -2000,6 +2093,8 @@ CCTV14少儿高清,http://120.76.248.139/live/bfgd/4200000132.m3u8$雷蒙影视�
 西藏卫视,http://115.171.216.32:4000/rtp/225.1.8.160:8164$雷蒙影视•IPV4『线路30』
 西藏卫视,http://114.254.38.234:8888/rtp/239.3.1.47:8164$雷蒙影视•IPV4『线路31』
 西藏卫视,http://111.196.128.44:20000/rtp/239.3.1.47:8164$雷蒙影视•IPV4『线路32』
+西藏卫视,http://125.93.74.27:9002/tsfile/live/0111_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路33』
+西藏卫视,http://218.13.170.98:9901/tsfile/live/0111_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路34』
 海峡卫视,http://38.64.72.148:80/hls/modn/list/4009/chunklist1.m3u8$雷蒙影视•IPV4『线路1』
 海峡卫视,http://38.64.72.148:80/hls/modn/list/4009/playlist.m3u8$雷蒙影视•IPV4『线路2』
 海峡卫视,http://8.138.7.223/tv/migu3.php?id=hxws$雷蒙影视•IPV4『线路3』
@@ -2035,6 +2130,7 @@ CCTV14少儿高清,http://120.76.248.139/live/bfgd/4200000132.m3u8$雷蒙影视�
 兵团卫视,http://115.171.216.32:4000/rtp/225.1.8.167:4120$雷蒙影视•IPV4『线路26』
 兵团卫视,http://114.254.38.234:8888/rtp/239.3.1.144:4120$雷蒙影视•IPV4『线路27』
 兵团卫视,http://111.196.128.44:20000/rtp/239.3.1.144:4120$雷蒙影视•IPV4『线路28』
+兵团卫视,http://218.13.170.98:9901/tsfile/live/0115_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路29』
 安多卫视,http://39.134.67.148/ottrrs.hl.chinamobile.com/hlj/yd/0/3221225659/.m3u8$雷蒙影视•IPV4『线路1』
 安多卫视,http://39.134.64.87:6610/PLTV/88888888/224/3221225659/index.m3u8?IASHttpSessionId=$雷蒙影视•IPV4『线路2』
 安多卫视,http://hegd-livod.tx-cdn.gitv.tv/gitv_live/G_ANDUO/G_ANDUO.m3u8$雷蒙影视•IPV4『线路3』
@@ -2318,19 +2414,18 @@ AMC最爱电影,https://tv.iill.top/litv/4gtv-4gtv017$雷蒙影视•IPV4『线�
 凤凰卫视中文台,http://hwltc.tv.cdn.zj.chinamobile.com/PLTV/88888888/224/3221236260/index.m3u8$雷蒙影视•IPV4『线路15』
 凤凰卫视中文台,http://121.205.69.190:8848/rtp/239.61.2.184:9092$雷蒙影视•IPV4『线路16』
 凤凰卫视中文台,http://58.19.180.108:9981/stream/channelid/1749482778?profile=pass$雷蒙影视•IPV4『线路17』
-凤凰卫视中文台,http://play-flive.ifeng.com/live/06OLEGEGM4G.m3u8$雷蒙影视•IPV4『线路18』
-凤凰卫视中文台,http://43.152.143.193:80/1.v.smtcdns.net/tvlive.fengshows.cn/live/0701pcc72.flv$雷蒙影视•IPV4『线路19』
-凤凰卫视中文台,https://migu.188766.xyz/?migutoken=dafea9a89f8759bcd04edfafc63b435d&id=fhzw&pp=1$雷蒙影视•IPV4『线路20』
-凤凰卫视中文台,https://migu.188766.xyz/?migutoken=bf161ac290d85d4778ebc36e83daeb42&id=phoenixtv_hd&type=dy$雷蒙影视•IPV4『线路21』
-凤凰卫视中文台,https://mgev.188766.xyz/?migutoken=3267cd6151f58a4919b93c0e63f69337&id=fhzw&pp=1$雷蒙影视•IPV4『线路22』
-凤凰卫视中文台,https://migu.188766.xyz/?migutoken=866341f35ab82e48dea654d12b6e5881&id=hk_fhzw&type=dy$雷蒙影视•IPV4『线路23』
-凤凰卫视中文台,http://218.104.239.114:9901/tsfile/live/1013_1.m3u8$雷蒙影视•IPV4『线路24』
-凤凰卫视中文台,http://ttkx.cc:1380/公开源/fh.php?id=fhzw###HLS\\n$雷蒙影视•IPV4『线路25』
-凤凰卫视中文台,https://345iptv.com/?act=play&token=1954169d1dfb9cbc12fd4f353d5d31b2&tid=gt&id=1&p=0###WEB\\n$雷蒙影视•IPV4『线路26』
-凤凰卫视中文台,https://ali.hlspull.yximgs.com/live/qq491695550-fh.flv###HLS\\n$雷蒙影视•IPV4『线路27』
-凤凰卫视中文台,http://php.jdshipin.com/TVOD/iptv.php?id=fhzw###HLS\\n$雷蒙影视•IPV4『线路28』
-凤凰卫视中文台,http://139.196.228.200:5678/%E5%85%AC%E4%BC%97%E5%8F%B7%E6%90%9E%E6%9C%BA%E5%A4%A7%E5%B8%88/fhx.php?id=cn###HLS\\n$雷蒙影视•IPV4『线路29』
-凤凰卫视中文台,http://php.jdshipin.com:8880/TVOD/iptv.php?id=fhzw###HLS\\n$雷蒙影视•IPV4『线路30』
+凤凰卫视中文台,http://43.152.143.193:80/1.v.smtcdns.net/tvlive.fengshows.cn/live/0701pcc72.flv$雷蒙影视•IPV4『线路18』
+凤凰卫视中文台,https://migu.188766.xyz/?migutoken=dafea9a89f8759bcd04edfafc63b435d&id=fhzw&pp=1$雷蒙影视•IPV4『线路19』
+凤凰卫视中文台,https://migu.188766.xyz/?migutoken=bf161ac290d85d4778ebc36e83daeb42&id=phoenixtv_hd&type=dy$雷蒙影视•IPV4『线路20』
+凤凰卫视中文台,https://mgev.188766.xyz/?migutoken=3267cd6151f58a4919b93c0e63f69337&id=fhzw&pp=1$雷蒙影视•IPV4『线路21』
+凤凰卫视中文台,https://migu.188766.xyz/?migutoken=866341f35ab82e48dea654d12b6e5881&id=hk_fhzw&type=dy$雷蒙影视•IPV4『线路22』
+凤凰卫视中文台,http://218.104.239.114:9901/tsfile/live/1013_1.m3u8$雷蒙影视•IPV4『线路23』
+凤凰卫视中文台,http://ttkx.cc:1380/公开源/fh.php?id=fhzw###HLS\\n$雷蒙影视•IPV4『线路24』
+凤凰卫视中文台,https://345iptv.com/?act=play&token=1954169d1dfb9cbc12fd4f353d5d31b2&tid=gt&id=1&p=0###WEB\\n$雷蒙影视•IPV4『线路25』
+凤凰卫视中文台,https://ali.hlspull.yximgs.com/live/qq491695550-fh.flv###HLS\\n$雷蒙影视•IPV4『线路26』
+凤凰卫视中文台,http://php.jdshipin.com/TVOD/iptv.php?id=fhzw###HLS\\n$雷蒙影视•IPV4『线路27』
+凤凰卫视中文台,http://139.196.228.200:5678/%E5%85%AC%E4%BC%97%E5%8F%B7%E6%90%9E%E6%9C%BA%E5%A4%A7%E5%B8%88/fhx.php?id=cn###HLS\\n$雷蒙影视•IPV4『线路28』
+凤凰卫视中文台,http://php.jdshipin.com:8880/TVOD/iptv.php?id=fhzw###HLS\\n$雷蒙影视•IPV4『线路29』
 凤凰卫视资讯台,http://203.205.191.53/qctv.fengshows.cn/live/0701pin72.m3u8$雷蒙影视•IPV4『线路1』
 凤凰卫视资讯台,https://cdn3.163189.xyz/live/fhzx/stream.m3u8$雷蒙影视•IPV4『线路2』
 凤凰卫视资讯台,https://stream1.freetv.fun/feng-huang-zi-xun-2.m3u8$雷蒙影视•IPV4『线路3』
