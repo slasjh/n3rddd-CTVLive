@@ -1795,6 +1795,8 @@ http://115.171.216.32:4000/udp/225.1.8.44:8028$雷蒙影视•IPV4『线路57』
 http://114.254.38.234:8888/rtp/239.3.1.135:8028$雷蒙影视•IPV4『线路58』
 #EXTINF:-1 tvg-id="59" tvg-name="江苏卫视" tvg-logo="https://gitee.com/n3rddd/tvlogos/raw/main/logo/江苏卫视.png" group-title="📡卫视",江苏卫视
 http://111.196.128.44:20000/rtp/239.3.1.135:8028$雷蒙影视•IPV4『线路59』
+#EXTINF:-1 tvg-id="60" tvg-name="江苏卫视" tvg-logo="https://gitee.com/n3rddd/tvlogos/raw/main/logo/江苏卫视.png" group-title="📡卫视",江苏卫视
+http://125.43.249.76:9901/tsfile/live/1030_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路60』
 #EXTINF:-1 tvg-id="1" tvg-name="安徽卫视" tvg-logo="https://gitee.com/n3rddd/tvlogos/raw/main/logo/安徽卫视.png" group-title="📡卫视",安徽卫视
 http://106.53.99.30/tv/20250803.php?id=安徽卫视$雷蒙影视•IPV4『线路1』
 #EXTINF:-1 tvg-id="2" tvg-name="安徽卫视" tvg-logo="https://gitee.com/n3rddd/tvlogos/raw/main/logo/安徽卫视.png" group-title="📡卫视",安徽卫视
@@ -1883,6 +1885,8 @@ http://115.171.216.32:4000/udp/225.1.8.52:8064$雷蒙影视•IPV4『线路42』
 http://114.254.38.234:8888/rtp/239.3.1.211:8064$雷蒙影视•IPV4『线路43』
 #EXTINF:-1 tvg-id="44" tvg-name="安徽卫视" tvg-logo="https://gitee.com/n3rddd/tvlogos/raw/main/logo/安徽卫视.png" group-title="📡卫视",安徽卫视
 http://111.196.128.44:20000/rtp/239.3.1.211:8064$雷蒙影视•IPV4『线路44』
+#EXTINF:-1 tvg-id="45" tvg-name="安徽卫视" tvg-logo="https://gitee.com/n3rddd/tvlogos/raw/main/logo/安徽卫视.png" group-title="📡卫视",安徽卫视
+http://125.43.249.76:9901/tsfile/live/1037_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路45』
 #EXTINF:-1 tvg-id="1" tvg-name="重庆卫视" tvg-logo="https://gitee.com/n3rddd/tvlogos/raw/main/logo/重庆卫视.png" group-title="📡卫视",重庆卫视
 http://106.53.99.30/tv/20250803.php?id=重庆卫视$雷蒙影视•IPV4『线路1』
 #EXTINF:-1 tvg-id="2" tvg-name="重庆卫视" tvg-logo="https://gitee.com/n3rddd/tvlogos/raw/main/logo/重庆卫视.png" group-title="📡卫视",重庆卫视
@@ -3007,8 +3011,6 @@ http://115.171.216.32:4000/udp/225.1.8.47:8044$雷蒙影视•IPV4『线路50』
 http://114.254.38.234:8888/rtp/239.3.1.138:8044$雷蒙影视•IPV4『线路51』
 #EXTINF:-1 tvg-id="52" tvg-name="湖北卫视" tvg-logo="https://gitee.com/n3rddd/tvlogos/raw/main/logo/湖北卫视.png" group-title="📡卫视",湖北卫视
 http://111.196.128.44:20000/rtp/239.3.1.138:8044$雷蒙影视•IPV4『线路52』
-#EXTINF:-1 tvg-id="53" tvg-name="湖北卫视" tvg-logo="https://gitee.com/n3rddd/tvlogos/raw/main/logo/湖北卫视.png" group-title="📡卫视",湖北卫视
-http://125.43.249.76:9901/tsfile/live/1033_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路53』
 #EXTINF:-1 tvg-id="1" tvg-name="江西卫视" tvg-logo="https://gitee.com/n3rddd/tvlogos/raw/main/logo/江西卫视.png" group-title="📡卫视",江西卫视
 http://106.53.99.30/tv/20250803.php?id=江西卫视$雷蒙影视•IPV4『线路1』
 #EXTINF:-1 tvg-id="2" tvg-name="江西卫视" tvg-logo="https://gitee.com/n3rddd/tvlogos/raw/main/logo/江西卫视.png" group-title="📡卫视",江西卫视
@@ -3377,8 +3379,6 @@ http://115.171.216.32:4000/udp/225.1.8.51:8056$雷蒙影视•IPV4『线路49』
 http://114.254.38.234:8888/rtp/239.3.1.210:8056$雷蒙影视•IPV4『线路50』
 #EXTINF:-1 tvg-id="51" tvg-name="辽宁卫视" tvg-logo="https://gitee.com/n3rddd/tvlogos/raw/main/logo/辽宁卫视.png" group-title="📡卫视",辽宁卫视
 http://111.196.128.44:20000/rtp/239.3.1.210:8056$雷蒙影视•IPV4『线路51』
-#EXTINF:-1 tvg-id="52" tvg-name="辽宁卫视" tvg-logo="https://gitee.com/n3rddd/tvlogos/raw/main/logo/辽宁卫视.png" group-title="📡卫视",辽宁卫视
-http://125.43.249.76:9901/tsfile/live/1022_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路52』
 #EXTINF:-1 tvg-id="1" tvg-name="宁夏卫视" tvg-logo="https://gitee.com/n3rddd/tvlogos/raw/main/logo/宁夏卫视.png" group-title="📡卫视",宁夏卫视
 http://106.53.99.30/tv/20250803.php?id=宁夏卫视$雷蒙影视•IPV4『线路1』
 #EXTINF:-1 tvg-id="2" tvg-name="宁夏卫视" tvg-logo="https://gitee.com/n3rddd/tvlogos/raw/main/logo/宁夏卫视.png" group-title="📡卫视",宁夏卫视
@@ -3623,6 +3623,8 @@ http://115.171.216.32:4000/udp/225.1.8.50:8052$雷蒙影视•IPV4『线路48』
 http://114.254.38.234:8888/rtp/239.3.1.209:8052$雷蒙影视•IPV4『线路49』
 #EXTINF:-1 tvg-id="50" tvg-name="山东卫视" tvg-logo="https://gitee.com/n3rddd/tvlogos/raw/main/logo/山东卫视.png" group-title="📡卫视",山东卫视
 http://111.196.128.44:20000/rtp/239.3.1.209:8052$雷蒙影视•IPV4『线路50』
+#EXTINF:-1 tvg-id="51" tvg-name="山东卫视" tvg-logo="https://gitee.com/n3rddd/tvlogos/raw/main/logo/山东卫视.png" group-title="📡卫视",山东卫视
+http://125.43.249.76:9901/tsfile/live/1023_1.m3u8?key=txiptv&playlive=1&authid=0$雷蒙影视•IPV4『线路51』
 #EXTINF:-1 tvg-id="1" tvg-name="天津卫视" tvg-logo="https://gitee.com/n3rddd/tvlogos/raw/main/logo/天津卫视.png" group-title="📡卫视",天津卫视
 http://106.53.99.30/tv/20250803.php?id=天津卫视$雷蒙影视•IPV4『线路1』
 #EXTINF:-1 tvg-id="2" tvg-name="天津卫视" tvg-logo="https://gitee.com/n3rddd/tvlogos/raw/main/logo/天津卫视.png" group-title="📡卫视",天津卫视
